@@ -22,6 +22,53 @@
 
 </div>
 
+#### Hashing
+
+A variety of hashing algorithms are available in various libraries.
+
+<div class="grid cards" markdown>
+
+-   The standard library contains [**hashlib**](https://docs.python.org/3/library/hashlib.html), which supports a variety of SHA algorithms including SHA3, as well as MD5, Blake and SHAKE (Secure Hashing Algorithm and KECCAK).
+
+    ```py title="hashlib"
+    import hashlib
+
+    data = b'Hello, World!'
+
+    # The quickest way to use them is to use the named constructors, passing the text as binary.
+    hashlib.sha256(data).hexdigest()
+
+    # A generic constructor is also available with a less appealing workflow
+    h = hashlib.new('sha256')
+    h.update(data)
+    h.hexdigest()
+    ```
+
+
+-   The [**pysha3**](https://pypi.python.org/pypi/pysha3) module also supports various algorithms, including SHA3, SHAKE, and Keccak.
+
+    ```py
+    import sha3
+
+    data = b'Hello, World!'
+
+    sha3.keccak_256(data).hexdigest()
+    ```
+
+
+-   The [**eth-utils**](https://pypi.org/project/eth-utils/) package also provides the [Keccak-256](https://wiki.rugdoc.io/docs/introduction-to-ethereums-keccak-256-algorithm/) algorithm used by Ethereum.
+
+
+    ```py
+    import eth_utils
+
+    data = b'Hello, World!'
+
+    eth_utils.keccak(text=data.hex()).hex()
+    ```
+
+</div>
+
 ## Decorators
 
 
@@ -1595,64 +1642,62 @@ operation: runs over NumPy
   - numerical analyses, including count, unique, mean, etc
 - `sort_values('field',ascending=False)`
 ### pathlib
-Create a new pathlib object; represents a file or directory
+
 ```py
+# Create a new pathlib object; represents a file or directory
 pathlib.Path(path)
-```
-Test for existence of a file
-```py
+
+# Test for existence of a file
 pathlib.Path.is_file(file)
-``` 
-Test for existence of a directory
-```py
+
+# Test for existence of a directory
 pathlib.Path.is_dir(dir)
-```
-Find all `.py` files
-Returns a generator
-```py
+
+# Find all .py files. Returns a generator
 pathlib.Path.glob('*.py')
-```
-Open a file. This makes a file object that is automatically closed, similar to `open` builtin:
-```py
+
+# Open a file. 
+# This makes a file object that is automatically closed, similar to `open` builtin:
 pathlib.Path.open()
-``` 
-Display file extension
-```py
+
+# Display file extension
 pathlib.Path.suffix()
-```
-Display file size
-```py
+
+# Display file size
 pathlib.Path.stat().st_size
 ```
-### pyinstaller
-[pyinstaller --name]: # "Change the name of the executable artifact"
-[pyinstaller --onefile]: # "Package the entire application intoa  single executable file"
-[pyinstaller --hidden-import]: # "Explicitly specify imports that may not have been detected by PyInstaller."
 
-Source: [RealPython tutorial](https://realpython.com/pyinstaller-python/)
+### pyinstaller
 
 Installing **PyInstaller**, even in a virtual environment, will install the pyinstaller executable to $HOME/.local/bin.
 On Windows, it is installed to another directory within 
-[`LOCALAPPDATA`](# "$Env:LOCALAPPDATA\Packages\PythonSoftwareFoundation.Python.3.x....\LocalCache\local-packages\Python3x\Scripts").
+**LOCALAPPDATA**.
+
 ```sh
 pip install pyinstaller
 ```
+
 PyInstaller creates primarily 3 items:
+
 - .spec file, named after the CLI script
 - build/ folder, which can be ignored
 - dist/ folder, containing the final artifact at dist/cli/cli or dist/cli/cli.exe
 
 Several options are available
+
 [`hidden-import`][pyinstaller --hidden-import]
 [`name`][pyinstaller --name]
 [`onefile`][pyinstaller --onefile]
+
 ```sh
 pyinstaller script.py --onefile
 ```
 On Windows, if PyInstaller is run from a virtual environment without necessary modules installed, they may not be available for compilation into the artifact. This does not appear to be an issue with Linux.
 
 This problem appears to be specific to certain modules, like [**emoji**](https://github.com/carpedm20/emoji/).
+
 ### pythonnet
+
 - Docs: [?](https://github.com/pythonnet/pythonnet "Github") [!](http://pythonnet.github.io/)
 Developers recommend Mono version 5.20.1 <sup>Issues [939](https://github.com/pythonnet/pythonnet/issues/939)</sup>
 On Ubuntu, the `eoan` `universe` repository has to be added 
@@ -1681,7 +1726,12 @@ pip install -U setuptools
 
     ```py
     --8<-- "includes/py/modules/random.py"
+
+    # Random 20-byte hex value
+    hex(random.randrange(2**(8*20)))
+    random.randrange(2**(8*20)).to_bytes(20, 'big').hex()
     ```
+
 
 -   #### scrapy
 
@@ -1934,11 +1984,12 @@ This will raise a `CalledProcessError` exception because of the non-zero exit co
 ```py
 subprocess.run('exit 1', shell=True, check=True)
 ```
+
 ### sys
 
 
 ```py
-Return site-specific directory where Python files are installed (/usr/local/ by default)
+# Return site-specific directory where Python files are installed (/usr/local/ by default)
 sys.prefix
 ```
 
