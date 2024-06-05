@@ -1,3 +1,4 @@
+.env
 site/**
 **.bz2
 .vscode/**
