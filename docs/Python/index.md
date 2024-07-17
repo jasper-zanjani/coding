@@ -1005,15 +1005,15 @@ The `ArgumentParser` object exposes an attribute that contains the value passed 
     import argparse
 
     def get_args():
-      parser = argparse.ArgumentParser()
-      parser.add_argument(dest='bar')
-      return parser.parse_args()
+        parser = argparse.ArgumentParser()
+        parser.add_argument(dest='bar')
+        return parser.parse_args()
 
     def main():
-      args = get_args().bar
+        args = get_args().bar
     ```
 
-    The optional value assigned to `description` will be displayed when running the script with the options `-h` or `--help`
+    The optional value assigned to `description` will be displayed when running the script with **-h**/**--help**
     
     ```py
     parser = argparse.ArgumentParser(description=helptext)
@@ -2199,22 +2199,13 @@ Find elements by element namescripts
 ```py
 tree.findall('book')
 ```
+
 ## Glossary
 
-
-### Method resolution order
-
 **Method resolution order (MRO)** is the order of base classes that are searched when using **super()**. 
-
 It is accessed with **\_\_mro\_\_**, which returns a tuple of base classes in order of precedence, ending in `object` which is the root class of all classes.
 ([src](https://rhettinger.wordpress.com/2011/05/26/super-considered-super/))
 
-
-### Non-interactive debugging
-
-
 **Non-interactive debugging** is the most basic form of debugging, dependent on `print` or `log` statements placed within the body of code.
 
-### Type slot
-
-A **type slot is any of a number of fields within each magic method, including** **\_\_new\_\_()**, **\_\_init\_\_()**, and **\_\_prepare\_\_()** (which returns a dictionary-like object that's used as the local namespace for all code from the class body)
+A **type slot** is any of a number of fields within each magic method, including `__new__()`, `__init__()`, and `__prepare__()` (which returns a dictionary-like object that's used as the local namespace for all code from the class body)

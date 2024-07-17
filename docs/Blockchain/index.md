@@ -7,7 +7,6 @@ A wallet is an interface for managing an Ethereum account.
 
 Every Ethereum account is associated with an **address**, a 42-character hexadecimal value which derives from the last 20 bytes of a hash of the account's public key.
 
-
 A [**block**](https://ethereum.org/en/developers/docs/blocks/) is a batch of transactions stored with a hash of the previous block in the blockchain.
 Time is divided into twelve second units called [**slots**](https://ethereum.org/en/developers/docs/blocks/#proof-of-work-protocol).
 Every **slot** (spaced twelve seconds apart) a single validator is randomly selected to be the block proposer.

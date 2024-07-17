@@ -3,19 +3,16 @@ site_url: https://jasper-zanjani.github.io/coding
 site_dir: /home/jasper/Documents/mkdocs/coding
 theme:
   name: material
-  favicon: img/favicon.png
+  favicon: img/logo.png
   logo: img/logo.png
   palette:
     scheme: slate
     primary: pink
     accent: pink
   features:
-  # - navigation.tabs         # Render top-level sections as a menubar
-  # - navigation.tabs.sticky  # Top-level menubar remains visible while scrolling down
-  # - navigation.indexes      # Integrate section index pages into sections as overview pages (incompatible with toc.integrate)
-    - navigation.sections     # Render sections as groups
-    - navigation.expand       # Expand all collapsible subsections by default
-    - toc.integrate           # Always render table of contents as part of the left navbar
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
     - content.code.annotate
     - content.code.copy
     - content.tabs.link
@@ -23,6 +20,8 @@ theme:
     search: 191
 extra_css:
 - style/annotation-width.css
+plugins:
+- mkdocs-jupyter
 markdown_extensions:
   - abbr
   - admonition
@@ -31,9 +30,6 @@ markdown_extensions:
   - md_in_html
   - meta
   - pymdownx.details
-  - pymdownx.emoji: # from https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#emoji
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:
