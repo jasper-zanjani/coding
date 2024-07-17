@@ -1,0 +1,1870 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jasper-zanjani.github.io/coding/Rust/Crates/Clap/">
+      
+      
+        <link rel="prev" href="../Actix/">
+      
+      
+        <link rel="next" href="../Failure/">
+      
+      
+      <link rel="icon" href="../../../img/logo.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+    
+    
+      
+        <title>clap - Coding</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../style/annotation-width.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#clap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Coding" class="md-header__button md-logo" aria-label="Coding" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Coding
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              clap
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Coding" class="md-nav__button md-logo" aria-label="Coding" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    Coding
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Blockchain
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blockchain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blockchain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blockchain/eth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ethereum utilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Blockchain/solidity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solidity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/pandas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pandas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/yfinance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Yfinance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/Data/altair/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Altair
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Rust
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Rust
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cargo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cargo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Combinators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Combinators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Error/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Error handling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Crates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Crates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Actix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    actix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    clap
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    clap
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parser
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clap_app" class="md-nav__link">
+    <span class="md-ellipsis">
+      clap_app
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parser_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parser
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#starships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starships
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Failure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    failure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gtk-rs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gtk-rs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rnd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    rnd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rocket/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rocket
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Rusqlite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    rusqlite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Serde/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    serde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Structopt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    structopt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lazy_static/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    lazy_static
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_7_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_11" id="__nav_4_7_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cursive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_11">
+            <span class="md-nav__icon md-icon"></span>
+            Cursive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cursive/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cursive/API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cursive/Tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_7_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_12" id="__nav_4_7_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Diesel
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_12">
+            <span class="md-nav__icon md-icon"></span>
+            Diesel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Diesel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Diesel/Tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Boilerplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tasks/Hello-World/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello World
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tasks/Mathematics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathematics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tasks/Porting-grep/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    grep ports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tasks/To-Do/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To-Do
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Tasks/Transactions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transactions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="clap">clap</h1>
+<p><strong>Clap</strong> is a command-line parser with both declarative (preferred, using <strong>Parser</strong>) and procedural APIs.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Declarative</label><label for="__tabbed_1_2">Procedural</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">clap</span>::<span class="n">Parser</span><span class="p">;</span><span class="w"> </span><span class="c1">// (1)</span>
+
+<span class="cp">#[derive(Parser)]</span>
+<span class="cp">#[clap(name = </span><span class="s">&quot;Hello, World!&quot;</span><span class="cp">, version, author)]</span><span class="w"> </span><span class="c1">// (2)</span>
+<span class="k">struct</span> <span class="nc">Cli</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(short, long, default_value_t = String::from(</span><span class="s">&quot;Hello&quot;</span><span class="cp">))]</span>
+<span class="w">    </span><span class="n">greeting</span>: <span class="nb">String</span><span class="p">,</span>
+
+<span class="w">    </span><span class="cp">#[clap(default_value_t = String::from(</span><span class="s">&quot;World&quot;</span><span class="cp">))]</span>
+<span class="w">    </span><span class="n">name</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cli</span>::<span class="n">parse</span><span class="p">();</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}, {}!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cli</span><span class="p">.</span><span class="n">greeting</span><span class="p">,</span><span class="w"> </span><span class="n">cli</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li><strong>Parser</strong> requires the <strong>derive</strong> and <strong>std</strong> features:
+<div class="highlight"><span class="filename">Cargo.toml</span><pre><span></span><code><span class="n">clap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s2">&quot;3.0.12&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">features</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;std&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;derive&quot;</span><span class="p">],</span><span class="w"> </span><span class="n">default-features</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">false</span><span class="p">}</span>
+</code></pre></div></li>
+<li>Without providing arguments to version or author, the relevant values will be pulled from the crate itself, similar to the <a href="https://docs.rs/clap/latest/clap/macro.crate_version.html">crate_authors</a> and <a href="https://docs.rs/clap/latest/clap/macro.crate_version.html">crate_version</a> macros for the procedural API.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">clap</span>::<span class="p">{</span><span class="n">App</span><span class="p">,</span><span class="w"> </span><span class="n">Arg</span><span class="p">,</span><span class="w"> </span><span class="n">crate_version</span><span class="p">,</span><span class="w"> </span><span class="n">crate_authors</span><span class="p">};</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">App</span>::<span class="n">new</span><span class="p">(</span><span class="s">&quot;Say hello&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">version</span><span class="p">(</span><span class="n">crate_version</span><span class="o">!</span><span class="p">())</span><span class="w"> </span><span class="c1">// (1)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">author</span><span class="p">(</span><span class="n">crate_authors</span><span class="o">!</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="n">Arg</span>::<span class="n">new</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// (2)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">default_value</span><span class="p">(</span><span class="s">&quot;World&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="n">Arg</span>::<span class="n">new</span><span class="p">(</span><span class="s">&quot;greeting&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">default_value</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">short</span><span class="p">(</span><span class="sc">&#39;g&#39;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">long</span><span class="p">(</span><span class="s">&quot;greeting&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">get_matches</span><span class="p">();</span>
+
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}, {}!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="n">value_of</span><span class="p">(</span><span class="s">&quot;greeting&quot;</span><span class="p">).</span><span class="n">unwrap</span><span class="p">(),</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="n">value_of</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">).</span><span class="n">unwrap</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>The <a href="https://docs.rs/clap/latest/clap/macro.crate_version.html"><strong>crate_authors</strong></a> and <a href="https://docs.rs/clap/latest/clap/macro.crate_version.html"><strong>crate_version</strong></a> macros allow you to pull information from the Cargo.toml at compile time.</li>
+<li>Since clap 3.0.0, <strong>new()</strong> takes the place of <strong>with_name()</strong>, which is now deprecated.</li>
+</ol>
+</div>
+</div>
+</div>
+<h2 id="api">API</h2>
+<h4 id="parser">Parser</h4>
+<dl>
+<dd>
+<p>Using the <a href="https://docs.rs/clap/latest/clap/trait.Parser.html#"><strong>Parser</strong></a> derive allows command-line arguments and options to be defined on a struct with an attribute.
+Any <strong>Command</strong>, <strong>Arg</strong>, or <strong>PossibleValue</strong> method can be used as an attribute.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Option</label><label for="__tabbed_2_2">Command</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">clap</span>::<span class="n">Parser</span><span class="p">;</span>
+
+<span class="cp">#[derive(Parser)]</span>
+<span class="cp">#[clap(name = </span><span class="s">&quot;Hello, World!&quot;</span><span class="cp">)]</span>
+<span class="k">struct</span> <span class="nc">Args</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(short, long, default_value_t = String::from(</span><span class="s">&quot;Hello&quot;</span><span class="cp">))]</span>
+<span class="w">    </span><span class="n">greeting</span>: <span class="nb">String</span><span class="p">,</span>
+
+<span class="w">    </span><span class="cp">#[clap(default_value_t = String::from(</span><span class="s">&quot;World&quot;</span><span class="cp">))]</span>
+<span class="w">    </span><span class="n">name</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Args</span>::<span class="n">parse</span><span class="p">();</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}, {}!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="n">greeting</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">clap</span>::<span class="p">{</span><span class="n">Parser</span><span class="p">,</span><span class="w"> </span><span class="n">Subcommand</span><span class="p">};</span>
+
+<span class="cp">#[derive(Parser)]</span>
+<span class="cp">#[clap(name = </span><span class="s">&quot;Hello, World!&quot;</span><span class="cp">)]</span>
+<span class="k">struct</span> <span class="nc">Args</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(subcommand)]</span>
+<span class="w">    </span><span class="n">greeting</span>: <span class="nc">Greeting</span><span class="p">,</span>
+
+<span class="w">    </span><span class="cp">#[clap(default_value_t = String::from(</span><span class="s">&quot;World&quot;</span><span class="cp">))]</span>
+<span class="w">    </span><span class="n">name</span>: <span class="nb">String</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Subcommand)]</span>
+<span class="k">enum</span> <span class="nc">Greeting</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Hello</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Greetings</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Args</span>::<span class="n">parse</span><span class="p">();</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{}, {}!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="n">greeting</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">.</span><span class="n">name</span><span class="p">);</span><span class="w"> </span><span class="c1">// (1)</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>This requires the <strong>Display</strong> trait to be implemented
+<div class="highlight"><pre><span></span><code><span class="k">impl</span><span class="w"> </span><span class="n">std</span>::<span class="n">fmt</span>::<span class="n">Display</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Greeting</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">fn</span> <span class="nf">fmt</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">_</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">std</span>::<span class="n">fmt</span>::<span class="n">Formatter</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">std</span>::<span class="n">fmt</span>::<span class="nb">Result</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">match</span><span class="w"> </span><span class="bp">self</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Greeting</span>::<span class="n">Hello</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="fm">print!</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span><span class="w"> </span><span class="nb">Ok</span><span class="p">(())</span><span class="w"> </span><span class="p">},</span>
+<span class="w">            </span><span class="n">_</span><span class="w">               </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="fm">print!</span><span class="p">(</span><span class="s">&quot;Greetings&quot;</span><span class="p">);</span><span class="w"> </span><span class="nb">Ok</span><span class="p">(())</span><span class="w"> </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ol>
+</div>
+</div>
+</div>
+</dd>
+</dl>
+<h4 id="clap_app">clap_app</h4>
+<dl>
+<dd>
+<p>The (now deprecated) <strong>clap_app</strong> macro was used to create simple applications.</p>
+<p>Boolean values can be set to true with <code>+</code> and false with <code>!</code>:
+<div class="highlight"><pre><span></span><code><span class="o">+</span><span class="n">required</span><span class="w"> </span><span class="c1">// Arg::required(true)</span>
+<span class="o">!</span><span class="n">required</span><span class="w"> </span><span class="c1">// Arg::required(false)</span>
+</code></pre></div></p>
+</dd>
+</dl>
+<h2 id="api_1">API</h2>
+<h4 id="parser_1">Parser</h4>
+<dl>
+<dd>
+<p><a href="https://docs.rs/clap/latest/clap/trait.ArgEnum.html"><strong>ArgEnum</strong></a> and <a href="https://docs.rs/clap/latest/clap/trait.Subcommand.html"><strong>Subcommand</strong></a> can be used in very similar ways.
+ArgEnum variants do show up in the help output but inline with the Subcommand.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">ArgEnum</label><label for="__tabbed_3_2">Subcommand</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">clap</span>::<span class="p">{</span><span class="n">ArgEnum</span><span class="p">,</span><span class="w"> </span><span class="n">Parser</span><span class="p">};</span>
+
+<span class="cp">#[derive(Parser)]</span>
+<span class="k">struct</span> <span class="nc">Cli</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="cp">#[clap(arg_enum)]</span>
+</span><span class="w">    </span><span class="n">command</span>: <span class="nc">Actions</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Copy, Clone, ArgEnum)]</span>
+<span class="hll"><span class="k">enum</span> <span class="nc">Actions</span><span class="w"> </span><span class="p">{</span>
+</span><span class="w">    </span><span class="n">Eat</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Drink</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cli</span>::<span class="n">parse</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">match</span><span class="w"> </span><span class="n">cli</span><span class="p">.</span><span class="n">command</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Actions</span>::<span class="n">Eat</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Eating&quot;</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Actions</span>::<span class="n">Drink</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Drinking&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">clap</span>::<span class="p">{</span><span class="n">Subcommand</span><span class="p">,</span><span class="w"> </span><span class="n">Parser</span><span class="p">};</span>
+
+<span class="cp">#[derive(Parser)]</span>
+<span class="k">struct</span> <span class="nc">Cli</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="cp">#[clap(subcommand)]</span>
+</span><span class="w">    </span><span class="n">command</span>: <span class="nc">Actions</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Subcommand)]</span>
+<span class="hll"><span class="k">enum</span> <span class="nc">Actions</span><span class="w"> </span><span class="p">{</span>
+</span><span class="w">    </span><span class="n">Eat</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Drink</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cli</span>::<span class="n">parse</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">match</span><span class="w"> </span><span class="n">cli</span><span class="p">.</span><span class="n">command</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Actions</span>::<span class="n">Eat</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Eating&quot;</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Actions</span>::<span class="n">Drink</span><span class="w">  </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Drinking&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Apparently they may not be used together, enums with a Subcommand derive attribute require variants that contain Args derived values:</p>
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">clap</span>::<span class="p">{</span><span class="n">Args</span><span class="p">,</span><span class="w"> </span><span class="n">Parser</span><span class="p">,</span><span class="w"> </span><span class="n">Subcommand</span><span class="p">};</span>
+
+<span class="cp">#[derive(Parser)]</span>
+<span class="k">struct</span> <span class="nc">Cli</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(subcommand)]</span>
+<span class="w">    </span><span class="n">command</span>: <span class="nc">Actions</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Subcommand)]</span>
+<span class="k">enum</span> <span class="nc">Actions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(arg_enum)]</span>
+<span class="w">    </span><span class="n">Eat</span><span class="p">(</span><span class="n">Foods</span><span class="p">),</span>
+<span class="w">    </span><span class="cp">#[clap(arg_enum)]</span>
+<span class="w">    </span><span class="n">Drink</span><span class="p">(</span><span class="n">Drinks</span><span class="p">),</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Args)]</span>
+<span class="k">struct</span> <span class="nc">Foods</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">name</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Args)]</span>
+<span class="k">struct</span> <span class="nc">Drinks</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">name</span>: <span class="nb">String</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cli</span>::<span class="n">parse</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">match</span><span class="w"> </span><span class="n">cli</span><span class="p">.</span><span class="n">command</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Actions</span>::<span class="n">Eat</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Eating {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">Actions</span>::<span class="n">Drink</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Drinking {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">string</span>::<span class="n">ParseError</span><span class="p">;</span>
+
+<span class="k">use</span><span class="w"> </span><span class="n">clap</span>::<span class="p">{</span><span class="n">ArgEnum</span><span class="p">,</span><span class="w"> </span><span class="n">Args</span><span class="p">,</span><span class="w"> </span><span class="n">Parser</span><span class="p">,</span><span class="w"> </span><span class="n">Subcommand</span><span class="p">,</span><span class="w"> </span><span class="p">};</span>
+
+<span class="cp">#[derive(Parser)]</span>
+<span class="k">struct</span> <span class="nc">Cli</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(subcommand)]</span>
+<span class="w">    </span><span class="n">command</span>: <span class="nc">Actions</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Subcommand)]</span>
+<span class="k">enum</span> <span class="nc">Actions</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(arg_enum)]</span>
+<span class="w">    </span><span class="n">Eat</span><span class="p">(</span><span class="n">Food</span><span class="p">),</span>
+<span class="w">    </span><span class="cp">#[clap(arg_enum)]</span>
+<span class="w">    </span><span class="n">Drink</span><span class="p">(</span><span class="n">Drink</span><span class="p">),</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Args)]</span>
+<span class="k">struct</span> <span class="nc">Food</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">name</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Args)]</span>
+<span class="k">struct</span> <span class="nc">Drink</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">drink</span>: <span class="nc">Drinks</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(ArgEnum, Clone)]</span>
+<span class="k">enum</span> <span class="nc">Drinks</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Coke</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Pepsi</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Other</span>
+<span class="p">}</span>
+
+<span class="k">impl</span><span class="w"> </span><span class="n">std</span>::<span class="kt">str</span>::<span class="n">FromStr</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Drinks</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">type</span> <span class="nb">Err</span> <span class="o">=</span><span class="w"> </span><span class="n">ParseError</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">fn</span> <span class="nf">from_str</span><span class="p">(</span><span class="n">s</span>: <span class="kp">&amp;</span><span class="kt">str</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">Result</span><span class="o">&lt;</span><span class="bp">Self</span><span class="p">,</span><span class="w"> </span><span class="bp">Self</span>::<span class="nb">Err</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">match</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="s">&quot;coke&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">Ok</span><span class="p">(</span><span class="bp">Self</span>::<span class="n">Coke</span><span class="p">),</span>
+<span class="w">            </span><span class="s">&quot;pepsi&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">Ok</span><span class="p">(</span><span class="bp">Self</span>::<span class="n">Pepsi</span><span class="p">),</span>
+<span class="w">            </span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">Ok</span><span class="p">(</span><span class="bp">Self</span>::<span class="n">Other</span><span class="p">),</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">impl</span><span class="w"> </span><span class="nb">From</span><span class="o">&lt;</span><span class="n">Drinks</span><span class="o">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">fn</span> <span class="nf">from</span><span class="p">(</span><span class="n">item</span>: <span class="nc">Drinks</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">String</span> <span class="p">{</span>
+<span class="w">        </span><span class="k">match</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Drinks</span>::<span class="n">Coke</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&quot;Coke&quot;</span><span class="p">),</span>
+<span class="w">            </span><span class="n">Drinks</span>::<span class="n">Pepsi</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&quot;Pepsi&quot;</span><span class="p">),</span>
+<span class="w">            </span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&quot;Other&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">cli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cli</span>::<span class="n">parse</span><span class="p">();</span>
+
+<span class="w">    </span><span class="k">match</span><span class="w"> </span><span class="n">cli</span><span class="p">.</span><span class="n">command</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Actions</span>::<span class="n">Eat</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Eating {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">Actions</span>::<span class="n">Drink</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Drinking {}&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">drink</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</dd>
+</dl>
+<h4 id="starships">Starships</h4>
+<dl>
+<dd>
+<div class="highlight"><pre><span></span><code><span class="cp">#[macro_use]</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">diesel</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">prelude</span>::<span class="o">*</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">result</span>::<span class="n">QueryResult</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">sqlite</span>::<span class="n">SqliteConnection</span><span class="p">;</span>
+
+<span class="k">mod</span> <span class="nn">models</span><span class="p">;</span><span class="w"> </span><span class="c1">// (1)</span>
+<span class="k">use</span><span class="w"> </span><span class="n">models</span>::<span class="n">Starship</span><span class="p">;</span>
+<span class="k">mod</span> <span class="nn">schema</span><span class="p">;</span><span class="w"> </span><span class="c1">// (2)</span>
+<span class="k">use</span><span class="w"> </span><span class="n">schema</span>::<span class="n">starships</span>::<span class="n">dsl</span>::<span class="o">*</span><span class="p">;</span>
+
+<span class="k">use</span><span class="w"> </span><span class="n">clap</span>::<span class="p">{</span><span class="n">Parser</span><span class="p">,</span><span class="w"> </span><span class="n">Subcommand</span><span class="p">};</span>
+
+<span class="cp">#[derive(Parser)]</span>
+<span class="k">struct</span> <span class="nc">Cli</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(subcommand)]</span>
+<span class="w">    </span><span class="n">command</span>: <span class="nc">Commands</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Subcommand)]</span>
+<span class="k">enum</span> <span class="nc">Commands</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Add</span><span class="p">(</span><span class="n">Starship</span><span class="p">),</span>
+<span class="w">    </span><span class="n">Update</span><span class="p">,</span>
+<span class="w">    </span><span class="n">Remove</span><span class="p">,</span>
+<span class="w">    </span><span class="n">List</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cli</span>::<span class="n">parse</span><span class="p">();</span>
+<span class="w">    </span><span class="k">match</span><span class="w"> </span><span class="n">app</span><span class="p">.</span><span class="n">command</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Commands</span>::<span class="n">Add</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">add_ship</span><span class="p">(</span><span class="o">&amp;</span><span class="n">s</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Commands</span>::<span class="n">List</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">list_ships</span><span class="p">(),</span>
+<span class="w">        </span><span class="n">Commands</span>::<span class="n">Remove</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Removing&quot;</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Commands</span>::<span class="n">Update</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Updating&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">add_ship</span><span class="p">(</span><span class="n">s</span>: <span class="kp">&amp;</span><span class="nc">Starship</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_connection</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Adding {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+<span class="w">    </span><span class="n">s</span><span class="p">.</span><span class="n">insert_into</span><span class="p">(</span><span class="n">starships</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">list_ships</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">get_ships</span><span class="p">().</span><span class="n">unwrap</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_connection</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nc">ConnectionResult</span><span class="o">&lt;</span><span class="n">SqliteConnection</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">dotenv</span>::<span class="n">dotenv</span><span class="p">().</span><span class="n">expect</span><span class="p">(</span><span class="s">&quot;Couldn&#39;t load .env file&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span>::<span class="n">env</span>::<span class="n">var</span><span class="p">(</span><span class="s">&quot;DATABASE_URL&quot;</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="n">SqliteConnection</span>::<span class="n">establish</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_ships</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nc">QueryResult</span><span class="o">&lt;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_connection</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="n">starships</span>
+<span class="w">        </span><span class="p">.</span><span class="n">load</span>::<span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>Not that the order of the fields matters (for both postgres as well as sqlite connections), and the primary key should be the first field defined.
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="k">crate</span>::<span class="n">schema</span>::<span class="n">starships</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">clap</span>::<span class="n">Args</span><span class="p">;</span>
+
+<span class="cp">#[derive(Args,Debug, Queryable, Insertable, Identifiable, Clone)]</span>
+<span class="cp">#[primary_key(registry)]</span>
+<span class="k">pub</span><span class="w"> </span><span class="k">struct</span> <span class="nc">Starship</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(long, short)]</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">registry</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="cp">#[clap(long, short)]</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">name</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="cp">#[clap(long, short)]</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">crew</span>: <span class="kt">i32</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+2.
+<div class="highlight"><pre><span></span><code><span class="n">table</span><span class="o">!</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">starships</span><span class="w"> </span><span class="p">(</span><span class="n">registry</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">registry</span><span class="w"> </span>-&gt; <span class="nc">Text</span><span class="p">,</span>
+<span class="w">        </span><span class="n">name</span><span class="w"> </span>-&gt; <span class="nc">Text</span><span class="p">,</span>
+<span class="w">        </span><span class="n">crew</span><span class="w"> </span>-&gt; <span class="nc">Integer</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ol>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.sections", "navigation.expand", "toc.integrate", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.caa56a14.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1782 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jasper-zanjani.github.io/coding/Rust/Crates/Diesel/Tasks/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../../Tasks/">
+      
+      
+      <link rel="icon" href="../../../../img/logo.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+    
+    
+      
+        <title>Tasks - Coding</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../style/annotation-width.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tasks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Coding" class="md-header__button md-logo" aria-label="Coding" data-md-component="logo">
+      
+  <img src="../../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Coding
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tasks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Coding" class="md-nav__button md-logo" aria-label="Coding" data-md-component="logo">
+      
+  <img src="../../../../img/logo.png" alt="logo">
+
+    </a>
+    Coding
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Blockchain
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blockchain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Blockchain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Blockchain/eth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ethereum utilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Blockchain/solidity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solidity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Python/pandas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pandas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Python/yfinance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Yfinance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Python/Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Python/Data/altair/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Altair
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Rust
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Rust
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cargo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cargo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Combinators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Combinators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Error/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Error handling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Crates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Crates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Actix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    actix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Clap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    clap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Failure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    failure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gtk-rs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gtk-rs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rnd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    rnd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rocket/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rocket
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rusqlite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    rusqlite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Serde/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    serde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structopt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    structopt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lazy_static/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    lazy_static
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_7_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_11" id="__nav_4_7_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cursive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_11">
+            <span class="md-nav__icon md-icon"></span>
+            Cursive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cursive/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cursive/API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Cursive/Tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_12" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_12" id="__nav_4_7_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Diesel
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_12_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_7_12">
+            <span class="md-nav__icon md-icon"></span>
+            Diesel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#to-do-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      To-do app
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starships
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Boilerplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tasks/Hello-World/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello World
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tasks/Mathematics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathematics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tasks/Porting-grep/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    grep ports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tasks/To-Do/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To-Do
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tasks/Transactions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transactions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="tasks">Tasks</h1>
+<h4 id="to-do-app">To-do app</h4>
+<dl>
+<dd>
+<div class="highlight"><pre><span></span><code><span class="cp">#[macro_use]</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">diesel</span><span class="p">;</span><span class="w"> </span><span class="c1">// (1)</span>
+<span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">pg</span>::<span class="n">PgConnection</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">prelude</span>::<span class="o">*</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">schema</span>::<span class="n">tasks</span>::<span class="n">dsl</span>::<span class="o">*</span><span class="p">;</span>
+
+<span class="k">mod</span> <span class="nn">schema</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">table</span><span class="o">!</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// (3)</span>
+<span class="w">        </span><span class="n">tasks</span><span class="w"> </span><span class="p">(</span><span class="n">description</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">description</span><span class="w"> </span>-&gt; <span class="nc">Text</span><span class="p">,</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Queryable, Insertable, Debug)]</span><span class="w"> </span><span class="c1">// (4)</span>
+<span class="k">pub</span><span class="w"> </span><span class="k">struct</span> <span class="nc">Task</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// (6)</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">description</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_connection</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">todo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Task</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">description</span>: <span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&quot;Buy milk&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">add_task</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">todo</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Added {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;All tasks: {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">get_tasks</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">).</span><span class="n">unwrap</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_connection</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nc">ConnectionResult</span><span class="o">&lt;</span><span class="n">PgConnection</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// (7)</span>
+<span class="w">    </span><span class="n">dotenv</span>::<span class="n">dotenv</span><span class="p">().</span><span class="n">ok</span><span class="p">();</span>
+<span class="w">    </span><span class="n">PgConnection</span>::<span class="n">establish</span><span class="p">(</span><span class="o">&amp;</span><span class="n">std</span>::<span class="n">env</span>::<span class="n">var</span><span class="p">(</span><span class="s">&quot;DATABASE_URL&quot;</span><span class="p">).</span><span class="n">unwrap</span><span class="p">())</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">add_task</span><span class="p">(</span><span class="n">conn</span>: <span class="kp">&amp;</span><span class="nc">PgConnection</span><span class="p">,</span><span class="w"> </span><span class="n">todo</span>: <span class="kp">&amp;</span><span class="nc">Task</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">QueryResult</span><span class="o">&lt;</span><span class="n">Task</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// (2)</span>
+<span class="w">    </span><span class="n">diesel</span>::<span class="n">insert_into</span><span class="p">(</span><span class="n">tasks</span><span class="p">)</span><span class="w"> </span><span class="c1">// (8)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">values</span><span class="p">(</span><span class="n">todo</span><span class="p">).</span><span class="n">get_result</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span><span class="w"> </span><span class="c1">// (5)</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_tasks</span><span class="p">(</span><span class="n">conn</span>: <span class="kp">&amp;</span><span class="nc">PgConnection</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">QueryResult</span><span class="o">&lt;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Task</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// (9)</span>
+<span class="w">    </span><span class="n">tasks</span><span class="p">.</span><span class="n">load</span>::<span class="o">&lt;</span><span class="n">Task</span><span class="o">&gt;</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>For some reason, Diesel appears to require use of outdated syntax at the crate root (main.rs or lib.rs), without which the <strong>table!</strong> macro import in the schema is not resolved.</li>
+<li>Like <strong>ConnectionError</strong>, <a href="https://docs.rs/diesel/1.4.8/diesel/result/type.QueryResult.html"><strong>QueryResult</strong></a> is a convenience wrapper around <strong>Result</strong>:
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">result</span>::<span class="n">Error</span><span class="p">;</span>
+
+<span class="k">fn</span> <span class="nf">add_task</span><span class="p">(</span><span class="n">conn</span>: <span class="kp">&amp;</span><span class="nc">PgConnection</span><span class="p">,</span><span class="w"> </span><span class="n">todo</span>: <span class="kp">&amp;</span><span class="nc">Task</span><span class="p">)</span><span class="w"> </span>
+<span class="hll"><span class="w">    </span>-&gt; <span class="nb">Result</span><span class="o">&lt;</span><span class="n">Task</span><span class="p">,</span><span class="w"> </span><span class="n">Error</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div></li>
+<li>Normally found in <strong>src/schema.rs</strong> (which can be changed by editing diesel.toml), this is the output of the Diesel CLI when running migrations. This macro actually exposes a module with the table name (<strong>tasks</strong> in this case).</li>
+<li>This struct represents the <strong>model</strong>, or the language-native data structure into which the database's query results will be cast. 
+If the model is in a separate module (as it normally is), the <strong>Queryable</strong> and <strong>Insertable</strong> derives are made accessible not by including from the Diesel crate directly but by including the module generated by <strong>table!</strong>.
+<div class="highlight"><span class="filename">models.rs</span><pre><span></span><code><span class="hll"><span class="k">use</span><span class="w"> </span><span class="n">schema</span>::<span class="n">tasks</span><span class="p">;</span>
+</span>
+<span class="cp">#[derive(Queryable, Insertable)]</span>
+<span class="k">pub</span><span class="w"> </span><span class="k">struct</span> <span class="nc">Task</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">description</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>Thanks to the <strong>dsl</strong> import, the <strong>table</strong> field doesn't have to be accessed:
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">get_tasks</span><span class="p">(</span><span class="n">conn</span>: <span class="kp">&amp;</span><span class="nc">PgConnection</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nc">QueryResult</span><span class="o">&lt;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Task</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="n">tasks</span><span class="p">.</span><span class="n">table</span><span class="p">.</span><span class="n">load</span>::<span class="o">&lt;</span><span class="n">Task</span><span class="o">&gt;</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
+</span><span class="p">}</span>
+</code></pre></div>
+There is also a <strong>get_results()</strong> function that returns a Vec in case of success.
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">add_task</span><span class="p">(</span><span class="n">conn</span>: <span class="kp">&amp;</span><span class="nc">PgConnection</span><span class="p">,</span><span class="w"> </span><span class="n">todo</span>: <span class="kp">&amp;</span><span class="nc">Task</span><span class="p">)</span><span class="w"> </span>
+<span class="hll"><span class="w">    </span>-&gt; <span class="nc">QueryResult</span><span class="o">&lt;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Task</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span class="w">    </span><span class="n">diesel</span>::<span class="n">insert_into</span><span class="p">(</span><span class="n">tasks</span>::<span class="n">table</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">values</span><span class="p">(</span><span class="n">todo</span><span class="p">)</span>
+<span class="hll"><span class="w">        </span><span class="p">.</span><span class="n">get_results</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
+</span><span class="p">}</span>
+</code></pre></div></li>
+<li>The compiler will infer that the annotated struct is a record belonging to a table named after the plural of the struct's identifier (i.e. it will look for "Tasks", case insensitive). If the table does not have such a name it must be explicitly annotated with <strong>table_name</strong>.
+<div class="highlight"><pre><span></span><code><span class="cp">#[derive(Queryable, Insertable )]</span>
+<span class="cp">#[table_name = </span><span class="s">&quot;tasks&quot;</span><span class="cp">]</span>
+<span class="k">pub</span><span class="w"> </span><span class="k">struct</span> <span class="nc">Todo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">description</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>Like <strong>QueryResult</strong>, <a href="https://docs.rs/diesel/latest/diesel/result/type.ConnectionResult.html"><strong>ConnectionResult</strong></a> is simply a convenience wrapper around <strong>Result</strong>:
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">result</span>::<span class="n">ConnectionError</span><span class="p">;</span>
+
+<span class="k">fn</span> <span class="nf">get_connection</span><span class="p">()</span><span class="w"> </span>
+<span class="hll"><span class="w">    </span>-&gt; <span class="nb">Result</span><span class="o">&lt;</span><span class="n">PgConnection</span><span class="p">,</span><span class="w"> </span><span class="n">ConnectionError</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span>
+</span></code></pre></div></li>
+<li>Using the <strong>Dsl</strong> import exposes some minor syntactic sugars, otherwise:
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">add_task</span><span class="p">(</span><span class="n">conn</span>: <span class="kp">&amp;</span><span class="nc">PgConnection</span><span class="p">,</span><span class="w"> </span><span class="n">todo</span>: <span class="kp">&amp;</span><span class="nc">Task</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span>-&gt; <span class="nc">QueryResult</span><span class="o">&lt;</span><span class="n">Task</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="n">diesel</span>::<span class="n">insert_into</span><span class="p">(</span><span class="n">tasks</span>::<span class="n">table</span><span class="p">)</span>
+</span><span class="w">        </span><span class="p">.</span><span class="n">values</span><span class="p">(</span><span class="n">todo</span><span class="p">).</span><span class="n">get_result</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>Using the <strong>Dsl</strong> import exposes some minor syntactic sugars, otherwise:
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">get_tasks</span><span class="p">(</span><span class="n">conn</span>: <span class="kp">&amp;</span><span class="nc">PgConnection</span><span class="p">)</span><span class="w"> </span>
+<span class="w">    </span>-&gt; <span class="nc">QueryResult</span><span class="o">&lt;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Task</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="n">tasks</span>::<span class="n">table</span><span class="p">.</span><span class="n">load</span>::<span class="o">&lt;</span><span class="n">Task</span><span class="o">&gt;</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
+</span><span class="p">}</span>
+</code></pre></div></li>
+</ol>
+</dd>
+</dl>
+<h4 id="starships">Starships</h4>
+<dl>
+<dd>
+<div class="highlight"><span class="filename">main.rs</span><pre><span></span><code><span class="cp">#[macro_use]</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">diesel</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">pg</span>::<span class="n">PgConnection</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">prelude</span>::<span class="o">*</span><span class="p">;</span>
+
+<span class="k">mod</span> <span class="nn">models</span><span class="p">;</span><span class="w"> </span><span class="c1">// (1)</span>
+<span class="k">use</span><span class="w"> </span><span class="n">models</span>::<span class="n">Starship</span><span class="p">;</span>
+
+<span class="k">mod</span> <span class="nn">schema</span><span class="p">;</span><span class="w"> </span><span class="c1">// (2)</span>
+<span class="k">use</span><span class="w"> </span><span class="n">schema</span>::<span class="n">starships</span><span class="p">;</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">create_connection</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="n">add_item</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">get_data</span><span class="p">()).</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">add_item</span><span class="p">(</span><span class="n">conn</span>: <span class="kp">&amp;</span><span class="nc">PgConnection</span><span class="p">,</span><span class="w"> </span><span class="n">ship</span>: <span class="kp">&amp;</span><span class="nc">Starship</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">Result</span><span class="o">&lt;</span><span class="n">Starship</span><span class="p">,</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">result</span>::<span class="n">Error</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">diesel</span>::<span class="n">insert_into</span><span class="p">(</span><span class="n">starships</span>::<span class="n">table</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">values</span><span class="p">(</span><span class="n">ship</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">get_result</span><span class="p">(</span><span class="n">conn</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">create_connection</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nb">Result</span><span class="o">&lt;</span><span class="n">PgConnection</span><span class="p">,</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">result</span>::<span class="n">ConnectionError</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">dotenv</span>::<span class="n">dotenv</span><span class="p">().</span><span class="n">ok</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span>::<span class="n">env</span>::<span class="n">var</span><span class="p">(</span><span class="s">&quot;DATABASE_URL&quot;</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="nb">Ok</span><span class="p">(</span><span class="n">PgConnection</span>::<span class="n">establish</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">?</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_data</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nc">Starship</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Starship</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">registry</span>: <span class="s">&quot;NCC-1700&quot;</span><span class="p">.</span><span class="n">to_string</span><span class="p">(),</span>
+<span class="w">        </span><span class="n">name</span>: <span class="s">&quot;USS Constitution&quot;</span><span class="p">.</span><span class="n">to_string</span><span class="p">(),</span>
+<span class="w">        </span><span class="n">crew</span>: <span class="mi">204</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li><div class="highlight"><span class="filename">models.rs</span><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="k">crate</span>::<span class="n">schema</span>::<span class="n">starships</span><span class="p">;</span>
+
+<span class="cp">#[derive(Queryable, Insertable)]</span>
+<span class="k">pub</span><span class="w"> </span><span class="k">struct</span> <span class="nc">Starship</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">registry</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">name</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">crew</span>: <span class="kt">i32</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li><div class="highlight"><span class="filename">schema.rs</span><pre><span></span><code><span class="n">table</span><span class="o">!</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">starships</span><span class="w"> </span><span class="p">(</span><span class="n">registry</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">registry</span><span class="w"> </span>-&gt; <span class="nc">Text</span><span class="p">,</span>
+<span class="w">        </span><span class="n">name</span><span class="w"> </span>-&gt; <span class="nc">Text</span><span class="p">,</span>
+<span class="w">        </span><span class="n">crew</span><span class="w"> </span>-&gt; <span class="nc">Int4</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="cp">#[macro_use]</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">diesel</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">pg</span>::<span class="n">PgConnection</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">prelude</span>::<span class="o">*</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">result</span>::<span class="n">QueryResult</span><span class="p">;</span>
+
+<span class="k">mod</span> <span class="nn">models</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">models</span>::<span class="n">Starship</span><span class="p">;</span>
+<span class="k">mod</span> <span class="nn">schema</span><span class="p">;</span><span class="w"> </span><span class="c1">// (2)</span>
+<span class="k">use</span><span class="w"> </span><span class="n">schema</span>::<span class="n">starships</span>::<span class="n">dsl</span>::<span class="o">*</span><span class="p">;</span>
+
+<span class="k">use</span><span class="w"> </span><span class="n">clap</span>::<span class="p">{</span><span class="n">Args</span><span class="p">,</span><span class="w"> </span><span class="n">Parser</span><span class="p">,</span><span class="w"> </span><span class="n">Subcommand</span><span class="p">};</span>
+
+<span class="cp">#[derive(Parser)]</span>
+<span class="k">struct</span> <span class="nc">Cli</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(subcommand)]</span>
+<span class="w">    </span><span class="n">command</span>: <span class="nc">Commands</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Subcommand)]</span>
+<span class="k">enum</span> <span class="nc">Commands</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Add</span><span class="p">(</span><span class="n">Starship</span><span class="p">),</span>
+<span class="w">    </span><span class="n">Update</span><span class="p">(</span><span class="n">StarshipFilter</span><span class="p">),</span>
+<span class="w">    </span><span class="n">Remove</span><span class="p">(</span><span class="n">StarshipFilter</span><span class="p">),</span>
+<span class="w">    </span><span class="n">List</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Args)]</span>
+<span class="k">struct</span> <span class="nc">StarshipFilter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(short, long)]</span>
+<span class="w">    </span><span class="n">filter</span>: <span class="nb">String</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cli</span>::<span class="n">parse</span><span class="p">();</span>
+<span class="w">    </span><span class="k">match</span><span class="w"> </span><span class="n">app</span><span class="p">.</span><span class="n">command</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Commands</span>::<span class="n">Add</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w">    </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">add_ship</span><span class="p">(</span><span class="o">&amp;</span><span class="n">s</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Commands</span>::<span class="n">List</span><span class="w">      </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">list_ships</span><span class="p">(),</span>
+<span class="w">        </span><span class="n">Commands</span>::<span class="n">Remove</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">remove_ship</span><span class="p">(</span><span class="o">&amp;</span><span class="n">s</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Commands</span>::<span class="n">Update</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">update_ship</span><span class="p">(</span><span class="o">&amp;</span><span class="n">s</span><span class="p">),</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">update_ship</span><span class="p">(</span><span class="n">s</span>: <span class="kp">&amp;</span><span class="nc">StarshipFilter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">.</span><span class="n">filter</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_connection</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">remove_ship</span><span class="p">(</span><span class="n">s</span>: <span class="kp">&amp;</span><span class="nc">StarshipFilter</span><span class="p">)</span><span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">.</span><span class="n">filter</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_connection</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">delete</span><span class="p">(</span>
+<span class="w">        </span><span class="n">starships</span><span class="p">.</span><span class="n">filter</span><span class="p">(</span><span class="n">registry</span><span class="p">.</span><span class="n">ilike</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="w">    </span><span class="p">).</span><span class="n">get_result</span>::<span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">expect</span><span class="p">(</span><span class="s">&quot;Record not found!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Removing {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">add_ship</span><span class="p">(</span><span class="n">s</span>: <span class="kp">&amp;</span><span class="nc">Starship</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_connection</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Adding {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+<span class="w">    </span><span class="n">s</span><span class="p">.</span><span class="n">insert_into</span><span class="p">(</span><span class="n">starships</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">list_ships</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">get_ships</span><span class="p">().</span><span class="n">unwrap</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_connection</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nc">ConnectionResult</span><span class="o">&lt;</span><span class="n">PgConnection</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">dotenv</span>::<span class="n">dotenv</span><span class="p">().</span><span class="n">expect</span><span class="p">(</span><span class="s">&quot;Couldn&#39;t load .env file&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span>::<span class="n">env</span>::<span class="n">var</span><span class="p">(</span><span class="s">&quot;DATABASE_URL&quot;</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="n">PgConnection</span>::<span class="n">establish</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_ships</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nc">QueryResult</span><span class="o">&lt;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_connection</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="n">starships</span>
+<span class="w">        </span><span class="p">.</span><span class="n">load</span>::<span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li><div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="k">crate</span>::<span class="n">schema</span>::<span class="n">starships</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">clap</span>::<span class="n">Args</span><span class="p">;</span>
+
+<span class="cp">#[derive(Args,Debug, Queryable, Insertable, Identifiable, Clone)]</span>
+<span class="cp">#[primary_key(registry)]</span>
+<span class="k">pub</span><span class="w"> </span><span class="k">struct</span> <span class="nc">Starship</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(long, short)]</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">registry</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="cp">#[clap(long, short)]</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">name</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="cp">#[clap(long, short)]</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">crew</span>: <span class="kt">i32</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li><div class="highlight"><pre><span></span><code><span class="n">table</span><span class="o">!</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">starships</span><span class="w"> </span><span class="p">(</span><span class="n">registry</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">registry</span><span class="w"> </span>-&gt; <span class="nc">Text</span><span class="p">,</span>
+<span class="w">        </span><span class="n">name</span><span class="w"> </span>-&gt; <span class="nc">Text</span><span class="p">,</span>
+<span class="w">        </span><span class="n">crew</span><span class="w"> </span>-&gt; <span class="nc">Integer</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="cp">#[macro_use]</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">diesel</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">pg</span>::<span class="n">PgConnection</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">prelude</span>::<span class="o">*</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">result</span>::<span class="n">QueryResult</span><span class="p">;</span>
+
+<span class="k">mod</span> <span class="nn">models</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">models</span>::<span class="n">Starship</span><span class="p">;</span>
+<span class="k">mod</span> <span class="nn">schema</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">schema</span>::<span class="n">starships</span>::<span class="n">dsl</span>::<span class="o">*</span><span class="p">;</span>
+
+<span class="k">use</span><span class="w"> </span><span class="n">clap</span>::<span class="p">{</span><span class="n">Args</span><span class="p">,</span><span class="w"> </span><span class="n">Parser</span><span class="p">,</span><span class="w"> </span><span class="n">Subcommand</span><span class="p">};</span>
+
+<span class="cp">#[derive(Parser)]</span>
+<span class="k">struct</span> <span class="nc">Cli</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(subcommand)]</span>
+<span class="w">    </span><span class="n">command</span>: <span class="nc">Commands</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Subcommand)]</span>
+<span class="k">enum</span> <span class="nc">Commands</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Add</span><span class="p">(</span><span class="n">Starship</span><span class="p">),</span>
+<span class="w">    </span><span class="n">Update</span><span class="p">(</span><span class="n">StarshipFilter</span><span class="p">),</span>
+<span class="w">    </span><span class="n">Remove</span><span class="p">(</span><span class="n">StarshipFilter</span><span class="p">),</span>
+<span class="w">    </span><span class="n">List</span><span class="p">(</span><span class="n">OptionalStarshipFilter</span><span class="p">),</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Args)]</span>
+<span class="k">struct</span> <span class="nc">StarshipFilter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(short, long)]</span>
+<span class="w">    </span><span class="n">filter</span>: <span class="nb">String</span>
+<span class="p">}</span>
+
+<span class="cp">#[derive(Args)]</span>
+<span class="k">struct</span> <span class="nc">OptionalStarshipFilter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cp">#[clap(short,long)]</span>
+<span class="w">    </span><span class="n">filter</span>: <span class="nb">Option</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cli</span>::<span class="n">parse</span><span class="p">();</span>
+<span class="w">    </span><span class="k">match</span><span class="w"> </span><span class="n">app</span><span class="p">.</span><span class="n">command</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Commands</span>::<span class="n">Add</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="w">        </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">add_ship</span><span class="p">(</span><span class="o">&amp;</span><span class="n">arg</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Commands</span>::<span class="n">List</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="w">       </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">list_ships</span><span class="p">(</span><span class="o">&amp;</span><span class="n">arg</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Commands</span>::<span class="n">Remove</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">remove_ship</span><span class="p">(</span><span class="o">&amp;</span><span class="n">arg</span><span class="p">),</span>
+<span class="w">        </span><span class="n">Commands</span>::<span class="n">Update</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span><span class="w">     </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">update_ship</span><span class="p">(</span><span class="o">&amp;</span><span class="n">arg</span><span class="p">),</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">update_ship</span><span class="p">(</span><span class="n">s</span>: <span class="kp">&amp;</span><span class="nc">StarshipFilter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">.</span><span class="n">filter</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_connection</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">remove_ship</span><span class="p">(</span><span class="n">s</span>: <span class="kp">&amp;</span><span class="nc">StarshipFilter</span><span class="p">)</span><span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">s</span><span class="p">.</span><span class="n">filter</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_connection</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">delete</span><span class="p">(</span>
+<span class="w">        </span><span class="n">starships</span><span class="p">.</span><span class="n">filter</span><span class="p">(</span><span class="n">registry</span><span class="p">.</span><span class="n">ilike</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="w">    </span><span class="p">).</span><span class="n">get_result</span>::<span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">expect</span><span class="p">(</span><span class="s">&quot;Record not found!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Removing {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">result</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">add_ship</span><span class="p">(</span><span class="n">s</span>: <span class="kp">&amp;</span><span class="nc">Starship</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_connection</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;Adding {:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
+<span class="w">    </span><span class="n">s</span><span class="p">.</span><span class="n">insert_into</span><span class="p">(</span><span class="n">starships</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">execute</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">list_ships</span><span class="p">(</span><span class="n">arg</span>: <span class="kp">&amp;</span><span class="nc">OptionalStarshipFilter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_connection</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="k">match</span><span class="w"> </span><span class="o">&amp;</span><span class="n">arg</span><span class="p">.</span><span class="n">filter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">Some</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">starships</span><span class="p">.</span><span class="n">filter</span><span class="p">(</span><span class="n">registry</span><span class="p">.</span><span class="n">ilike</span><span class="p">(</span><span class="n">s</span><span class="p">)).</span><span class="n">load</span>::<span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">).</span><span class="n">unwrap</span><span class="p">()),</span>
+<span class="w">        </span><span class="nb">None</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="fm">println!</span><span class="p">(</span><span class="s">&quot;{:?}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">starships</span><span class="p">.</span><span class="n">load</span>::<span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">).</span><span class="n">unwrap</span><span class="p">()),</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_connection</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nc">ConnectionResult</span><span class="o">&lt;</span><span class="n">PgConnection</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">dotenv</span>::<span class="n">dotenv</span><span class="p">().</span><span class="n">expect</span><span class="p">(</span><span class="s">&quot;Couldn&#39;t load .env file&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span>::<span class="n">env</span>::<span class="n">var</span><span class="p">(</span><span class="s">&quot;DATABASE_URL&quot;</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="n">PgConnection</span>::<span class="n">establish</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+</dd>
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.sections", "navigation.expand", "toc.integrate", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.caa56a14.min.js"></script>
+      
+    
+  </body>
+</html>

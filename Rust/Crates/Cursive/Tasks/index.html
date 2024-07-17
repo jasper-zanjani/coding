@@ -1,0 +1,2220 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://jasper-zanjani.github.io/coding/Rust/Crates/Cursive/Tasks/">
+      
+      
+        <link rel="prev" href="../API/">
+      
+      
+        <link rel="next" href="../../Diesel/">
+      
+      
+      <link rel="icon" href="../../../../img/logo.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+    
+    
+      
+        <title>Tasks - Coding</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../style/annotation-width.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tasks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Coding" class="md-header__button md-logo" aria-label="Coding" data-md-component="logo">
+      
+  <img src="../../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Coding
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tasks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Coding" class="md-nav__button md-logo" aria-label="Coding" data-md-component="logo">
+      
+  <img src="../../../../img/logo.png" alt="logo">
+
+    </a>
+    Coding
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Blockchain
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blockchain
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Blockchain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Blockchain/eth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ethereum utilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Blockchain/solidity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solidity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Python/pandas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pandas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Python/yfinance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Yfinance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Python/Data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Python/Data/altair/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Altair
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Rust
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Rust
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Cargo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cargo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Combinators/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Combinators
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Error/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Error handling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Crates
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            Crates
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Actix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    actix
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Clap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    clap
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Failure/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    failure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Gtk-rs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    gtk-rs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rnd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    rnd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rocket/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rocket
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Rusqlite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    rusqlite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Serde/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    serde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Structopt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    structopt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lazy_static/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    lazy_static
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_11" id="__nav_4_7_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Cursive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_7_11">
+            <span class="md-nav__icon md-icon"></span>
+            Cursive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#boilerplate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boilerplate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hello-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hello, World!
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation wizard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#starships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Starships
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#raven" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raven
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_7_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_7_12" id="__nav_4_7_12_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Diesel
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_12">
+            <span class="md-nav__icon md-icon"></span>
+            Diesel
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Diesel/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Diesel/Tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tasks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tasks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Boilerplate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tasks/Hello-World/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hello World
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tasks/Mathematics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mathematics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tasks/Porting-grep/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    grep ports
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tasks/To-Do/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To-Do
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Tasks/Transactions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transactions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="tasks">Tasks</h1>
+<h3 id="boilerplate">Boilerplate</h3>
+<dl>
+<dd>
+<p>Cursive apps are constructed procedurally using a succession of method calls, which require the main Cursive object (conventionally named "siv" in documentation) to be mutable.</p>
+<p>The <strong>default()</strong> function which sits at the root of the cursive module streamlines some of the boilerplate involved with calling <strong>Cursive::new()</strong> explicitly.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">default()</label><label for="__tabbed_1_2">Cursive::new()</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">default</span><span class="p">();</span>
+</span><span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_global_callback</span><span class="p">(</span><span class="sc">&#39;q&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">quit</span><span class="p">());</span>
+
+<span class="w">    </span><span class="c1">// ...</span>
+
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="hll"><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="p">{</span><span class="n">Cursive</span><span class="p">,</span><span class="w"> </span><span class="n">CursiveExt</span><span class="p">};</span><span class="w"> </span><span class="c1">// (1)</span>
+</span>
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cursive</span>::<span class="n">new</span><span class="p">();</span>
+</span><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="n">add_global_callback</span><span class="p">(</span><span class="sc">&#39;q&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">quit</span><span class="p">());</span>
+
+<span class="w">    </span><span class="c1">// ...</span>
+
+<span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>CursiveExt must be imported in order to call the <strong>run()</strong> method.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>Because Cursive depends on the ncurses backend, it won't work on Windows without additional modifications to Cargo.toml</p>
+<div class="highlight"><span class="filename">Cargo.toml</span><pre><span></span><code><span class="k">[dependencies.cursive]</span>
+<span class="n">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;0.16.3&quot;</span>
+<span class="n">default-features</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+
+<span class="k">[features]</span>
+<span class="n">default</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;pancurses-backend&quot;</span><span class="p">]</span>
+<span class="n">pancurses-backend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;cursive/pancurses-backend&quot;</span><span class="p">]</span>
+</code></pre></div>
+</dd>
+</dl>
+<h3 id="hello-world">Hello, World!</h3>
+<figure>
+<p><img alt="" src="../img/cursive-hw.png" /></p>
+</figure>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:5"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">TextView</label><label for="__tabbed_2_2">Dialog</label><label for="__tabbed_2_3">EditView</label><label for="__tabbed_2_4">Choice of greeting</label><label for="__tabbed_2_5">CLI integration</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">views</span>::<span class="n">TextView</span><span class="p">;</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">default</span><span class="p">();</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="hll"><span class="w">        </span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
+</span><span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">views</span>::<span class="n">TextView</span><span class="p">;</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">default</span><span class="p">();</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="hll"><span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+</span><span class="w">            </span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="s">&quot;Hello World!&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">view</span>::<span class="n">Nameable</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">views</span>::<span class="p">{</span><span class="n">Dialog</span><span class="p">,</span><span class="w"> </span><span class="n">EditView</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span><span class="w"> </span><span class="p">};</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">default</span><span class="p">();</span>
+<span class="w">    </span><span class="n">get_name</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="p">);</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_name</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// (1)</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">pop_layer</span><span class="p">();</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">new</span><span class="p">()</span>
+<span class="w">            </span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">&quot;Please enter name&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">content</span><span class="p">(</span><span class="n">EditView</span>::<span class="n">new</span><span class="p">().</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;message&quot;</span><span class="p">))</span><span class="w"> </span><span class="c1">// (2)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">greet_user</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="w">            </span><span class="p">})</span>
+<span class="w">            </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Quit&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span>::<span class="n">quit</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">greet_user</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">greeting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">format!</span><span class="p">(</span><span class="s">&quot;Hello, {}!&quot;</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="n">siv</span><span class="p">.</span><span class="n">call_on_name</span><span class="p">(</span><span class="s">&quot;message&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">t</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">EditView</span><span class="o">|</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">get_content</span><span class="p">())</span><span class="w"> </span><span class="c1">// (3)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">unwrap</span><span class="p">());</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">pop_layer</span><span class="p">();</span><span class="w"> </span><span class="c1">// (4)</span>
+<span class="hll"><span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+</span><span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="n">greeting</span><span class="p">))</span>
+<span class="w">            </span><span class="p">.</span><span class="n">title</span><span class="p">(</span><span class="s">&quot;Greetings!&quot;</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">get_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="p">),</span><span class="w"> </span><span class="c1">// (5)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>In order to implement multiple pages, the Cursive object must be passed as a mutable reference from function to function.</li>
+<li><strong>with_name()</strong>, only accessible after including the <a href="https://docs.rs/cursive/latest/cursive/view/trait.Nameable.html"><strong>Nameable</strong></a> trait, implicitly wraps the the view in a NamedView.</li>
+<li><a href="https://docs.rs/cursive/latest/cursive/struct.Cursive.html#method.call_on_name"><strong>call_on_name()</strong></a> allows a named View to be accessed.</li>
+<li>Each function in turn runs <strong>pop_layer()</strong> on the Cursive object to remove the previous View.</li>
+<li>This callback sends the user back to the first View, to repeat the process.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">view</span>::<span class="n">Nameable</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">views</span>::<span class="p">{</span><span class="n">Dialog</span><span class="p">,</span><span class="w"> </span><span class="n">EditView</span><span class="p">,</span><span class="w"> </span><span class="n">LinearLayout</span><span class="p">,</span><span class="w"> </span><span class="n">ListView</span><span class="p">,</span><span class="w"> </span><span class="n">RadioGroup</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span><span class="p">};</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">default</span><span class="p">();</span>
+<span class="w">    </span><span class="n">get_name</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="p">);</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_name</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">pop_layer</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">options</span>: <span class="nc">RadioGroup</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RadioGroup</span>::<span class="n">new</span><span class="p">();</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+<span class="w">            </span><span class="n">ListView</span>::<span class="n">new</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EditView</span>::<span class="n">new</span><span class="p">().</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span>
+<span class="w">                    </span><span class="s">&quot;Greeting&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">LinearLayout</span>::<span class="n">vertical</span><span class="p">()</span>
+<span class="w">                        </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="n">button_str</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">))</span>
+<span class="w">                        </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="n">button_str</span><span class="p">(</span><span class="s">&quot;Greetings&quot;</span><span class="p">)),</span>
+<span class="w">                </span><span class="p">),</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Ok&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">move</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">selection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;*</span><span class="n">options</span><span class="p">.</span><span class="n">selection</span><span class="p">();</span>
+<span class="w">            </span><span class="n">greet_user</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">selection</span><span class="p">);</span>
+<span class="w">        </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Quit&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span>::<span class="n">quit</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">greet_user</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">,</span><span class="w"> </span><span class="n">greeting</span>: <span class="kp">&amp;</span><span class="nb">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">siv</span>
+<span class="w">        </span><span class="p">.</span><span class="n">call_on_name</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">t</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">EditView</span><span class="o">|</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">get_content</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">unwrap</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">pop_layer</span><span class="p">();</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="fm">format!</span><span class="p">(</span><span class="s">&quot;{}, {}!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">greeting</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">)))</span>
+<span class="w">            </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Ok&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="n">get_name</span><span class="p">(</span><span class="n">s</span><span class="p">)),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">view</span>::<span class="n">Nameable</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">views</span>::<span class="p">{</span><span class="n">Dialog</span><span class="p">,</span><span class="w"> </span><span class="n">EditView</span><span class="p">,</span><span class="w"> </span><span class="n">LinearLayout</span><span class="p">,</span><span class="w"> </span><span class="n">ListView</span><span class="p">,</span><span class="w"> </span><span class="n">RadioGroup</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span><span class="p">};</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">default</span><span class="p">();</span>
+<span class="w">    </span><span class="n">get_name</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="p">);</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_name</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">pop_layer</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">options</span>: <span class="nc">RadioGroup</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RadioGroup</span>::<span class="n">new</span><span class="p">();</span>
+
+<span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">match</span><span class="w"> </span><span class="n">std</span>::<span class="n">env</span>::<span class="n">args</span><span class="p">().</span><span class="n">nth</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="w">        </span><span class="nb">Some</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">,</span>
+</span><span class="hll"><span class="w">        </span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&quot;World&quot;</span><span class="p">)</span>
+</span><span class="hll"><span class="w">    </span><span class="p">};</span>
+</span>
+<span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">editview</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EditView</span>::<span class="n">new</span><span class="p">()</span>
+</span><span class="hll"><span class="w">        </span><span class="p">.</span><span class="n">content</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+</span><span class="hll"><span class="w">        </span><span class="p">.</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">);</span>
+</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+<span class="w">            </span><span class="n">ListView</span>::<span class="n">new</span><span class="p">()</span>
+<span class="hll"><span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">editview</span><span class="p">)</span>
+</span><span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span>
+<span class="w">                    </span><span class="s">&quot;Greeting&quot;</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">LinearLayout</span>::<span class="n">vertical</span><span class="p">()</span>
+<span class="w">                        </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="n">button_str</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">))</span>
+<span class="w">                        </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="n">options</span><span class="p">.</span><span class="n">button_str</span><span class="p">(</span><span class="s">&quot;Greetings&quot;</span><span class="p">)),</span>
+<span class="w">                </span><span class="p">),</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Ok&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">move</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">selection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;*</span><span class="n">options</span><span class="p">.</span><span class="n">selection</span><span class="p">();</span>
+<span class="w">            </span><span class="n">greet_user</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">selection</span><span class="p">);</span>
+<span class="w">        </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Quit&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span>::<span class="n">quit</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">greet_user</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">,</span><span class="w"> </span><span class="n">greeting</span>: <span class="kp">&amp;</span><span class="nb">String</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">siv</span>
+<span class="w">        </span><span class="p">.</span><span class="n">call_on_name</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">t</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">EditView</span><span class="o">|</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">get_content</span><span class="p">())</span>
+<span class="w">        </span><span class="p">.</span><span class="n">unwrap</span><span class="p">();</span>
+
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">pop_layer</span><span class="p">();</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="fm">format!</span><span class="p">(</span><span class="s">&quot;{}, {}!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">greeting</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">)))</span>
+<span class="w">            </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Ok&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="n">get_name</span><span class="p">(</span><span class="n">s</span><span class="p">)),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="installation-wizard">Installation wizard</h3>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<h3 id="starships">Starships</h3>
+<figure>
+<p><img alt="" src="../img/cursive-starships.gif" /></p>
+</figure>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:6"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><input id="__tabbed_3_6" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">SelectView</label><label for="__tabbed_3_2">Enums</label><label for="__tabbed_3_3">Structs</label><label for="__tabbed_3_4">Vim keybindings</label><label for="__tabbed_3_5">JSON</label><label for="__tabbed_3_6">PostgreSQL</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">traits</span>::<span class="p">{</span><span class="n">Scrollable</span><span class="p">,</span><span class="w"> </span><span class="n">Resizable</span><span class="p">};</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">views</span>::<span class="p">{</span><span class="n">Dialog</span><span class="p">,</span><span class="w"> </span><span class="n">SelectView</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span><span class="p">};</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">default</span><span class="p">();</span>
+<span class="w">    </span><span class="n">list_ships</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="p">);</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">list_ships</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">pop_layer</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SelectView</span>::<span class="n">new</span><span class="p">();</span>
+<span class="w">    </span><span class="n">select</span><span class="p">.</span><span class="n">add_all_str</span><span class="p">(</span><span class="fm">vec!</span><span class="p">[</span><span class="s">&quot;USS Enterprise&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;USS Voyager&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;USS Reliant&quot;</span><span class="p">]);</span>
+<span class="w">    </span><span class="n">select</span><span class="p">.</span><span class="n">set_on_submit</span><span class="p">(</span><span class="n">show_ship</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+<span class="w">            </span><span class="n">select</span><span class="p">.</span><span class="n">scrollable</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="n">fixed_size</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">))</span>
+<span class="w">        </span><span class="p">).</span><span class="n">title</span><span class="p">(</span><span class="s">&quot;Choose a ship&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">show_ship</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">,</span><span class="w"> </span><span class="n">starship</span>: <span class="kp">&amp;</span><span class="kt">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">pop_layer</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">starship</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="n">starship</span><span class="p">).</span><span class="n">replace</span><span class="p">(</span><span class="s">&quot;USS &quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">format!</span><span class="p">(</span><span class="s">&quot;The {} is a fine ship!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">starship</span><span class="p">);</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+<span class="w">            </span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="n">list_ships</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Quit&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span>::<span class="n">quit</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">traits</span>::<span class="p">{</span><span class="n">Scrollable</span><span class="p">,</span><span class="w"> </span><span class="n">Resizable</span><span class="p">};</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">views</span>::<span class="p">{</span><span class="n">Dialog</span><span class="p">,</span><span class="w"> </span><span class="n">SelectView</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span><span class="p">};</span>
+
+<span class="hll"><span class="k">mod</span> <span class="nn">models</span><span class="p">;</span>
+</span><span class="hll"><span class="k">use</span><span class="w"> </span><span class="n">models</span>::<span class="n">Starships</span><span class="p">;</span><span class="w"> </span><span class="c1">// (1)</span>
+</span>
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">default</span><span class="p">();</span>
+<span class="w">    </span><span class="n">list_ships</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="p">);</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">list_ships</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">pop_layer</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SelectView</span>::<span class="n">new</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="n">with_all_str</span><span class="p">(</span><span class="fm">vec!</span><span class="p">[</span><span class="n">Starships</span>::<span class="n">Enterprise</span><span class="p">,</span><span class="w"> </span><span class="n">Starships</span>::<span class="n">Voyager</span><span class="p">,</span><span class="w"> </span><span class="n">Starships</span>::<span class="n">Defiant</span><span class="p">])</span>
+<span class="w">        </span><span class="p">.</span><span class="n">on_submit</span><span class="p">(</span><span class="n">show_ship</span><span class="p">);</span>
+
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+<span class="w">            </span><span class="n">select</span><span class="p">.</span><span class="n">scrollable</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="n">fixed_size</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">))</span>
+<span class="w">        </span><span class="p">).</span><span class="n">title</span><span class="p">(</span><span class="s">&quot;Choose a ship&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">show_ship</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">,</span><span class="w"> </span><span class="n">starship</span>: <span class="kp">&amp;</span><span class="kt">str</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">pop_layer</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">starship</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="n">starship</span><span class="p">).</span><span class="n">replace</span><span class="p">(</span><span class="s">&quot;USS &quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">format!</span><span class="p">(</span><span class="s">&quot;The {} is a fine ship!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">starship</span><span class="p">);</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+<span class="w">            </span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="n">text</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="n">list_ships</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Quit&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span>::<span class="n">quit</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>Implementing the list of starships as an enum is possible so long as the <strong>From&lt;Starships&gt;</strong> trait is implemented for String.
+<div class="highlight"><pre><span></span><code><span class="k">enum</span> <span class="nc">Starships</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Enterprise</span><span class="p">,</span><span class="w"> </span><span class="n">Defiant</span><span class="p">,</span><span class="w"> </span><span class="n">Voyager</span><span class="p">,</span><span class="w"> </span><span class="p">}</span>
+
+<span class="hll"><span class="k">impl</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="n">std</span>::<span class="n">convert</span>::<span class="nb">From</span><span class="o">&lt;</span><span class="n">Starships</span><span class="o">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="p">{</span>
+</span><span class="w">    </span><span class="k">fn</span> <span class="nf">from</span><span class="p">(</span><span class="n">item</span>: <span class="nc">Starships</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">String</span> <span class="p">{</span>
+<span class="w">        </span><span class="k">match</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Starships</span>::<span class="n">Enterprise</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&quot;USS Enterprise&quot;</span><span class="p">),</span>
+<span class="w">            </span><span class="n">Starships</span>::<span class="n">Defiant</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&quot;USS Defiant&quot;</span><span class="p">),</span>
+<span class="w">            </span><span class="n">Starships</span>::<span class="n">Voyager</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="s">&quot;USS Voyager&quot;</span><span class="p">),</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">traits</span>::<span class="p">{</span><span class="n">Scrollable</span><span class="p">,</span><span class="w"> </span><span class="n">Resizable</span><span class="p">};</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">views</span>::<span class="p">{</span><span class="n">Dialog</span><span class="p">,</span><span class="w"> </span><span class="n">SelectView</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span><span class="p">,</span><span class="w"> </span><span class="n">ListView</span><span class="p">};</span>
+
+<span class="hll"><span class="k">mod</span> <span class="nn">models</span><span class="p">;</span><span class="w"> </span><span class="c1">// (1)</span>
+</span><span class="hll"><span class="k">use</span><span class="w"> </span><span class="n">models</span>::<span class="n">Starship</span><span class="p">;</span>
+</span>
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">default</span><span class="p">();</span>
+<span class="w">    </span><span class="n">list_ships</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="p">);</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_ships</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Starship</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span>
+<span class="w">        </span><span class="n">Starship</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span>: <span class="s">&quot;USS Enterprise&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">registry</span>: <span class="s">&quot;NCC-1701&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">series</span>: <span class="nc">Series</span>::<span class="n">TOS</span><span class="p">},</span>
+<span class="w">        </span><span class="n">Starship</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span>: <span class="s">&quot;USS Defiant&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">registry</span>: <span class="s">&quot;NX-74205&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">series</span>: <span class="nc">Series</span>::<span class="n">DS9</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="n">Starship</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span>: <span class="s">&quot;USS Voyager&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">registry</span>: <span class="s">&quot;NCC-74656&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">series</span>: <span class="nc">Series</span>::<span class="n">VOY</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">];</span>
+<span class="w">        </span><span class="n">output</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">list_ships</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">ships</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_ships</span><span class="p">();</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">pop_layer</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SelectView</span>::<span class="n">new</span><span class="p">()</span>
+<span class="hll"><span class="w">        </span><span class="p">.</span><span class="n">with_all</span><span class="p">(</span><span class="n">ships</span><span class="p">.</span><span class="n">into_iter</span><span class="p">().</span><span class="n">map</span><span class="p">(</span><span class="o">|</span><span class="n">ship</span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">ship</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">ship</span><span class="p">)))</span><span class="w"> </span><span class="c1">// (2)</span>
+</span><span class="w">        </span><span class="p">.</span><span class="n">on_submit</span><span class="p">(</span><span class="n">show_ship</span><span class="p">);</span><span class="w"> </span><span class="c1">// (3)</span>
+
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+<span class="w">            </span><span class="n">select</span><span class="p">.</span><span class="n">scrollable</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="n">fixed_size</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">))</span>
+<span class="w">        </span><span class="p">).</span><span class="n">title</span><span class="p">(</span><span class="s">&quot;Choose a ship&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">show_ship</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">,</span><span class="w"> </span><span class="n">starship</span>: <span class="kp">&amp;</span><span class="nc">Starship</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+<span class="w">            </span><span class="n">ListView</span>::<span class="n">new</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Name:&quot;</span><span class="p">,</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="n">starship</span><span class="p">.</span><span class="n">name</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Registry:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="n">starship</span><span class="p">.</span><span class="n">registry</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Series:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="n">starship</span><span class="p">.</span><span class="n">series</span><span class="p">))</span>
+<span class="w">            </span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">list_ships</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Quit&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span>::<span class="n">quit</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>The Series enum must implement the Copy trait because it may not be moved in the detailed view. This is the <a href="https://doc.rust-lang.org/std/marker/trait.Copy.html#how-can-i-implement-copy">simpler method</a>.
+<div class="highlight"><pre><span></span><code><span class="cp">#[derive(Clone, Copy)]</span>
+<span class="k">enum</span> <span class="nc">Series</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">TOS</span><span class="p">,</span><span class="n">VOY</span><span class="p">,</span><span class="w"> </span><span class="n">DS9</span><span class="w"> </span><span class="p">}</span>
+
+<span class="k">impl</span><span class="w"> </span><span class="n">std</span>::<span class="n">convert</span>::<span class="nb">From</span><span class="o">&lt;</span><span class="n">Series</span><span class="o">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">fn</span> <span class="nf">from</span><span class="p">(</span><span class="n">item</span>: <span class="nc">Series</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">String</span> <span class="p">{</span>
+<span class="w">        </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="k">match</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Series</span>::<span class="n">TOS</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">&quot;The Original Series&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="n">Series</span>::<span class="n">VOY</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">&quot;Voyager&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="n">Series</span>::<span class="n">DS9</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">&quot;Deep Space Nine&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="p">})</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">struct</span> <span class="nc">Starship</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">name</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span><span class="p">,</span>
+<span class="w">    </span><span class="n">registry</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span><span class="p">,</span>
+<span class="w">    </span><span class="n">series</span>: <span class="nc">Series</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>Using <strong>with_all()</strong> or <strong>set_with_all()</strong> apparently requires a <a href="https://doc.rust-lang.org/stable/std/iter/struct.Map.html"><strong>Map</strong></a> struct, created by the <a href="https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html#method.map"><strong>map</strong></a> on <a href="https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html"><strong>Iterator</strong></a>. 
+The keys of this object define the text that appears in the SelectView, and the values define the data passed to the callback specified in <strong>on_submit()</strong>.</li>
+<li>Sometimes a bizarre and unhelpful compiler error will occur when this second value does not match the signature of the specified callback. 
+For example, changing <strong>ship</strong> to a unit type <strong>()</strong> will raise a compiler error:
+<div class="highlight"><pre><span></span><code>.on_submit(show_ship),
+ --------- ^^^^^^^^^ expected signature of `for&lt;&#39;r, &#39;s&gt; fn(&amp;&#39;r mut Cursive, &amp;&#39;s ()) -&gt; _`
+ |
+ required by a bound introduced by this call
+</code></pre></div></li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">traits</span>::<span class="p">{</span><span class="n">Scrollable</span><span class="p">,</span><span class="w"> </span><span class="n">Resizable</span><span class="p">};</span>
+<span class="hll"><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">views</span>::<span class="p">{</span><span class="n">Dialog</span><span class="p">,</span><span class="w"> </span><span class="n">SelectView</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span><span class="p">,</span><span class="w"> </span><span class="n">ListView</span><span class="p">,</span><span class="w"> </span><span class="n">OnEventView</span><span class="p">};</span>
+</span><span class="hll"><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">event</span>::<span class="n">EventResult</span><span class="p">;</span>
+</span>
+<span class="k">mod</span> <span class="nn">models</span><span class="p">;</span><span class="w"> </span><span class="c1">// (1)</span>
+<span class="k">use</span><span class="w"> </span><span class="n">models</span>::<span class="n">Starship</span><span class="p">;</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">default</span><span class="p">();</span>
+<span class="w">    </span><span class="n">list_ships</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="p">);</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_ships</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Starship</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[</span>
+<span class="w">        </span><span class="n">Starship</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span>: <span class="s">&quot;USS Enterprise&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">registry</span>: <span class="s">&quot;NCC-1701&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">series</span>: <span class="nc">Series</span>::<span class="n">TOS</span><span class="p">},</span>
+<span class="w">        </span><span class="n">Starship</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span>: <span class="s">&quot;USS Defiant&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">registry</span>: <span class="s">&quot;NX-74205&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">series</span>: <span class="nc">Series</span>::<span class="n">DS9</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="n">Starship</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span>: <span class="s">&quot;USS Voyager&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">registry</span>: <span class="s">&quot;NCC-74656&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">series</span>: <span class="nc">Series</span>::<span class="n">VOY</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">];</span>
+<span class="w">        </span><span class="n">output</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">list_ships</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">ships</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_ships</span><span class="p">();</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">pop_layer</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SelectView</span>::<span class="n">new</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="n">with_all</span><span class="p">(</span><span class="n">ships</span><span class="p">.</span><span class="n">into_iter</span><span class="p">().</span><span class="n">map</span><span class="p">(</span><span class="o">|</span><span class="n">ship</span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">ship</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">ship</span><span class="p">)))</span>
+<span class="w">        </span><span class="p">.</span><span class="n">on_submit</span><span class="p">(</span><span class="n">show_ship</span><span class="p">);</span>
+
+<span class="hll"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OnEventView</span>::<span class="n">new</span><span class="p">(</span><span class="n">select</span><span class="p">)</span>
+</span><span class="hll"><span class="w">        </span><span class="p">.</span><span class="n">on_event_inner</span><span class="p">(</span><span class="sc">&#39;k&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">cb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">select_up</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span><span class="hll"><span class="w">            </span><span class="nb">Some</span><span class="p">(</span><span class="n">EventResult</span>::<span class="n">Consumed</span><span class="p">(</span><span class="nb">Some</span><span class="p">(</span><span class="n">cb</span><span class="p">)))</span>
+</span><span class="hll"><span class="w">        </span><span class="p">})</span>
+</span><span class="hll"><span class="w">        </span><span class="p">.</span><span class="n">on_event_inner</span><span class="p">(</span><span class="sc">&#39;j&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">cb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">select_down</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</span><span class="hll"><span class="w">            </span><span class="nb">Some</span><span class="p">(</span><span class="n">EventResult</span>::<span class="n">Consumed</span><span class="p">(</span><span class="nb">Some</span><span class="p">(</span><span class="n">cb</span><span class="p">)))</span>
+</span><span class="hll"><span class="w">        </span><span class="p">});</span>
+</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+<span class="w">            </span><span class="n">select</span><span class="p">.</span><span class="n">scrollable</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="n">fixed_size</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">))</span>
+<span class="w">        </span><span class="p">).</span><span class="n">title</span><span class="p">(</span><span class="s">&quot;Choose a ship&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">show_ship</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">,</span><span class="w"> </span><span class="n">starship</span>: <span class="kp">&amp;</span><span class="nc">Starship</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+<span class="w">            </span><span class="n">ListView</span>::<span class="n">new</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Name:&quot;</span><span class="p">,</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="n">starship</span><span class="p">.</span><span class="n">name</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Registry:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="n">starship</span><span class="p">.</span><span class="n">registry</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Series:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="n">starship</span><span class="p">.</span><span class="n">series</span><span class="p">))</span><span class="w"> </span><span class="c1">// ...</span>
+<span class="w">            </span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">list_ships</span><span class="p">)</span>
+<span class="w">            </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Quit&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span>::<span class="n">quit</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li><div class="highlight"><span class="filename">models.rs</span><pre><span></span><code><span class="cp">#[derive(Clone, Copy)]</span>
+<span class="k">enum</span> <span class="nc">Series</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">TOS</span><span class="p">,</span><span class="w"> </span><span class="n">TNG</span><span class="p">,</span><span class="w"> </span><span class="n">VOY</span><span class="p">,</span><span class="w"> </span><span class="p">}</span>
+
+<span class="k">impl</span><span class="w"> </span><span class="n">std</span>::<span class="n">convert</span>::<span class="nb">From</span><span class="o">&lt;</span><span class="n">Series</span><span class="o">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">fn</span> <span class="nf">from</span><span class="p">(</span><span class="n">item</span>: <span class="nc">Series</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">String</span> <span class="p">{</span>
+<span class="w">        </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="k">match</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Series</span>::<span class="n">TOS</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">&quot;The Original Series&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="n">Series</span>::<span class="n">TNG</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">&quot;The Next Generation&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="n">Series</span>::<span class="n">VOY</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">&quot;Voyager&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="p">})</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">struct</span> <span class="nc">Starship</span><span class="o">&lt;&#39;</span><span class="na">a</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">name</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span><span class="p">,</span>
+<span class="w">    </span><span class="n">registry</span>: <span class="kp">&amp;</span><span class="o">&#39;</span><span class="na">a</span> <span class="kt">str</span><span class="p">,</span>
+<span class="w">    </span><span class="n">series</span>: <span class="nc">Series</span>
+<span class="p">}</span>
+</code></pre></div></li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">event</span>::<span class="n">EventResult</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">traits</span>::<span class="p">{</span><span class="n">Resizable</span><span class="p">,</span><span class="w"> </span><span class="n">Scrollable</span><span class="p">};</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">views</span>::<span class="p">{</span><span class="n">Dialog</span><span class="p">,</span><span class="w"> </span><span class="n">ListView</span><span class="p">,</span><span class="w"> </span><span class="n">OnEventView</span><span class="p">,</span><span class="w"> </span><span class="n">SelectView</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span><span class="p">};</span>
+
+<span class="hll"><span class="k">mod</span> <span class="nn">models</span><span class="p">;</span><span class="w"> </span><span class="c1">// (1)</span>
+</span><span class="hll"><span class="k">use</span><span class="w"> </span><span class="n">models</span>::<span class="n">Starship</span><span class="p">;</span>
+</span>
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">default</span><span class="p">();</span>
+<span class="w">    </span><span class="n">list_ships</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="p">);</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_ships</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span>::<span class="n">fs</span>::<span class="n">read_to_string</span><span class="p">(</span><span class="s">&quot;starships.json&quot;</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">output</span>: <span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serde_json</span>::<span class="n">from_str</span><span class="p">(</span><span class="o">&amp;</span><span class="n">f</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="n">output</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">list_ships</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">ships</span>: <span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_ships</span><span class="p">();</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">pop_layer</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SelectView</span>::<span class="n">new</span><span class="p">()</span>
+<span class="hll"><span class="w">        </span><span class="p">.</span><span class="n">with_all</span><span class="p">(</span><span class="n">ships</span><span class="p">.</span><span class="n">into_iter</span><span class="p">().</span><span class="n">map</span><span class="p">(</span><span class="o">|</span><span class="n">ship</span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">ship</span><span class="p">.</span><span class="n">name</span><span class="p">.</span><span class="n">clone</span><span class="p">(),</span><span class="w"> </span><span class="n">ship</span><span class="p">)))</span><span class="w"> </span><span class="c1">// (2)</span>
+</span><span class="w">        </span><span class="p">.</span><span class="n">on_submit</span><span class="p">(</span><span class="n">show_ship</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OnEventView</span>::<span class="n">new</span><span class="p">(</span><span class="n">select</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">on_event_inner</span><span class="p">(</span><span class="sc">&#39;k&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">cb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">select_up</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="nb">Some</span><span class="p">(</span><span class="n">EventResult</span>::<span class="n">Consumed</span><span class="p">(</span><span class="nb">Some</span><span class="p">(</span><span class="n">cb</span><span class="p">)))</span>
+<span class="w">        </span><span class="p">})</span>
+<span class="w">        </span><span class="p">.</span><span class="n">on_event_inner</span><span class="p">(</span><span class="sc">&#39;j&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">cb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">select_down</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="w">            </span><span class="nb">Some</span><span class="p">(</span><span class="n">EventResult</span>::<span class="n">Consumed</span><span class="p">(</span><span class="nb">Some</span><span class="p">(</span><span class="n">cb</span><span class="p">)))</span>
+<span class="w">        </span><span class="p">});</span>
+
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span><span class="n">select</span><span class="p">.</span><span class="n">scrollable</span><span class="p">().</span><span class="n">fixed_size</span><span class="p">((</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">))).</span><span class="n">title</span><span class="p">(</span><span class="s">&quot;Choose a ship&quot;</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">show_ship</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">,</span><span class="w"> </span><span class="n">starship</span>: <span class="kp">&amp;</span><span class="nc">Starship</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+<span class="w">            </span><span class="n">ListView</span>::<span class="n">new</span><span class="p">()</span>
+<span class="hll"><span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Name:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="o">&amp;</span><span class="n">starship</span><span class="p">.</span><span class="n">name</span><span class="p">))</span><span class="w"> </span><span class="c1">// (3)</span>
+</span><span class="hll"><span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Registry:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="o">&amp;</span><span class="n">starship</span><span class="p">.</span><span class="n">registry</span><span class="p">))</span>
+</span><span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Series:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="n">starship</span><span class="p">.</span><span class="n">series</span><span class="p">)),</span><span class="w"> </span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">list_ships</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Quit&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span>::<span class="n">quit</span><span class="p">),</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>The <strong>serde_derive::Deserialize</strong> derive is necessary for the mapped struct as well as the Series enum because it appears as a member of the Starship struct.
+<div class="highlight"><span class="filename">models.rs</span><pre><span></span><code><span class="hll"><span class="cp">#[derive(Clone, Copy, serde_derive::Deserialize)]</span>
+</span><span class="k">enum</span> <span class="nc">Series</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">TOS</span><span class="p">,</span>
+<span class="w">    </span><span class="n">DS9</span><span class="p">,</span>
+<span class="w">    </span><span class="n">VOY</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">impl</span><span class="w"> </span><span class="n">std</span>::<span class="n">convert</span>::<span class="nb">From</span><span class="o">&lt;</span><span class="n">Series</span><span class="o">&gt;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">fn</span> <span class="nf">from</span><span class="p">(</span><span class="n">item</span>: <span class="nc">Series</span><span class="p">)</span><span class="w"> </span>-&gt; <span class="nb">String</span> <span class="p">{</span>
+<span class="w">        </span><span class="nb">String</span>::<span class="n">from</span><span class="p">(</span><span class="k">match</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Series</span>::<span class="n">TOS</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">&quot;The Original Series&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="n">Series</span>::<span class="n">DS9</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">&quot;Deep Space Nine&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="n">Series</span>::<span class="n">VOY</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="s">&quot;Voyager&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="p">})</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="hll"><span class="cp">#[derive(serde_derive::Deserialize)]</span>
+</span><span class="k">struct</span> <span class="nc">Starship</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">name</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="n">registry</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="n">series</span>: <span class="nc">Series</span><span class="p">,</span>
+<span class="p">}</span><span class="w">    </span>
+</code></pre></div></li>
+<li>A <strong>clone()</strong> is necessary here, although I'm not sure why. A reference is not accepted.</li>
+<li>References are accepted here, as is a clone().</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="hll"><span class="cp">#[macro_use]</span><span class="w"> </span><span class="k">extern</span><span class="w"> </span><span class="k">crate</span><span class="w"> </span><span class="n">diesel</span><span class="p">;</span>
+</span><span class="hll"><span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">prelude</span>::<span class="o">*</span><span class="p">;</span><span class="w">  </span>
+</span><span class="hll"><span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">pg</span>::<span class="n">PgConnection</span><span class="p">;</span>
+</span><span class="hll"><span class="k">use</span><span class="w"> </span><span class="n">diesel</span>::<span class="n">result</span>::<span class="n">QueryResult</span><span class="p">;</span>
+</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">view</span>::<span class="p">{</span><span class="n">Nameable</span><span class="p">,</span><span class="w"> </span><span class="n">Resizable</span><span class="p">};</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">views</span>::<span class="p">{</span><span class="n">Dialog</span><span class="p">,</span><span class="w"> </span><span class="n">EditView</span><span class="p">,</span><span class="w"> </span><span class="n">ListView</span><span class="p">,</span><span class="w"> </span><span class="n">SelectView</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span><span class="p">};</span>
+
+<span class="k">mod</span> <span class="nn">models</span><span class="p">;</span><span class="w"> </span><span class="c1">// (3)</span>
+<span class="k">use</span><span class="w"> </span><span class="n">models</span>::<span class="n">Starship</span><span class="p">;</span>
+<span class="hll"><span class="k">mod</span> <span class="nn">schema</span><span class="p">;</span>
+</span><span class="hll"><span class="k">use</span><span class="w"> </span><span class="n">schema</span>::<span class="n">starships</span>::<span class="n">dsl</span>::<span class="o">*</span><span class="p">;</span>
+</span>
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">default</span><span class="p">();</span>
+<span class="w">    </span><span class="n">list_ships</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="p">);</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">get_ships</span><span class="p">()</span><span class="w"> </span>-&gt; <span class="nc">QueryResult</span><span class="o">&lt;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">dotenv</span>::<span class="n">dotenv</span><span class="p">().</span><span class="n">expect</span><span class="p">(</span><span class="s">&quot;Couldn&#39;t load .env file&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">std</span>::<span class="n">env</span>::<span class="n">var</span><span class="p">(</span><span class="s">&quot;DATABASE_URL&quot;</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">expect</span><span class="p">(</span><span class="s">&quot;Couldn&#39;t retrieve DATABASE_URL environment variable&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PgConnection</span>::<span class="n">establish</span><span class="p">(</span><span class="n">url</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="n">starships</span><span class="p">.</span><span class="n">load</span>::<span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">list_ships</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">ships</span>: <span class="nb">Vec</span><span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_ships</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">pop_layer</span><span class="p">();</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+<span class="w">            </span><span class="n">SelectView</span>::<span class="n">new</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="n">with_all</span><span class="p">(</span>
+<span class="w">                    </span><span class="n">ships</span>
+<span class="w">                        </span><span class="p">.</span><span class="n">into_iter</span><span class="p">()</span>
+<span class="w">                        </span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="o">|</span><span class="n">ship</span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="fm">format!</span><span class="p">(</span><span class="s">&quot;{} ({})&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ship</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">ship</span><span class="p">.</span><span class="n">registry</span><span class="p">),</span><span class="w"> </span><span class="n">ship</span><span class="p">)),</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="n">on_submit</span><span class="p">(</span><span class="n">show_ship</span><span class="p">)</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Quit&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span>::<span class="n">quit</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Add&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">add_ship</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">show_ship</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">,</span><span class="w"> </span><span class="n">ship</span>: <span class="kp">&amp;</span><span class="nc">Starship</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+<span class="w">            </span><span class="n">ListView</span>::<span class="n">new</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Name:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ship</span><span class="p">.</span><span class="n">name</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Registry:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ship</span><span class="p">.</span><span class="n">registry</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Crew:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="fm">format!</span><span class="p">(</span><span class="s">&quot;{}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ship</span><span class="p">.</span><span class="n">crew</span><span class="p">))),</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;OK&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">list_ships</span><span class="p">),</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">fn</span> <span class="nf">add_ship</span><span class="p">(</span><span class="n">siv</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">Cursive</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_connection</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span>
+<span class="w">        </span><span class="n">Dialog</span>::<span class="n">around</span><span class="p">(</span>
+<span class="w">            </span><span class="n">ListView</span>::<span class="n">new</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Name:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EditView</span>::<span class="n">new</span><span class="p">().</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Registry:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EditView</span>::<span class="n">new</span><span class="p">().</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;registry&quot;</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="n">child</span><span class="p">(</span><span class="s">&quot;Crew:&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">EditView</span>::<span class="n">new</span><span class="p">().</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;crew&quot;</span><span class="p">)),</span>
+<span class="w">        </span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="n">button</span><span class="p">(</span><span class="s">&quot;Ok&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">move</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">input_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span>
+<span class="w">                </span><span class="p">.</span><span class="n">call_on_name</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">t</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">EditView</span><span class="o">|</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">get_content</span><span class="p">())</span>
+<span class="w">                </span><span class="p">.</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">input_registry</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span>
+<span class="w">                </span><span class="p">.</span><span class="n">call_on_name</span><span class="p">(</span><span class="s">&quot;registry&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">t</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">EditView</span><span class="o">|</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">get_content</span><span class="p">())</span>
+<span class="w">                </span><span class="p">.</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">input_crew</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span>
+<span class="w">                </span><span class="p">.</span><span class="n">call_on_name</span><span class="p">(</span><span class="s">&quot;crew&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">t</span>: <span class="kp">&amp;</span><span class="nc">mut</span><span class="w"> </span><span class="n">EditView</span><span class="o">|</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">get_content</span><span class="p">())</span>
+<span class="w">                </span><span class="p">.</span><span class="n">unwrap</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="n">parse</span>::<span class="o">&lt;</span><span class="kt">i32</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="n">input</span>: <span class="nc">Starship</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Starship</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">name</span>:       <span class="p">(</span><span class="o">*</span><span class="n">input_name</span><span class="p">).</span><span class="n">clone</span><span class="p">(),</span><span class="w"> </span><span class="c1">// (2)</span>
+<span class="w">                </span><span class="n">registry</span>:   <span class="p">(</span><span class="o">*</span><span class="n">input_registry</span><span class="p">).</span><span class="n">clone</span><span class="p">(),</span>
+<span class="w">                </span><span class="n">crew</span>:       <span class="nc">input_crew</span><span class="p">,</span>
+<span class="w">            </span><span class="p">};</span>
+<span class="w">            </span><span class="n">input</span><span class="p">.</span><span class="n">insert_into</span><span class="p">(</span><span class="n">starships</span><span class="p">)</span><span class="w"> </span><span class="c1">// (4)</span>
+<span class="w">                </span><span class="p">.</span><span class="n">get_result</span>::<span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">)</span><span class="w"> </span><span class="c1">// (5)</span>
+<span class="w">                </span><span class="p">.</span><span class="n">unwrap</span><span class="p">();</span>
+<span class="w">            </span><span class="n">list_ships</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}).</span><span class="n">min_width</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li><div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="k">crate</span>::<span class="n">schema</span>::<span class="n">starships</span><span class="p">;</span>
+
+<span class="cp">#[derive(Debug, Queryable, Insertable)]</span>
+<span class="k">pub</span><span class="w"> </span><span class="k">struct</span> <span class="nc">Starship</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">name</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">registry</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">crew</span>: <span class="kt">i32</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li>Struct intiializations move values, so the String must be deeply copied, here using <a href="https://doc.rust-lang.org/std/clone/trait.Clone.html#tymethod.clone"><strong>String::clone</strong></a></li>
+<li><div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="k">crate</span>::<span class="n">schema</span>::<span class="n">starships</span><span class="p">;</span>
+
+<span class="cp">#[derive(Debug, Queryable, Insertable)]</span>
+<span class="k">pub</span><span class="w"> </span><span class="k">struct</span> <span class="nc">Starship</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">name</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">registry</span>: <span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">crew</span>: <span class="kt">i32</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></li>
+<li><a href="https://docs.rs/diesel/1.4.8/diesel/prelude/trait.Insertable.html#method.insert_into"><strong>insert_into</strong></a> is a method on the Insertable trait Equivalent to:
+<div class="highlight"><pre><span></span><code><span class="n">diesel</span>::<span class="n">insert_into</span><span class="p">(</span><span class="n">starships</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">values</span><span class="p">(</span><span class="o">&amp;</span><span class="n">input</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">get_result</span>::<span class="o">&lt;</span><span class="n">Starship</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">conn</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="n">unwrap</span><span class="p">();</span>
+</code></pre></div></li>
+<li>
+<p>Diesel collects various methods that execute a query into the <a href="https://docs.rs/diesel/1.4.8/diesel/query_dsl/trait.RunQueryDsl.html">RunQueryDsl trait</a>.
+These methods include:</p>
+<ul>
+<li><a href="https://docs.rs/diesel/1.4.8/diesel/query_dsl/trait.RunQueryDsl.html#method.get_result"><strong>get_result</strong></a> which returns the affected row</li>
+<li><a href="https://docs.rs/diesel/1.4.8/diesel/query_dsl/trait.RunQueryDsl.html#method.get_results"><strong>get_results</strong></a> which returns a Vec of affected rows</li>
+<li><a href="https://docs.rs/diesel/1.4.8/diesel/query_dsl/trait.RunQueryDsl.html#method.execute"><strong>execute</strong></a> which returns a usize of affected rows.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h3 id="raven">Raven</h3>
+<p>A multi-page wizard can be constructed with the <a href="https://github.com/deinstapel/cursive-tabs">cursive-tabs</a> crate.</p>
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">views</span>::<span class="p">{</span><span class="n">TextView</span><span class="p">};</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">view</span>::<span class="n">Nameable</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive_tabs</span>::<span class="n">TabPanel</span><span class="p">;</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">default</span><span class="p">();</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_global_callback</span><span class="p">(</span><span class="sc">&#39;q&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">quit</span><span class="p">());</span>
+
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">tabs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TabPanel</span>::<span class="n">new</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="n">with_tab</span><span class="p">(</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="fm">include_str!</span><span class="p">(</span><span class="s">&quot;assets/raven1&quot;</span><span class="p">)).</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="n">with_tab</span><span class="p">(</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="fm">include_str!</span><span class="p">(</span><span class="s">&quot;assets/raven2&quot;</span><span class="p">)).</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;2&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="n">with_tab</span><span class="p">(</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="fm">include_str!</span><span class="p">(</span><span class="s">&quot;assets/raven3&quot;</span><span class="p">)).</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;3&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="n">with_tab</span><span class="p">(</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="fm">include_str!</span><span class="p">(</span><span class="s">&quot;assets/raven4&quot;</span><span class="p">)).</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;4&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="n">with_tab</span><span class="p">(</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="fm">include_str!</span><span class="p">(</span><span class="s">&quot;assets/raven5&quot;</span><span class="p">)).</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;5&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">tabs</span><span class="p">);</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Key bindings are added as global callbacks. This functionality works because the TabPanel is nameable and can be retrieved by the callback by its name.</p>
+<div class="highlight"><pre><span></span><code><span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">views</span>::<span class="p">{</span><span class="n">TextView</span><span class="p">};</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">view</span>::<span class="n">Nameable</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">event</span>::<span class="n">Key</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="n">cursive_tabs</span>::<span class="n">TabPanel</span><span class="p">;</span>
+
+<span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">siv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cursive</span>::<span class="n">default</span><span class="p">();</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_global_callback</span><span class="p">(</span><span class="sc">&#39;q&#39;</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">quit</span><span class="p">());</span>
+
+<span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">tabs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TabPanel</span>::<span class="n">new</span><span class="p">()</span>
+<span class="w">        </span><span class="p">.</span><span class="n">with_tab</span><span class="p">(</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="fm">include_str!</span><span class="p">(</span><span class="s">&quot;assets/raven1&quot;</span><span class="p">)).</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="n">with_tab</span><span class="p">(</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="fm">include_str!</span><span class="p">(</span><span class="s">&quot;assets/raven2&quot;</span><span class="p">)).</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;2&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="n">with_tab</span><span class="p">(</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="fm">include_str!</span><span class="p">(</span><span class="s">&quot;assets/raven3&quot;</span><span class="p">)).</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;3&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="n">with_tab</span><span class="p">(</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="fm">include_str!</span><span class="p">(</span><span class="s">&quot;assets/raven4&quot;</span><span class="p">)).</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;4&quot;</span><span class="p">))</span>
+<span class="w">        </span><span class="p">.</span><span class="n">with_tab</span><span class="p">(</span><span class="n">TextView</span>::<span class="n">new</span><span class="p">(</span><span class="fm">include_str!</span><span class="p">(</span><span class="s">&quot;assets/raven5&quot;</span><span class="p">)).</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;5&quot;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">;</span>
+
+<span class="hll"><span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_layer</span><span class="p">(</span><span class="n">tabs</span><span class="p">.</span><span class="n">with_name</span><span class="p">(</span><span class="s">&quot;Tabs&quot;</span><span class="p">));</span>
+</span><span class="hll"><span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_global_callback</span><span class="p">(</span><span class="n">Key</span>::<span class="n">PageUp</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">tabs</span>: <span class="nc">cursive</span>::<span class="n">views</span>::<span class="n">ViewRef</span><span class="o">&lt;</span><span class="n">TabPanel</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">find_name</span><span class="p">(</span><span class="s">&quot;Tabs&quot;</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span>
+</span><span class="hll"><span class="w">        </span><span class="n">tabs</span><span class="p">.</span><span class="n">prev</span><span class="p">();</span>
+</span><span class="hll"><span class="w">    </span><span class="p">});</span>
+</span><span class="hll"><span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">add_global_callback</span><span class="p">(</span><span class="n">Key</span>::<span class="n">PageDown</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="n">s</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+</span><span class="hll"><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">tabs</span>: <span class="nc">cursive</span>::<span class="n">views</span>::<span class="n">ViewRef</span><span class="o">&lt;</span><span class="n">TabPanel</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">find_name</span><span class="p">(</span><span class="s">&quot;Tabs&quot;</span><span class="p">).</span><span class="n">unwrap</span><span class="p">();</span>
+</span><span class="hll"><span class="w">        </span><span class="n">tabs</span><span class="p">.</span><span class="n">next</span><span class="p">();</span>
+</span><span class="hll"><span class="w">    </span><span class="p">});</span>
+</span>
+<span class="w">    </span><span class="n">siv</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.sections", "navigation.expand", "toc.integrate", "content.code.annotate", "content.code.copy", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.caa56a14.min.js"></script>
+      
+    
+  </body>
+</html>
