@@ -1938,28 +1938,32 @@ yield scrapy.Request(url={url}, callback=self.parse_details)
 
         [Sockets tutorial](https://youtu.be/Lbfe3-v7yE0)
 
-### sqlite3
+<div class="grid cards" markdown>
 
-Create a `Connect` connection object and **employee.db** (binary) if it doesn't exist
-```py
-conn = sqlite.connect('employee.db')
-```
-Create a `Connect.Cursor` object
-```py
-c = conn.cursor()
-```
-Perform SQL commands with `Connect.Cursor.execute()`. Create `tablename` with fields `field` of type `type` (`null`, `integer`, `real`, `text`, `blob`); never use Python's native string operations (f-strings, etc) to form commands, because this method is vulnerable to SQL injection. <sup>[YouTube](https://youtu.be/pd-0G0MigUA)</sup>
-```py
-c.execute('''CREATE TABLE {tablename} ({field} {type}, {field} {type} ...))
-``` 
-Save changes
-```py
-conn.commit()
-```
-Close connection
-```py
-conn.close()
-```
+-   #### sqlite3
+
+    ---
+
+
+    ```py
+    # Create a Connect connection object and employee.db if it doesn't exist
+    conn = sqlite.connect('employee.db')
+
+    # Create a Connect.Cursor object
+    c = conn.cursor()
+
+    c.execute('''CREATE TABLE {tablename} ({field} {type}, {field} {type} ...))
+    # Save changes
+    conn.commit()
+
+    # Close connection
+    conn.close()
+    ```
+
+    Perform SQL commands with `Connect.Cursor.execute()`. Create `tablename` with fields `field` of type `type` (`null`, `integer`, `real`, `text`, `blob`); never use Python's native string operations (f-strings, etc) to form commands, because this method is vulnerable to SQL injection. <sup>[YouTube](https://youtu.be/pd-0G0MigUA)</sup>
+
+</div>
+
 ### subprocess
 
 **subprocess** modules allows you to spawn new processes, interact with file descriptors, and obtain exit codes. The recommended approach is to use the `run()` function as default, which runs a CLI command with options as a list of strings and returns a `CompletedProcess` instance.\

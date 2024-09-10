@@ -1,0 +1,18 @@
+[std]:          https://doc.rust-lang.org/stable/std/
+[std::convert]: https://doc.rust-lang.org/stable/std/convert/
+[std::env]:     https://doc.rust-lang.org/stable/std/env/
+[std::fmt]:     https://doc.rust-lang.org/stable/std/fmt
+[std::fs]:      https://doc.rust-lang.org/stable/std/fs/
+[std::io]:      https://doc.rust-lang.org/stable/std/io/
+[std::iter]:    https://doc.rust-lang.org/stable/std/iter/
+[std::net]:     https://doc.rust-lang.org/stable/std/net/
+[std::path]:    https://doc.rust-lang.org/stable/std/path/
+[std::str]:     https://doc.rust-lang.org/std/primitive.str.html
+[std::sync]:    https://doc.rust-lang.org/stable/std/sync/
+[std::thread]:  https://doc.rust-lang.org/stable/std/thread/
+[std::time]:    https://doc.rust-lang.org/stable/std/time/
+
+[clap::ArgMatches]: https://docs.rs/clap/latest/clap/struct.ArgMatches.html
+[clap::Command]: https://docs.rs/clap/latest/clap/struct.Command.html
+[clap::Arg]: https://docs.rs/clap/latest/clap/struct.Arg.html
+

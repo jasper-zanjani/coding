@@ -1,0 +1,9 @@
+[package]
+name = "alternate-screen"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.5.11", features = ["cargo"] }
+crossterm = "0.27.0"
+ratatui = "0.27.0"

@@ -3,3 +3,6 @@ site/**
 **.bz2
 .vscode/**
 scratch/**
+**/Cargo.lock
+**/target
+**/.git

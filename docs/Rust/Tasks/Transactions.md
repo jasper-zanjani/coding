@@ -1,7 +1,0 @@
-# Transactions
-
-#### Simple
-
-```rs
-
-```
