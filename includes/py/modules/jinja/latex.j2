@@ -1,0 +1,25 @@
+% Begin document
+\documentclass[12pt,letterpaper]{exam}
+\usepackage{multicol}
+\usepackage{geometry}
+\geometry{letterpaper, tmargin=1in, bmargin=1in, lmargin=1in, rmargin=1in}
+
+{{ prelude }}
+
+\begin{document}
+\title { {{ document_title }} }
+\author{ Daddy }
+\maketitle
+
+\begin{multicols}{ {{ columns }} }
+\begin{questions}
+
+{% for problem in problems %}\item {{ problem }}
+{% endfor %}
+
+\end{questions}
+\end{multicols}
+
+% End document
+\vfill
+\end{document}

@@ -1,0 +1,7 @@
+
+Download an RFC file from rfc-editor.org
+
+```py
+rfc_raw = urllib.request.urlopen(url).read()
+rfc = rfc_raw.decode()
+```
