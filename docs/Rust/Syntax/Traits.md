@@ -1,15 +1,15 @@
 # Traits
 
---8<-- "includes/rs/Topics/Traits.md"
+--8<-- "includes/rs/Topics/traits.md"
 
---8<-- "includes/rs/Topics/Trait-Bounds.md"
+--8<-- "includes/rs/Topics/trait-bounds.md"
 
---8<-- "includes/rs/Topics/Trait-Objects.md"
+--8<-- "includes/rs/Topics/trait-objects.md"
 
---8<-- "includes/rs/Topics/Self.md"
+--8<-- "includes/rs/Topics/self.md"
 
 ## Iterators
 
---8<-- "includes/rs/Topics/Iterators.md"
+--8<-- "includes/rs/Topics/iterators.md"
 
 --8<-- "includes/rs/links.md"

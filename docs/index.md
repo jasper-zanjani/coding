@@ -1,3 +1,32 @@
+## Syscalls
+
+In Rust, the **nix** crate can be used for syscalls, but depending on the type, the proper feature flag must be used (i.e. "process" for `getpid`, etc)
+
+<div class="grid cards" markdown>
+
+-   
+
+    ```c
+    --8<-- "includes/c/syscalls/syscalls0.c"
+    ```
+
+-   
+
+    === "src/main.rs"
+
+        ```rs
+        --8<-- "includes/rs/syscalls/syscalls0.rs"
+        ```
+
+    === "Cargo.toml"
+
+        ```toml
+        --8<-- "includes/rs/syscalls/syscalls0.toml"
+        ```
+
+</div>
+
+
 
 ## S/360
 

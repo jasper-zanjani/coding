@@ -11,8 +11,3 @@
 [std::sync]:    https://doc.rust-lang.org/stable/std/sync/
 [std::thread]:  https://doc.rust-lang.org/stable/std/thread/
 [std::time]:    https://doc.rust-lang.org/stable/std/time/
-
-[clap::ArgMatches]: https://docs.rs/clap/latest/clap/struct.ArgMatches.html
-[clap::Command]: https://docs.rs/clap/latest/clap/struct.Command.html
-[clap::Arg]: https://docs.rs/clap/latest/clap/struct.Arg.html
-

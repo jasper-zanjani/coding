@@ -1,10 +1,10 @@
 # Glossary
 
+
 *[TOML]: Tom's Obvious Minimal Language
 *[LIFO]: Last-In First-Out
 *[RPL]: Klabnik, Steve and Nichols, Carol. <i>The Rust Programming Language</i>. 2019.
 *[FFI]: Foreign Function Interface, a way for a programming language to define functions and enable a different programming language to call them. <i>The Rust Programming Language</i>. 2019.
-
 
 **Associated type**{: #associated-type }
 :   
