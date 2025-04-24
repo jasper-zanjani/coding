@@ -6,3 +6,4 @@ scratch/**
 **/Cargo.lock
 **/target
 **/.git
+**/__pycache__

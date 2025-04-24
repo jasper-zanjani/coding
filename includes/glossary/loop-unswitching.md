@@ -1,0 +1,1 @@
+**Loop unswitching**: one of the core optimizations that a C compiler performs, whereby a loop containing a conditional is transformed into a conditional with a loop in both parts, which changes flow control

@@ -1,15 +1,5 @@
 # Python
 
-!!! info "Glossary"
-
-    **Method resolution order (MRO)** is the order of base classes that are searched when using **super()**. 
-    It is accessed with **\_\_mro\_\_**, which returns a tuple of base classes in order of precedence, ending in `object` which is the root class of all classes.
-    ([src](https://rhettinger.wordpress.com/2011/05/26/super-considered-super/))
-
-    **Non-interactive debugging** is the most basic form of debugging, dependent on `print` or `log` statements placed within the body of code.
-
-    A **type slot** is any of a number of fields within each magic method, including `__new__()`, `__init__()`, and `__prepare__()` (which returns a dictionary-like object that's used as the local namespace for all code from the class body)
-
 
 ## Tasks
 

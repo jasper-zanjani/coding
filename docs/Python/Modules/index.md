@@ -343,20 +343,17 @@ import main.py # Error
     )
     ```
 
-    Reserve the name, upload package metadata, and create the pypi.python.org webpage
     ```py
+    # Reserve the name, upload package metadata, and create the pypi.python.org webpage
     python setup.py register
-    ```
-    Create a source distribution, producing a tarball inside the top-level directory
-    ```py
+
+    # Create a source distribution, producing a tarball inside the top-level directory
     python setup.py sdist
-    ```
-    Upload the source distribution
-    ```py
+
+    # Upload the source distribution
     python setup.py sdist upload
-    ```
-    Do all the above in a single step
-    ```py
+
+    # Do all the above in a single step
     python setup.py register sdist upload
     ```
 

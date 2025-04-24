@@ -1,0 +1,1 @@
+**type slot**: any of a number of fields within each magic method, including `__new__()`, `__init__()`, and `__prepare__()` (which returns a dictionary-like object that's used as the local namespace for all code from the class body)

@@ -1,6 +1,4 @@
-# click
-
-`Click` modifies functions using decorators whch determine the command-line arguments elements that the decorated function can see.
+**click** modifies functions using decorators whch determine the command-line arguments elements that the decorated function can see.
 
 Hello World program. <sup>[Click](https://click.palletsprojects.com/en/7.x/quickstart/#screencast-and-examples "Quickstart - Click Documentation")
 ```py
