@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="ExampleAppWindow" parent="GtkApplicationWindow">
+    <property name="title">Custom Widget with Blueprint</property>
+    <property name="default-width">400</property>
+    <property name="default-height">350</property>
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <property name="spacing">12</property>
+        <property name="margin-top">12</property>
+        <property name="margin-bottom">12</property>
+        <property name="margin-start">12</property>
+        <property name="margin-end">12</property>
+
+        <child>
+          <object class="GtkLabel">
+            <property name="label">A Custom Drawn Circle Below:</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="MyCircleWidget" id="my_custom_circle">
+            <property name="vexpand">true</property>
+            <property name="hexpand">true</property>
+            <property name="color">rgb(0,0,255)</property>
+            </object>
+        </child>
+
+        <child>
+          <object class="GtkButton" id="change_color_button">
+            <property name="label">Change Circle to Green</property>
+            <signal name="clicked" handler="change_color_button_clicked"/>
+          </object>
+        </child>
+
+      </object>
+    </child>
+  </template>
+</interface>

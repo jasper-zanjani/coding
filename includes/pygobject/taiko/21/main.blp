@@ -1,0 +1,25 @@
+using Gtk 4.0;
+using Adw 1;
+
+ApplicationWindow main_window {
+  title: _("Learning Cairo");
+  default-width: 600;
+  default-height: 250;
+
+  Box box1 {
+    orientation: horizontal;
+
+    Box box2 {
+      orientation: vertical;
+    }
+
+    Box box3 {
+      orientation: vertical;
+
+      DrawingArea dw {
+        hexpand: true;
+        vexpand: true;
+      }
+    }
+  }
+}

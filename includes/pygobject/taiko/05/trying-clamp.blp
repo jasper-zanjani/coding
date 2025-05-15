@@ -1,0 +1,31 @@
+using Gtk 4.0;
+using Adw 1;
+
+ApplicationWindow main_window {
+  title: "Taiko's Tutorial using Blueprint";
+  default-height: 250;
+  default-width: 600;
+
+  Adw.Clamp clamp {
+    maximum-size: 400;
+    tightening-threshold: 200;
+
+    Button button_hello {
+      label: "Hello";
+    }
+  }
+
+  /* 
+  Box {
+    orientation: vertical;
+    margin-bottom: 5;
+    margin-top: 5;
+    margin-start: 5;
+    margin-end: 5;
+
+    Button button_hello {
+      label: "Hello";
+    }
+  }
+  */
+}

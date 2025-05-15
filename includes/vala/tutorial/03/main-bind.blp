@@ -1,0 +1,27 @@
+using Gtk 4.0;
+using Adw 1;
+
+ApplicationWindow main_window {
+  Box hbox {
+    orientation: horizontal;
+    spacing: 5;
+    homogeneous: true;
+
+    SpinButton spin_box {
+      adjustment: Gtk.Adjustment {
+        lower: 0;
+        upper: 130;
+        step-increment: 1;
+      };
+    }
+
+    Scale slider {
+      orientation: horizontal;
+      adjustment: Gtk.Adjustment {
+        lower: 0;
+        upper: 130;
+        step-increment: 1;
+      };
+    }
+  }
+}

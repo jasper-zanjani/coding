@@ -1,0 +1,2 @@
+# Verify installation
+flutter doctor

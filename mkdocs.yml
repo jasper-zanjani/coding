@@ -1,6 +1,5 @@
 site_name: Coding
 site_url: https://jasper-zanjani.github.io/coding
-site_dir: /home/jasper/Documents/mkdocs/coding
 theme:
   name: material
   favicon: img/logo.png
@@ -28,6 +27,9 @@ markdown_extensions:
   - md_in_html
   - meta
   - pymdownx.details
+  - pymdownx.emoji: # from https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#emoji
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.snippets
   - pymdownx.superfences:
       custom_fences:

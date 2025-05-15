@@ -7,3 +7,4 @@ scratch/**
 **/target
 **/.git
 **/__pycache__
+**/**.bak

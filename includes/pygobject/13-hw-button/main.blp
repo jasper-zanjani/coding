@@ -1,0 +1,24 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ToastOverlay overlay {
+  Adw.ApplicationWindow main_window {
+    default-width: 400;
+    default-height: 200;
+
+    Box box {
+      halign: center;
+      valign: center;
+      orientation: vertical;
+
+      Label label {
+        label: "Hello, World!";
+        margin-bottom: 20;
+      }
+
+      Button button {
+        label: "Greet";
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ApplicationWindow main_window {
+  Adw.ToolbarView {
+
+    [top]
+    Adw.HeaderBar {
+      [end]
+      MenuButton {
+        icon-name: "document-open-symbolic";
+        menu-model: menu;
+      }
+    }
+  }
+}
+
+menu menu {
+  item ( "Aristotle", "", "document-new-symbolic")
+  item ( "Plato", "", "document-open-symbolic")
+  item ("Socrates", "", "open-menu-symbolic")
+}

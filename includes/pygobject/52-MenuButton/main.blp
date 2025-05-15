@@ -1,0 +1,22 @@
+using Gtk 4.0;
+using Adw 1;
+
+ApplicationWindow main_window {
+  title: _("Boilerplate");
+  default-height: 250;
+  default-width: 600;
+
+  [titlebar]
+  HeaderBar {
+    
+    [start]
+    MenuButton {
+      icon-name: "open-menu-symbolic";
+    }
+
+    [end]
+    MenuButton {
+      icon-name: "document-open-symbolic";
+    }
+  }
+}

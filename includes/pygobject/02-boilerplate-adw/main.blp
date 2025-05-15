@@ -1,0 +1,13 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ApplicationWindow main_window {
+  title: _("Boilerplate (Adwaita)");
+  default-height: 250;
+  default-width: 600;
+
+  Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {}
+  }
+}

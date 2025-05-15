@@ -1,6 +1,6 @@
 # GTK
 
---8<-- "includes/py/gtk/links.md"
+--8<-- "includes/pygobject/links.md"
 
 ## [Adw][Adw]
 
@@ -9,7 +9,7 @@
 #### [Application][Adw.Application]
 
 ```py
---8<-- "includes/py/gtk/02.py"
+--8<-- "includes/pygobject/02.py"
 ```
 
 ## Gio

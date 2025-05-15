@@ -1,0 +1,20 @@
+using Gtk 4.0;
+
+ApplicationWindow main_window {
+  Box {
+    orientation: vertical;
+    halign: center;
+    valign: center;
+    spacing: 12;
+
+    Label label {
+      label: bind entry.text;
+    }
+
+    Entry entry {
+      margin-top: 12;
+      text: "Hello, World!";
+      halign: center;
+    }
+  }
+}

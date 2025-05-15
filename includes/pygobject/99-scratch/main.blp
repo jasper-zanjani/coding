@@ -1,0 +1,27 @@
+using Gtk 4.0;
+using Adw 1;
+
+ApplicationWindow main_window {
+  title: _("Scratchpad (playing around)");
+  default-width: 600;
+  default-height: 250;
+
+  [titlebar]
+  HeaderBar {}
+
+  Adw.Clamp {
+    maximum-size: 500;
+
+    Box {
+      orientation: vertical;
+      styles ['bordered-box']
+
+      ListBox {
+        selection-mode: none;
+        Adw.ActionRow { title: "Testing action row"; }
+        Adw.ActionRow { title: "Testing action row"; }
+        Adw.EntryRow { title: "Enter name"; }
+      }
+    }
+  }
+}

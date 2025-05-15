@@ -1,0 +1,51 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $TextEditorWindow: Adw.ApplicationWindow {
+  default-width: 800;
+  default-height: 600;
+  title: "Jasper's Text Editor";
+
+  content: Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {
+      [start]
+      Button open_button {
+        label: "Open";
+        action-name: "win.open";
+      }
+
+      [end]
+      MenuButton {
+        primary: true;
+        icon-name: "open-menu-symbolic";
+        tooltip-text: _("Main Menu");
+        menu-model: primary_menu;
+      }
+    }
+
+    content: ScrolledWindow {
+      hexpand: true;
+      vexpand: true;
+      margin-top: 6;
+      margin-bottom: 6;
+      margin-start: 6;
+      margin-end: 6;
+
+      child: TextView textview {
+        monospace: true;
+      };
+    };
+  };
+}
+
+menu primary_menu {
+  section {
+    item ( _("_Save as"), "win.save-as" )
+    item ( _("_Preferences"), "app.preferences" )
+    item ( _("_Keyboard Shortcuts"), "win.show-help-overlay" )
+    item ( _("_About Text-editor"), "app.about" )
+  }
+}
+
+

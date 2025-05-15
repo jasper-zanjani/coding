@@ -1,0 +1,52 @@
+using Gtk 4.0;
+using Adw 1;
+
+ApplicationWindow main_window {
+  default-height: 250;
+  default-width: 600;
+  title: "Taiko's Tutorial using Blueprint";
+
+  [titlebar]
+  HeaderBar {
+    [start]
+    Button open_button {
+      label: _("Open");
+      icon-name: "document-open-symbolic";
+    }
+  }
+
+  Box box1 {
+    orientation: horizontal;
+
+    Box box2 {
+      orientation: vertical;
+      margin-bottom: 5;
+      margin-top: 5;
+      margin-start: 5;
+      margin-end: 5;
+
+      Button button_hello {
+        label: "Hello";
+      }
+
+      CheckButton socrates {
+        label: "Socrates";
+        active: true;
+      }
+
+      CheckButton plato {
+        label: "Plato";
+        group: socrates;
+      }
+
+      CheckButton aristotle {
+        label: "Aristotle";
+        group: socrates;
+      }
+
+    }
+    Box box3 { 
+      orientation: vertical;
+    }
+  }
+}

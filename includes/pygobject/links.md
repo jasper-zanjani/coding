@@ -1,0 +1,5 @@
+--8<-- "includes/pygobject/links/adw.md"
+--8<-- "includes/pygobject/links/gio.md"
+--8<-- "includes/pygobject/links/glib.md"
+--8<-- "includes/pygobject/links/gtk.md"
+--8<-- "includes/pygobject/links/etc.md"
