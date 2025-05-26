@@ -1,30 +1,103 @@
 <!-- Gtk4 links -->
-[Gtk]:              https://api.pygobject.gnome.org/Gtk-4.0/
-[Gtk.AboutDialog]:  https://api.pygobject.gnome.org/Gtk-4.0/class-AboutDialog.html
-[Gtk.Adjustment]:   https://api.pygobject.gnome.org/Gtk-4.0/class-Adjustment.html
-[Gtk.Application]:  https://api.pygobject.gnome.org/Gtk-4.0/class-Application.html
-[Gtk.ApplicationWindow]: https://api.pygobject.gnome.org/Gtk-4.0/class-ApplicationWindow.html
-[Gtk.Box]:          https://api.pygobject.gnome.org/Gtk-4.0/class-Box.html
-[Gtk.Builder]:      https://api.pygobject.gnome.org/Gtk-4.0/class-Builder.html
-[Gtk.Button]:       https://api.pygobject.gnome.org/Gtk-4.0/class-Button.html
-[Gtk.CheckButton]:  https://api.pygobject.gnome.org/Gtk-4.0/class-CheckButton.html
-[Gtk.CssProvider]:  https://api.pygobject.gnome.org/Gtk-4.0/class-CssProvider.html
-[Gtk.DrawingArea]:  https://api.pygobject.gnome.org/Gtk-4.0/class-DrawingArea.html
-[Gtk.FileDialog]:   https://api.pygobject.gnome.org/Gtk-4.0/class-FileDialog.html
-[Gtk.FileFilter]:   https://api.pygobject.gnome.org/Gtk-4.0/class-FileFilter.html
-[Gtk.GridView]:     https://api.pygobject.gnome.org/Gtk-4.0/class-GridView.html
-[Gtk.HeaderBar]:    https://api.pygobject.gnome.org/Gtk-4.0/class-HeaderBar.html
-[Gtk.Label]:        https://api.pygobject.gnome.org/Gtk-4.0/class-Label.html
-[Gtk.MenuButton]:   https://api.pygobject.gnome.org/Gtk-4.0/class-MenuButton.html
-[Gtk.PopoverMenu]:  https://api.pygobject.gnome.org/Gtk-4.0/class-PopoverMenu.html
-[Gtk.Range]:        https://api.pygobject.gnome.org/Gtk-4.0/class-Range.html#gi.repository.Gtk.Range.get_value
-[Gtk.Scale]:        https://api.pygobject.gnome.org/Gtk-4.0/class-Scale.html
-[Gtk.ScrolledWindow]: https://api.pygobject.gnome.org/Gtk-4.0/class-ScrolledWindow.html
-[Gtk.SignalListItemFactory]: https://api.pygobject.gnome.org/Gtk-4.0/class-SignalListItemFactory.html
-[Gtk.SingleSelection]: https://api.pygobject.gnome.org/Gtk-4.0/class-SingleSelection.html
-[Gtk.Snapshot]:     https://api.pygobject.gnome.org/Gtk-4.0/class-Snapshot.html
-[Gtk.SpinButton]:   https://api.pygobject.gnome.org/Gtk-4.0/class-SpinButton.html
-[Gtk.StyleContext]: https://api.pygobject.gnome.org/Gtk-4.0/class-StyleContext.html
-[Gtk.Template]:     https://api.pygobject.gnome.org/Gtk-4.0/class-Template.html
-[Gtk.TextView]:     https://api.pygobject.gnome.org/Gtk-4.0/class-TextView.html
-[Gtk.Window]:       https://api.pygobject.gnome.org/Gtk-4.0/class-Window.html
+[Gtk]:
+    https://api.pygobject.gnome.org/Gtk-4.0/
+[Gtk.AboutDialog]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-AboutDialog.html
+[Gtk.Adjustment]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Adjustment.html
+[Gtk.Application]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Application.html
+[Gtk.ApplicationWindow]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-ApplicationWindow.html
+[Gtk.Box]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Box.html
+[Gtk.Builder]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Builder.html
+[Gtk.BuilderListItemFactory]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-BuilderListItemFactory.html
+[Gtk.ListItemFactory]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-ListItemFactory.html
+[Gtk.ListView]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-ListView.html
+[Gtk.Button]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Button.html
+[Gtk.CheckButton]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-CheckButton.html
+[Gtk.ColumnView]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-ColumnView.html
+[Gtk.ColumnViewCell]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-ColumnViewCell.html
+[Gtk.ColumnViewRow]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-ColumnViewRow.html
+[Gtk.CssProvider]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-CssProvider.html
+[Gtk.DrawingArea]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-DrawingArea.html
+[Gtk.FileDialog]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-FileDialog.html
+[Gtk.FileFilter]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-FileFilter.html
+[Gtk.Gesture]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Gesture.html
+[Gtk.GridView]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-GridView.html
+[Gtk.HeaderBar]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-HeaderBar.html
+[Gtk.Image]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Image.html
+[Gtk.Label]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Label.html
+[Gtk.ListBox]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-ListBox.html
+[Gtk.ListBoxRow]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-ListBoxRow.html
+[Gtk.ListItem]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-ListItem.html
+[Gtk.ListItemFactory]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-ListItemFactory.html
+[Gtk.MenuButton]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-MenuButton.html
+[Gtk.MultiSelection]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-MultiSelection.html
+[Gtk.NoSelection]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-NoSelection.html
+[Gtk.Picture]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Picture.html
+[Gtk.PopoverMenu]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-PopoverMenu.html
+[Gtk.PropertyExpression]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-PropertyExpression.html
+[Gtk.Range]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Range.html#gi.repository.Gtk.Range.get_value
+[Gtk.Scale]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Scale.html
+[Gtk.ScrolledWindow]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-ScrolledWindow.html
+[Gtk.SelectionModel]:
+    https://api.pygobject.gnome.org/Gtk-4.0/interface-SelectionModel.html
+[Gtk.SignalListItemFactory]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-SignalListItemFactory.html
+[Gtk.SingleSelection]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-SingleSelection.html
+[Gtk.Snapshot]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Snapshot.html
+[Gtk.SpinButton]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-SpinButton.html
+[Gtk.Stack]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Stack.html
+[Gtk.StackPage]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-StackPage.html
+[Gtk.StringList]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-StringList.html
+[Gtk.StringSorter]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-PropertyExpression.html
+[Gtk.StyleContext]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-StyleContext.html
+[Gtk.Template]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Template.html
+[Gtk.TextView]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-TextView.html
+[Gtk.ToggleButton]:
+    https://api.pygobject.gnome.org/Gtk-4.0/class-ToggleButton.html
+[Gtk.Window]:       
+    https://api.pygobject.gnome.org/Gtk-4.0/class-Window.html

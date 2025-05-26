@@ -1,0 +1,26 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ApplicationWindow main_window {
+  height-request: 300;
+  width-request: 400;
+  title: "GtkLabel";
+
+  Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {}
+
+    Adw.StatusPage {
+      title: "Hello, World!";
+
+      Box {
+        orientation: vertical;
+        halign: center;
+
+        Label label {
+          label: "Hello, World!";
+        }
+      }
+    }
+  }
+}

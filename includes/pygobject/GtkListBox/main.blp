@@ -1,0 +1,99 @@
+using Gtk 4.0;
+using Adw 1;
+
+ApplicationWindow main_window {
+  default-width: 500;
+  default-height: 200;
+
+  Adw.Clamp {
+    maximum-size: 500;
+    
+    ListBox {
+      selection-mode: none;
+
+      Adw.ActionRow {
+        title: "Adw.ActionRow";
+        subtitle: "Lorem ipsum...";
+        icon-name: "list-add-symbolic";
+
+        [prefix]
+        Button {
+          label: "prefix";
+          valign: center;
+        }
+
+        [suffix]
+        Button {
+          label: "suffix";
+          valign: center;
+        }
+      }
+
+      Adw.EntryRow {
+        title: "EntryRow with prefix and suffix children";
+        [prefix]
+        Button {
+          label: "prefix";
+          valign: center;
+        }
+
+        [suffix]
+        Button {
+          label: "suffix";
+          valign: center;
+        }
+      }
+
+      Adw.SpinRow {
+        title: "Adw.SpinRow";
+        subtitle: "Lorem ipsum...";
+        [prefix]
+        Button {
+          label: "prefix";
+          valign: center;
+        }
+
+        [suffix]
+        Button {
+          icon-name: "list-add-symbolic";
+          label: "suffix";
+          valign: center;
+
+          styles [
+            "pill",
+            "destructive-action",
+            "suggested-action",
+          ]
+        }
+      }
+
+      Adw.SwitchRow {
+        title: "Adw.SwitchRow";
+        subtitle: "Lorem ipsum...";
+        [prefix]
+        Button {
+          label: "prefix";
+          valign: center;
+        }
+
+        [suffix]
+        Button {
+          label: "suffix";
+          valign: center;
+        }
+      }
+
+      Adw.ButtonRow {
+        title: "Button Row";
+      }
+
+      Adw.ButtonRow {
+        title: "Button Row (start-icon-name)";
+        start-icon-name: "go-next-symbolic";
+        end-icon-name: "go-previous-symbolic";
+
+      }
+    }
+  }
+}
+

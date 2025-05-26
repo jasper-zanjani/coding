@@ -6,3 +6,4 @@
 
     -   [masamerc/sevp](https://github.com/masamerc/sevp) environment variable picker written in Go
 
+    -   [jpinilloslr/gshortcuts](https://github.com/jpinilloslr/gshortcuts)

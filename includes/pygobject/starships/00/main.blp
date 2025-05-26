@@ -1,0 +1,49 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ApplicationWindow main_window {
+  height-request: 300;
+  width-request: 400;
+
+  Adw.ToastOverlay {
+
+    Adw.NavigationSplitView split_view {
+
+      sidebar: Adw.NavigationPage list_pane {
+        title: "Starships";
+
+        Adw.ToolbarView {
+          [top]
+          Adw.HeaderBar {
+            
+            [start]
+            Button add_button {
+              icon-name: "list-add-symbolic";
+            }
+
+          }
+
+          Adw.StatusPage {
+            title: "Sidebar";
+          }
+        }
+      };
+
+      content: Adw.NavigationPage details_pane {
+        title: "Content";
+
+        Adw.ToolbarView {
+          [top]
+          Adw.HeaderBar {
+            show-title: false;
+          }
+
+          Adw.StatusPage {
+            title: "Content";
+          }
+        }
+      };
+
+    }
+  }
+}

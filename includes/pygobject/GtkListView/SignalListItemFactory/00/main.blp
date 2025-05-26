@@ -1,0 +1,30 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ApplicationWindow main_window {
+  default-width: 200;
+  default-height: 200;
+
+  Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {}
+
+    Adw.Clamp {
+      maximum-size: 240;
+
+      Box {
+        orientation: vertical;
+        spacing: 18;
+
+        ScrolledWindow {
+          hscrollbar-policy: never;
+          propagate-natural-height: true;
+          has-frame: true;
+          valign: start;
+
+          ListView list_view {}
+        }
+      }
+    }
+  }
+}

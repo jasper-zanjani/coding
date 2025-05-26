@@ -1,0 +1,35 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ApplicationWindow main_window {
+  height-request: 300;
+  width-request: 400;
+  title: "AdwToast";
+
+  Adw.ToastOverlay toast_overlay {
+    Adw.ToolbarView {
+      [top]
+      Adw.HeaderBar {}
+
+      Adw.StatusPage {
+        title: "Hello, World!";
+
+        Box {
+          orientation: vertical;
+          halign: center;
+
+          Entry entry {
+            text: "World";
+            margin-bottom: 12;
+          }
+          Button button {
+            label: "Toast!";
+            margin-bottom: 40;
+
+            styles [ "pill", ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.Window main_window {
+  content: Adw.NavigationSplitView split_view {
+    sidebar: Adw.NavigationPage {
+      title: _("Sidebar");
+      tag: "sidebar";
+      child: Adw.StatusPage {
+        title: "Sidebar";
+      };
+    };
+
+    content: Adw.NavigationPage {
+      title: _("Content");
+      tag: "content";
+      child: Adw.StatusPage {
+        title: "Content";
+      };
+    };
+  };
+}

@@ -1,0 +1,29 @@
+using Gtk 4.0;
+using Adw 1;
+
+ApplicationWindow main_window {
+  default-width: 500;
+  default-height: 200;
+
+  Adw.Clamp {
+    maximum-size: 500;
+
+    Box {
+      orientation: vertical;
+      margin-top: 12;
+      margin-bottom: 12;
+
+      Button button {
+        label: "Click me";
+      }
+    }
+  }
+}
+
+Adw.AboutDialog about {
+  application-icon: "application-x-executable";
+  application-name: "Applicaty";
+  developer-name: "Jane Jifinkus";
+  version: "0.0.1";
+  copyright: "Jane Jifinkus";
+}

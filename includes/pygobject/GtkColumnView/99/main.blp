@@ -1,0 +1,59 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ApplicationWindow main_window {
+  title: _("Column View");
+  valign: start;
+
+  Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {}
+      Adw.Clamp {
+        maximum-size: 240;
+
+        Box {
+          orientation: vertical;
+          spacing: 18;
+
+          Box {
+            halign: center;
+
+            LinkButton {
+              label: _("API Reference");
+              uri: "https://docs.gtk.org/gtk4/class.ColumnView.html";
+            }
+
+            LinkButton {
+              label: _("Documentation");
+              uri: "https://docs.gtk.org/gtk4/section-list-widget.html";
+            }
+          }
+
+          Frame {
+            ColumnView column_view {
+              show-column-separators: true;
+              show-row-separators: true;
+
+              ColumnViewColumn col1 {
+                title: _("Title");
+
+                factory: SignalListItemFactory {};
+              }
+
+              ColumnViewColumn col2 {
+                title: _("Author");
+
+                factory: SignalListItemFactory {};
+              }
+
+              ColumnViewColumn col3 {
+                title: _("Year");
+
+                factory: SignalListItemFactory {};
+              }
+            }
+          }
+        }
+      }
+    }
+  }

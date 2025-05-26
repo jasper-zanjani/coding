@@ -1,8 +1,43 @@
 <!-- Adwaita links -->
-[Adw]:                      https://api.pygobject.gnome.org/Adw-1/index.html
-[Adw.AboutWindow]:          https://api.pygobject.gnome.org/Adw-1/class-AboutWindow.html
-[Adw.Application]:          https://api.pygobject.gnome.org/Adw-1/class-Application.html
-[Adw.ApplicationWindow]:    https://api.pygobject.gnome.org/Adw-1/class-ApplicationWindow.html
-[Adw.HeaderBar]:            https://api.pygobject.gnome.org/Adw-1/class-HeaderBar.html
-[Adw.StatusPage]:           https://api.pygobject.gnome.org/Adw-1/class-StatusPage.html
-[Adw.ToolbarView]:          https://api.pygobject.gnome.org/Adw-1/class-ToolbarView.html
+[Adw]:
+    https://api.pygobject.gnome.org/Adw-1/index.html
+[Adw.AboutDialog]:
+    https://api.pygobject.gnome.org/Adw-1/class-AboutDialog.html
+[Adw.AboutWindow]:
+    https://api.pygobject.gnome.org/Adw-1/class-AboutWindow.html
+[Adw.ActionRow]:
+    https://api.pygobject.gnome.org/Adw-1/class-ActionRow.html
+[Adw.Application]:
+    https://api.pygobject.gnome.org/Adw-1/class-Application.html
+[Adw.ApplicationWindow]:
+    https://api.pygobject.gnome.org/Adw-1/class-ApplicationWindow.html
+[Adw.Bin]:
+    https://api.pygobject.gnome.org/Adw-1/class-Bin.html
+[Adw.Breakpoint]:
+    https://api.pygobject.gnome.org/Adw-1/class-Breakpoint.html
+[Adw.ButtonRow]:
+    https://api.pygobject.gnome.org/Adw-1/class-ButtonRow.html
+[Adw.ComboRow]:
+    https://api.pygobject.gnome.org/Adw-1/class-ComboRow.html
+[Adw.EntryRow]:
+    https://api.pygobject.gnome.org/Adw-1/class-EntryRow.html
+[Adw.NavigationPage]:
+    https://api.pygobject.gnome.org/Adw-1/class-NavigationPage
+[Adw.NavigationSplitView]:
+https://api.pygobject.gnome.org/Adw-1/class-NavigationSplitView.html
+[Adw.OverlaySplitView]:
+    https://api.pygobject.gnome.org/Adw-1/class-OverlaySplitView.html
+[Adw.SwitchRow]:
+    https://api.pygobject.gnome.org/Adw-1/class-SwitchRow.html
+[Adw.SpinRow]:
+    https://api.pygobject.gnome.org/Adw-1/class-SpinRow.html
+[Adw.HeaderBar]:
+    https://api.pygobject.gnome.org/Adw-1/class-HeaderBar.html
+[Adw.StatusPage]:
+    https://api.pygobject.gnome.org/Adw-1/class-StatusPage.html
+[Adw.ToastOverlay]:
+    https://api.pygobject.gnome.org/Adw-1/class-ToastOverlay.html
+[Adw.Toast]:
+    https://api.pygobject.gnome.org/Adw-1/class-Toast.html
+[Adw.ToolbarView]:
+    https://api.pygobject.gnome.org/Adw-1/class-ToolbarView.html

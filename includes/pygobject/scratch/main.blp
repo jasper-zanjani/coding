@@ -1,25 +1,12 @@
-using Gtk 4.0;
-using Adw 1;
+using Gtk 3.0;
+using WebKit 4.1;
 
 ApplicationWindow main_window {
-  title: _("Learning Cairo");
+  title: _("GTK Google Tasks");
   default-width: 600;
-  default-height: 250;
+  default-height: 350;
 
-  Box box1 {
-    orientation: horizontal;
-
-    Box box2 {
-      orientation: vertical;
-    }
-
-    Box box3 {
-      orientation: vertical;
-
-      DrawingArea dw {
-        hexpand: true;
-        vexpand: true;
-      }
-    }
+  ScrolledWindow {
+    WebKit.WebView {}
   }
 }

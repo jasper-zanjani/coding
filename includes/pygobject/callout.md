@@ -15,3 +15,8 @@
 === "Community"
 
     --8<-- "includes/pygobject/callout/community.md"
+
+    People
+
+    --8<-- "includes/pygobject/people.md"
+

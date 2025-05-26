@@ -14,21 +14,19 @@ class MainWindow(Gtk.ApplicationWindow):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         # Things will go here
-        self.grid1 = Gtk.GridView()
+        self.grid = Gtk.GridView()
 
         fruits = ["Banana", "Apple", "Strawberry", "Pear", "Watermelon", "Blueberry"]
 
-        # Model
         self.ls = Gio.ListStore()
         for f in fruits:
             self.ls.append(Fruit(f))
 
         ss = Gtk.SingleSelection()
         ss.set_model(self.ls)
-        ss.connect("selection-changed", on_selected_items_changed)
-        self.grid1.set_model(ss)
+        ss.connect("selection-changed", self.on_selected_items_changed)
+        self.grid.set_model(ss)
 
-        # Factory
         factory = Gtk.SignalListItemFactory()
 
         def f_setup(fact, item):
@@ -38,21 +36,15 @@ class MainWindow(Gtk.ApplicationWindow):
 
         factory.connect("setup", f_setup)
         
-        # For static, hardcoded data
-        # def f_bind(fact, item):
-        #     item.get_child().set_label(item.get_item().name)
-
-        # For dynamic data
         def f_bind(fact, item):
             fruit = item.get_item()
-            fruit.bind_property("name",
-                                item.get_child(),
-                                "label",
-                                GObject.BindingFlags.SYNC_CREATE)
-
+            fruit.bind_property(
+                "name", item.get_child(), "label",
+                GObject.BindingFlags.SYNC_CREATE
+            )
         factory.connect("bind", f_bind)
 
-        self.grid1.set_factory(factory)
+        self.grid.set_factory(factory)
 
         # Set app name
         GLib.set_application_name("My App")
@@ -113,7 +105,7 @@ class MainWindow(Gtk.ApplicationWindow):
         self.slider.connect('value-changed', self.slider_slid)
 
         css_provider = Gtk.CssProvider()
-        css_provider.load_from_path('style.css') # (1)
+        css_provider.load_from_path('style.css')
         Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
         self.box1 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
@@ -158,7 +150,7 @@ class MainWindow(Gtk.ApplicationWindow):
         self.box2.append(plato_check)
         self.box2.append(aristotle_check)
         self.box2.append(self.slider)
-        self.box3.append(self.grid1)
+        self.box3.append(self.grid)
         self.set_default_size(600, 250)
         self.set_title("MyApp")
 

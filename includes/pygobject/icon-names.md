@@ -1,0 +1,10 @@
+-   avatar-default-symbolic
+-   document-open-symbolic
+-   document-edit-symbolic
+-   go-next-symbolic
+-   go-previous-symbolic
+-   list-add-symbolic
+-   open-menu-symbolic
+-   sidebar-show-symbolic
+-   sidebar-show-right-symbolic
+-   clipboard-symbolic

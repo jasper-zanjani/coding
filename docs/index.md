@@ -2,16 +2,17 @@
 
     I found a good workflow working through a [Python GTK4 tutorial](https://github.com/Taiko2k/GTK4PythonTutorial) which is meticulously crafted to introduced complexity one step at a time.
 
-    1.  Each new iteration is recorded as a code file in the includes directory.
-        This allows code files to be sequentially numbered, maintaining cleanliness, while also allowing the markdown file to add context.
+    1.  The **includes** folder is organized into languages and major libraries representing a campaign (i.e. GTK or Rust).
+        Each campaign directory is organized into subdirectories representing tutorials, projects, or major language features.
+        Each project, when it can be iterated, is subdivided into numbered folders.
+        This allows each project iteration to be contained separately.
 
-    2.  Create a task document that is also numbered after the source file but which adds context, such as a descriptive title, line highlights, etc.
-        Having the same numbering as the included code file makes a clear association.
+    2.  In the **docs** folder, create a Study directory under the associated campaign which will contain a markdown document for each project.
+        This document will illustrate changes made between iterations as well as commentary on what was learned and what was challenging, like a journal.
+        These Study documents can be numbered in reverse sequence (i.e. starting from 99 and counting down) in order to make sure that the most recent project is on top no matter the alphabetic order of titles.
+        Once enough of the campaign has been learned to distill well-structured Tasks, those are placed in a separate folder.
         
-    3.  Create an Anki deck equivalent to each **task** and numbered just like the task document.
-        This allows the decks to be organized alphabetically, maintaining order.
-        The equivalent numbering maintains a clear assocaition.
-        It is then up to you to proceed from iteration to iteration progressively to maintain knowledge.
+    3.  Create an Anki cloze note corresponding to each Task.
 
 !!! info "Coding challenges"
 

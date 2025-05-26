@@ -1,0 +1,42 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ApplicationWindow main_window {
+  title: _("Column View");
+  valign: start;
+
+  Adw.ToolbarView {
+    [top]
+    Adw.HeaderBar {}
+      Adw.Clamp {
+        maximum-size: 240;
+
+        Box {
+          orientation: vertical;
+          spacing: 18;
+
+          Frame {
+            ColumnView column_view {
+              show-column-separators: true;
+              show-row-separators: true;
+
+              ColumnViewColumn col1 {
+                title: _("Name");
+                factory: SignalListItemFactory {};
+              }
+
+              ColumnViewColumn col2 {
+                title: _("Registry");
+                factory: SignalListItemFactory {};
+              }
+
+              ColumnViewColumn col3 {
+                title: _("Franchise");
+                factory: SignalListItemFactory {};
+              }
+            }
+          }
+        }
+      }
+    }
+  }
