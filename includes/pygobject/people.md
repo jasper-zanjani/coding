@@ -12,4 +12,8 @@
 
 -   
 
+    --8<-- "includes/pygobject/people/alexander-larsson.md"
+
+-   
+
     --8<-- "includes/pygobject/people/florian-leander.md"

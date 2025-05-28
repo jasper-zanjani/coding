@@ -8,3 +8,4 @@ scratch/**
 **/.git
 **/__pycache__
 **/**.bak
+includes/pygobject/linked-examples/**
