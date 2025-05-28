@@ -1,5 +1,9 @@
 # Overview
 
+!!! info "Projects to read"
+
+    -   [Aperocky/tascli](https://github.com/Aperocky/tascli) to-do
+
 ## Syscalls
 
 In Rust, the **nix** crate can be used for syscalls, but depending on the type, the proper feature flag must be used (i.e. "process" for `getpid`, etc)

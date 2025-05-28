@@ -1,5 +1,9 @@
 # Overview
 
+!!! info "Projects to read"
+
+    -   [antoniorodr/lexy](https://github.com/antoniorodr/lexy) CLI utility that uses Click and BeautifulSoup
+
 
 ## Tasks
 
