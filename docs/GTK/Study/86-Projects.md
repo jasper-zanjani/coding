@@ -8,7 +8,7 @@
 
 PyGObject
 
-#### Contacts
+#### [Contacts][GNOME-Contacts]
 
 --8<-- "includes/pygobject/projects/contacts.md"
 
