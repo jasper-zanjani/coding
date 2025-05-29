@@ -1,4 +1,4 @@
-MainWindow (1) for [Contacts][GNOME-Contacts] "`content_box`" uses a [NavigationSplitView][Adw.NavigationSplitView].
+MainWindow (1) ("`content_box`") uses a [NavigationSplitView][Adw.NavigationSplitView].
 {: .annotate }
 
 1.  === "Source"

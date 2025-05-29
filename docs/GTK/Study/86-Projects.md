@@ -6,11 +6,10 @@
 
 #### [Gradia](https://github.com/AlexanderVanhee/Gradia)
 
-PyGObject
 
 #### [Contacts][GNOME-Contacts]
 
---8<-- "includes/pygobject/projects/contacts.md"
+--8<-- "includes/pygobject/projects/Contacts/info.md"
 
 ## Other projects
 

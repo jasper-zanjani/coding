@@ -2,8 +2,6 @@
 
 --8<-- "includes/pygobject/links.md"
 
-#### GObject
-
 --8<-- "includes/pygobject/GObject/info.md"
 
 #### ListStore

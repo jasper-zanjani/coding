@@ -1,27 +1,7 @@
 # UI Definitions
 
-!!! info "Plan"
-
-    1.  Get comfortable with XML files first. You can use pug to simplify the presentation for yourself.
-
 GTK UI definitions can be written in [Blueprint](https://jwestman.pages.gitlab.gnome.org/blueprint-compiler/) or XML.
 
-!!! info "Examples"
-
-    Default window.ui created by Builder as part of a new project.
-    Note that `object.AdwToolbarView` is actually a child of `property(name="content")`:
-
-    === "pug"
-
-        ```pug
-        --8<-- "includes/pygobject/builder-window.pug"
-        ```
-
-    === "xml"
-
-        ```xml
-        --8<-- "includes/pygobject/builder/00/window.ui"
-        ```
 
 Elements:
 

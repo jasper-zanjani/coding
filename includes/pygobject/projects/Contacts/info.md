@@ -20,3 +20,6 @@
 
     --8<-- "includes/pygobject/projects/Contacts/MainWindow.md"
 
+-   
+
+    --8<-- "includes/pygobject/projects/Contacts/Store.md"
