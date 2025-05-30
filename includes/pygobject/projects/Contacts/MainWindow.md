@@ -11,6 +11,6 @@ MainWindow (1) ("`content_box`") uses a [NavigationSplitView][Adw.NavigationSpli
 -   The content is named "contact-pane" and also uses a Stack to switch between editing and viewing modes (StackPages are named "contact-sheet-page" and "contact-editor-page".
     The editing view uses [Overlay][Gtk.Overlay] to organize the widgets in the avatar.
 
-Actions are defined with a GLib.ActionEntry list which are then passed to the `add_action_entries` method.
+Actions are defined with a GLib.ActionEntry list which are then passed to the [`add_action_entries`][Gio.ActionMap] method.
 This is not defined in code, nor is it found in the documentation for [Application][Gtk.Application].
 The code for the MainWindow creates properties for Settings, OperationList, App, and Store.
