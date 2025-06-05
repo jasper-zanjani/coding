@@ -1,15 +1,4 @@
 # Installation
 
-[Source](https://pygobject.gnome.org/getting_started.html#fedora-getting-started)
+--8<-- "includes/gtk/00-installation/info.md"
 
-=== ":simple-python: Python"
-
-    ```sh
-    --8<-- "includes/pygobject/00-installation/main.sh"
-    ```
-
-=== ":simple-vala: Vala"
-    
-    ```vala
-    --8<-- "includes/vala/00-installation/install.sh"
-    ```

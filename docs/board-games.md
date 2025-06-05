@@ -15,7 +15,7 @@
 
     === "GNOME"
 
-        --8<-- "includes/pygobject/board-games.md"
+        --8<-- "includes/gtk/board-games.md"
 
 ## Chess
 

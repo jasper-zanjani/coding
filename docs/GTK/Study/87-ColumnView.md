@@ -1,5 +1,5 @@
 # ColumnView
 
---8<-- "includes/pygobject/links.md"
+--8<-- "includes/gtk/links.md"
 
---8<-- "includes/pygobject/GtkColumnView/info.md"
+--8<-- "includes/gtk/GtkColumnView/info.md"

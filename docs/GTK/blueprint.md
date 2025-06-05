@@ -1,10 +1,10 @@
 # Blueprint syntax
 
---8<-- "includes/pygobject/links.md"
+--8<-- "includes/gtk/links.md"
 
 ??? info "Reference"
 
-    --8<-- "includes/pygobject/callout.md"
+    --8<-- "includes/gtk/callout.md"
 
 !!! info "Note"
 
@@ -16,7 +16,7 @@ Blueprint (1) documents can be compiled to XML using [blueprint-compiler](https:
 
 1.  
 
-    --8<-- "includes/pygobject/blueprint/callout.md"
+    --8<-- "includes/gtk/blueprint/callout.md"
 
 Every Blueprint document (with file name extension .blp) begins with a [GTK declaration](https://gnome.pages.gitlab.gnome.org/blueprint-compiler/reference/document_root.html#document-root) and one or more imports.
 [Objects](https://gnome.pages.gitlab.gnome.org/blueprint-compiler/reference/objects.html), which are the basic building blocks of a GTK interface, follow.
@@ -26,11 +26,11 @@ Also note that the compiler will throw an error if the empty braces are not pres
 <div class="grid cards" markdown>
 
 ```blueprint
---8<-- "includes/pygobject/01-boilerplate/main.blp"
+--8<-- "includes/gtk/01-boilerplate/main.blp"
 ```
 
 ```xml
---8<-- "includes/pygobject/01-boilerplate/main.xml"
+--8<-- "includes/gtk/01-boilerplate/main.xml"
 ```
 
 </div>
@@ -43,11 +43,11 @@ Also note that the blueprint file abstracts the parent-child relationship of ele
 <div class="grid cards" markdown>
 
 ```blueprint hl_lines="6"
---8<-- "includes/pygobject/taiko/04/main.blp"
+--8<-- "includes/gtk/taiko/04/main.blp"
 ```
 
 ```xml hl_lines="12"
---8<-- "includes/pygobject/taiko/04/main.ui"
+--8<-- "includes/gtk/taiko/04/main.ui"
 ```
 
 </div>
@@ -58,19 +58,19 @@ Also note that the blueprint file abstracts the parent-child relationship of ele
 <div class="grid cards" markdown>
 
 ```blueprint hl_lines="5-6"
---8<-- "includes/pygobject/ui-examples/10-HeaderBar/main.blp"
+--8<-- "includes/gtk/ui-examples/10-HeaderBar/main.blp"
 ```
 
 ```xml hl_lines="10-11"
---8<-- "includes/pygobject/ui-examples/10-HeaderBar/main.ui"
+--8<-- "includes/gtk/ui-examples/10-HeaderBar/main.ui"
 ```
 
 </div>
 
 #### Templates
 
---8<-- "includes/pygobject/templates/blueprint.md"
+--8<-- "includes/gtk/templates/blueprint.md"
 
 #### Menu
 
---8<-- "includes/pygobject/menu/blueprint.md"
+--8<-- "includes/gtk/menu/blueprint.md"

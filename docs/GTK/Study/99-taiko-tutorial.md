@@ -1,6 +1,6 @@
 # [Taiko2k's Tutorial](https://github.com/Taiko2k/GTK4PythonTutorial/)
 
---8<-- "includes/pygobject/links.md"
+--8<-- "includes/gtk/links.md"
 
 ## 1. Empty window
 
@@ -13,7 +13,7 @@ Make an empty window (1)
 
 
 ```py title="main.py"
---8<-- "includes/pygobject/taiko/01/main.py"
+--8<-- "includes/gtk/taiko/01/main.py"
 ```
 
 ## 2. Adwaita
@@ -26,11 +26,11 @@ We also add an empty box, which does not affect appearance (yet).
     <div class="grid cards" markdown>
 
     ```py title="main.py"
-    --8<-- "includes/pygobject/taiko/02/builder.py"
+    --8<-- "includes/gtk/taiko/02/builder.py"
     ```
 
     ```blueprint title="main.blp"
-    --8<-- "includes/pygobject/taiko/02/main.blp"
+    --8<-- "includes/gtk/taiko/02/main.blp"
     ```
 
     </div>
@@ -38,7 +38,7 @@ We also add an empty box, which does not affect appearance (yet).
 === "Procedural"
 
     ```py title="main.py"
-    --8<-- "includes/pygobject/taiko/02/main.py"
+    --8<-- "includes/gtk/taiko/02/main.py"
     ```
 
 
@@ -49,12 +49,12 @@ We also add an empty box, which does not affect appearance (yet).
     <div class="grid cards" markdown>
 
     ```py title="main.py"
-    --8<-- "includes/pygobject/taiko/03/builder.py"
+    --8<-- "includes/gtk/taiko/03/builder.py"
     ```
 
 
     ```blueprint title="main.blp"
-    --8<-- "includes/pygobject/taiko/03/main.blp"
+    --8<-- "includes/gtk/taiko/03/main.blp"
     ```
 
     </div>
@@ -62,7 +62,7 @@ We also add an empty box, which does not affect appearance (yet).
 === "Procedural"
 
     ```py title="main.py"
-    --8<-- "includes/pygobject/taiko/03/main.py"
+    --8<-- "includes/gtk/taiko/03/main.py"
     ```
 
 ## 4. Button
@@ -76,12 +76,12 @@ We also change the Box's orientation to vertical.
     <div class="grid cards" markdown>
 
     ```py hl_lines="15-16" title="main.py"
-    --8<-- "includes/pygobject/taiko/04/builder.py"
+    --8<-- "includes/gtk/taiko/04/builder.py"
     ```
 
 
     ```blueprint title="main.blp"
-    --8<-- "includes/pygobject/taiko/04/main.blp"
+    --8<-- "includes/gtk/taiko/04/main.blp"
     ```
 
     </div>
@@ -89,7 +89,7 @@ We also change the Box's orientation to vertical.
 === "Procedural"
 
     ```py hl_lines="11 14-19" title="main.py"
-    --8<-- "includes/pygobject/taiko/04/main.py"
+    --8<-- "includes/gtk/taiko/04/main.py"
     ```
 
 
@@ -100,11 +100,11 @@ We also change the Box's orientation to vertical.
     <div class="grid cards" markdown>
 
     ```py title="main.py"
-    --8<-- "includes/pygobject/taiko/05/builder.py"
+    --8<-- "includes/gtk/taiko/05/builder.py"
     ```
 
     ```blueprint hl_lines="5-6" title="main.blp"
-    --8<-- "includes/pygobject/taiko/05/main.blp"
+    --8<-- "includes/gtk/taiko/05/main.blp"
     ```
 
     </div>
@@ -113,7 +113,7 @@ We also change the Box's orientation to vertical.
 === "Procedural"
 
     ```py hl_lines="18-19" title="main.py"
-    --8<-- "includes/pygobject/taiko/05/main.py"
+    --8<-- "includes/gtk/taiko/05/main.py"
     ```
 
 ## 6. Fix layout
@@ -125,11 +125,11 @@ Additional boxes allow the window to be resized without affecting UI elements.
     <div class="grid cards" markdown>
     
     ```py title="main.py"
-    --8<-- "includes/pygobject/taiko/06/builder.py"
+    --8<-- "includes/gtk/taiko/06/builder.py"
     ```
 
     ```blueprint title="main.blp"
-    --8<-- "includes/pygobject/taiko/06/main.blp"
+    --8<-- "includes/gtk/taiko/06/main.blp"
     ```
 
     </div>
@@ -137,7 +137,7 @@ Additional boxes allow the window to be resized without affecting UI elements.
 === "Procedural"
 
     ```py hl_lines="11-21"
-    --8<-- "includes/pygobject/taiko/06/main.py"
+    --8<-- "includes/gtk/taiko/06/main.py"
     ```
 
 ## 7. CheckButton
@@ -147,11 +147,11 @@ Additional boxes allow the window to be resized without affecting UI elements.
     <div class="grid cards" markdown>
 
     ```py title="main.py"
-    --8<-- "includes/pygobject/taiko/07/main.py"
+    --8<-- "includes/gtk/taiko/07/main.py"
     ```
 
     ```blueprint hl_lines="23-25" title="main.blp"
-    --8<-- "includes/pygobject/taiko/07/main.blp"
+    --8<-- "includes/gtk/taiko/07/main.blp"
     ```
 
     </div>
@@ -159,7 +159,7 @@ Additional boxes allow the window to be resized without affecting UI elements.
 === "Procedural"
 
     ```py hl_lines="18 24" title="main.py"
-    --8<-- "includes/pygobject/taiko/07/main.py"
+    --8<-- "includes/gtk/taiko/07/main.py"
     ```
 
 ## 8. Grouped CheckButtons
@@ -172,11 +172,11 @@ The way I've implemented this is probably a mess but a custom property can't be 
     <div class="grid cards" markdown>
 
     ```py hl_lines="24-35 37-38" title="main.py"
-    --8<-- "includes/pygobject/taiko/08/builder.py"
+    --8<-- "includes/gtk/taiko/08/builder.py"
     ```
 
     ```blueprint hl_lines="23-26 28-31 33-36" title="main.blp"
-    --8<-- "includes/pygobject/taiko/08/main.blp"
+    --8<-- "includes/gtk/taiko/08/main.blp"
     ```
 
     </div>
@@ -184,7 +184,7 @@ The way I've implemented this is probably a mess but a custom property can't be 
 === "Procedural"
 
     ```py hl_lines="18-30 42-43 46"
-    --8<-- "includes/pygobject/taiko/08/main.py"
+    --8<-- "includes/gtk/taiko/08/main.py"
     ```
 
 ## 9. Switch
@@ -194,11 +194,11 @@ The way I've implemented this is probably a mess but a custom property can't be 
     <div class="grid cards" markdown>
 
     ```py title="main.py"
-    --8<-- "includes/pygobject/taiko/09/builder.py"
+    --8<-- "includes/gtk/taiko/09/builder.py"
     ```
 
     ```blueprint title="main.blp"
-    --8<-- "includes/pygobject/taiko/09/main.blp"
+    --8<-- "includes/gtk/taiko/09/main.blp"
     ```
 
     </div>
@@ -206,7 +206,7 @@ The way I've implemented this is probably a mess but a custom property can't be 
 === "Procedural"
 
     ```py hl_lines="32-42"
-    --8<-- "includes/pygobject/taiko/09/main.py"
+    --8<-- "includes/gtk/taiko/09/main.py"
     ```
 
 ## 10. CSS
@@ -214,13 +214,13 @@ The way I've implemented this is probably a mess but a custom property can't be 
 The path specified is relative to the working directory at the time of invocation.
 
 ```py hl_lines="12-14 43"
---8<-- "includes/pygobject/taiko/10/main.py"
+--8<-- "includes/gtk/taiko/10/main.py"
 ```
 
 1.  
 
     ```css
-    --8<-- "includes/pygobject/taiko/10/style.css"
+    --8<-- "includes/gtk/taiko/10/style.css"
     ```
 
 ## 11. Scale
@@ -229,13 +229,13 @@ The path specified is relative to the working directory at the time of invocatio
 Note that the `get_value()` method is not documented under [Scale][Gtk.Scale] but rather its superclass [Range][Gtk.Range].
 
 ```py hl_lines="12-17 68-69"
---8<-- "includes/pygobject/taiko/11/main.py"
+--8<-- "includes/gtk/taiko/11/main.py"
 ```
 
 1.  
 
     ```css
-    --8<-- "includes/pygobject/taiko/11/style.css"
+    --8<-- "includes/gtk/taiko/11/style.css"
     ```
 
 ## 12. HeaderBar
@@ -248,11 +248,11 @@ Note that the `get_value()` method is not documented under [Scale][Gtk.Scale] bu
     <div class="grid cards" markdown>
     
     ```py title="main.py"
-    --8<-- "includes/pygobject/taiko/12/builder.py"
+    --8<-- "includes/gtk/taiko/12/builder.py"
     ```
 
     ```blueprint hl_lines="9-14" title="main.blp"
-    --8<-- "includes/pygobject/taiko/12/main.blp"
+    --8<-- "includes/gtk/taiko/12/main.blp"
     ```
 
     </div>
@@ -260,49 +260,49 @@ Note that the `get_value()` method is not documented under [Scale][Gtk.Scale] bu
 === "Procedural"
 
     ```py hl_lines="12-16"
-    --8<-- "includes/pygobject/taiko/12/main.py"
+    --8<-- "includes/gtk/taiko/12/main.py"
     ```
 
     1.  
 
         ```css
-        --8<-- "includes/pygobject/taiko/12/style.css"
+        --8<-- "includes/gtk/taiko/12/style.css"
         ```
 
 ## 13. FileDialog
 
 ```py hl_lines="5 14-30 88-97"
---8<-- "includes/pygobject/taiko/13/main.py"
+--8<-- "includes/gtk/taiko/13/main.py"
 ```
 
 1.  
 
     ```css
-    --8<-- "includes/pygobject/taiko/13/style.css"
+    --8<-- "includes/gtk/taiko/13/style.css"
     ```
 
 ## 14. MenuButton
 
 ```py
---8<-- "includes/pygobject/taiko/14/main.py"
+--8<-- "includes/gtk/taiko/14/main.py"
 ```
 
 1.  
 
     ```css
-    --8<-- "includes/pygobject/taiko/14/style.css"
+    --8<-- "includes/gtk/taiko/14/style.css"
     ```
 
 ## 15. AboutDialog
 
 ```py
---8<-- "includes/pygobject/taiko/15/main.py"
+--8<-- "includes/gtk/taiko/15/main.py"
 ```
 
 1.  
 
     ```css
-    --8<-- "includes/pygobject/taiko/15/style.css"
+    --8<-- "includes/gtk/taiko/15/style.css"
     ```
 
 ## 16. AboutWindow
@@ -311,31 +311,31 @@ Note that the `get_value()` method is not documented under [Scale][Gtk.Scale] bu
 Implementing [Adw.AboutWindow][Adw.AboutWindow]
 
 ```py hl_lines="123-133"
---8<-- "includes/pygobject/taiko/16/main.py"
+--8<-- "includes/gtk/taiko/16/main.py"
 ```
 
 1.  
 
     ```css
-    --8<-- "includes/pygobject/taiko/16/style.css"
+    --8<-- "includes/gtk/taiko/16/style.css"
     ```
 
 ## 17. Single instancing
 
 ```py hl_lines="184 187-188"
---8<-- "includes/pygobject/taiko/17/main.py"
+--8<-- "includes/gtk/taiko/17/main.py"
 ```
 
 1.  
 
     ```css
-    --8<-- "includes/pygobject/taiko/17/style.css"
+    --8<-- "includes/gtk/taiko/17/style.css"
     ```
 
 ## [18. GridView](https://github.com/Taiko2k/GTK4PythonTutorial/?tab=readme-ov-file#using-gridview)
 
 
---8<-- "includes/pygobject/taiko/18/info.md"
+--8<-- "includes/gtk/taiko/18/info.md"
 
 
 ## 19. Builder
@@ -346,11 +346,11 @@ Using Builder we can finally use interface files.
 
 
 ```py hl_lines="13-24"
---8<-- "includes/pygobject/taiko/19/main.py"
+--8<-- "includes/gtk/taiko/19/main.py"
 ```
 
 ```xml
---8<-- "includes/pygobject/taiko/19/tutorial.ui"
+--8<-- "includes/gtk/taiko/19/tutorial.ui"
 ```
 
 </div>
@@ -358,7 +358,7 @@ Using Builder we can finally use interface files.
 ## Cairo
 
 ```py
---8<-- "includes/pygobject/taiko/20/main.py"
+--8<-- "includes/gtk/taiko/20/main.py"
 ```
 
 The [DrawingArea][Gtk.DrawingArea] widget can be placed in blueprint.
@@ -366,11 +366,11 @@ The [DrawingArea][Gtk.DrawingArea] widget can be placed in blueprint.
 <div class="grid cards" markdown>
 
 ```py hl_lines="21-22"
---8<-- "includes/pygobject/taiko/21/main.py"
+--8<-- "includes/gtk/taiko/21/main.py"
 ```
 
 ```blueprint hl_lines="19-21"
---8<-- "includes/pygobject/taiko/21/main.blp"
+--8<-- "includes/gtk/taiko/21/main.blp"
 ```
 
 </div>

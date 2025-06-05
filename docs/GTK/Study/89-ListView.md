@@ -1,10 +1,10 @@
 # ListViews
 
---8<-- "includes/pygobject/links.md"
+--8<-- "includes/gtk/links.md"
 
---8<-- "includes/pygobject/GtkListView/info.md"
+--8<-- "includes/gtk/GtkListView/info.md"
 
 #### SignalListItemFactory
 
---8<-- "includes/pygobject/GtkSignalListItemFactory/info.md"
+--8<-- "includes/gtk/GtkSignalListItemFactory/info.md"
 

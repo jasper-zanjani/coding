@@ -1,6 +1,6 @@
 # Images
 
---8<-- "includes/pygobject/links.md"
+--8<-- "includes/gtk/links.md"
 
 There is more than one widget used to display images.
 
@@ -24,7 +24,7 @@ Widget                  | File path (str)   | [GFile](#giofile) | [Pixbuf](#gdkp
         1.  
 
             ```py hl_lines="17-19" title="GtkPicture with GFile"
-            --8<-- "includes/pygobject/GtkPicture/00/main.py"
+            --8<-- "includes/gtk/GtkPicture/00/main.py"
             ```
     
     -   Another, more circuitous route is to take the File and then pass that to [Texture][Gdk.Texture].
@@ -35,7 +35,7 @@ Widget                  | File path (str)   | [GFile](#giofile) | [Pixbuf](#gdkp
         1.  
 
             ```py hl_lines="17-20" title="GtkPicture with GtkTexture"
-            --8<-- "includes/pygobject/GtkPicture/01/main.py"
+            --8<-- "includes/gtk/GtkPicture/01/main.py"
             ```
     
     -   It is also possible to create a Picture from a [GdkPixbuf](#gdkpixbuf) using the deprecated method `set_pixbuf` (1).
@@ -45,7 +45,7 @@ Widget                  | File path (str)   | [GFile](#giofile) | [Pixbuf](#gdkp
         1.  
 
             ```py hl_lines="17-24" title="GtkPicture with GdkPixbuf"
-            --8<-- "includes/pygobject/GtkPicture/02/main.py"
+            --8<-- "includes/gtk/GtkPicture/02/main.py"
             ```
 
 -   **[GtkImage][Gtk.Image]**
@@ -60,7 +60,7 @@ Widget                  | File path (str)   | [GFile](#giofile) | [Pixbuf](#gdkp
         1.  
 
             ```py hl_lines="18"
-            --8<-- "includes/pygobject/GtkImage/00/main.py"
+            --8<-- "includes/gtk/GtkImage/00/main.py"
             ```
 
     -   A [Pixbuf](#gdkpixbuf) can be passed to `set_from_pixbuf` (like `Picture.set_pixbuf` also deprecated since 4.12) (1)
@@ -69,14 +69,14 @@ Widget                  | File path (str)   | [GFile](#giofile) | [Pixbuf](#gdkp
         1.  
 
             ```py hl_lines="17-24"
-            --8<-- "includes/pygobject/GtkImage/01/main.py"
+            --8<-- "includes/gtk/GtkImage/01/main.py"
             ```
 
 </div>
 
 #### GdkPixbuf
 
---8<-- "includes/pygobject/GdkPixbuf/info.md"
+--8<-- "includes/gtk/GdkPixbuf/info.md"
 
 <div class="grid cards" markdown>
 
@@ -84,24 +84,24 @@ This is about as simple an example as is possible with GdkPixbuf.
 A [PixbufLoader][GdkPixbuf.PixbufLoader] is instantiated which uses the [**`write` method**](https://api.pygobject.gnome.org/GdkPixbuf-2.0/class-PixbufLoader.html#gi.repository.GdkPixbuf.PixbufLoader.write) to read from an open file.
 
 ```py hl_lines="11"
---8<-- "includes/pygobject/GdkPixbuf/00/main.py"
+--8<-- "includes/gtk/GdkPixbuf/00/main.py"
 ```
 
 More robust error handling is implemented in the entrypoint here:
 
 ```py hl_lines="4 17-22"
---8<-- "includes/pygobject/GdkPixbuf/01/main.py"
+--8<-- "includes/gtk/GdkPixbuf/01/main.py"
 ```
 
 
 A Pixbuf can be displayed with [Image][Gtk.Image]
 
 ```py
---8<-- "includes/pygobject/GdkPixbuf/02/main.py"
+--8<-- "includes/gtk/GdkPixbuf/02/main.py"
 ```
 
 </div>
 
 #### GioFile
 
---8<-- "includes/pygobject/GioFile/info.md"
+--8<-- "includes/gtk/GioFile/info.md"

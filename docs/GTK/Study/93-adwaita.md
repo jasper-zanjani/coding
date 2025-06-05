@@ -1,6 +1,6 @@
 # Adwaita
 
---8<-- "includes/pygobject/links.md"
+--8<-- "includes/gtk/links.md"
 
 #### ApplicationWindow
 
@@ -10,11 +10,11 @@
 <div class="grid cards" markdown>
 
 ```blueprint title="Gtk"
---8<-- "includes/pygobject/01-boilerplate/main.blp"
+--8<-- "includes/gtk/01-boilerplate/main.blp"
 ```
 
 ```blueprint title="Adw" hl_lines="9-12"
---8<-- "includes/pygobject/02-boilerplate-adw/main.blp"
+--8<-- "includes/gtk/02-boilerplate-adw/main.blp"
 ```
 
 </div>

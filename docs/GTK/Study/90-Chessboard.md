@@ -1,6 +1,6 @@
 # Chessboard
 
---8<-- "includes/pygobject/links.md"
+--8<-- "includes/gtk/links.md"
 
 ??? info "Libraries"
 
@@ -13,25 +13,25 @@
 
         ---
 
-        --8<-- "includes/pygobject/GDK/info.md"
+        --8<-- "includes/gtk/GDK/info.md"
 
     -   **GSK**
 
         ---
 
-        --8<-- "includes/pygobject/GSK/info.md"
+        --8<-- "includes/gtk/GSK/info.md"
 
     -   **Cairo**
 
         ---
 
-        --8<-- "includes/pygobject/cairo/info.md"
+        --8<-- "includes/gtk/cairo/info.md"
 
     -   **Graphene**
 
         ---
 
-        --8<-- "includes/pygobject/Graphene/info.md"
+        --8<-- "includes/gtk/Graphene/info.md"
 
     </div>
 
@@ -44,13 +44,13 @@
 
         ---
 
-        --8<-- "includes/pygobject/gestures/info.md"
+        --8<-- "includes/gtk/gestures/info.md"
 
     -   **Snapshots**
 
         ---
 
-        --8<-- "includes/pygobject/snapshots/info.md"
+        --8<-- "includes/gtk/snapshots/info.md"
 
     </div>
 
@@ -61,7 +61,7 @@ This example was derived (or rather copied wholesale) from the Snapshot demo in 
 1.  
 
     ```py
-    --8<-- "includes/pygobject/90-chessboard/chessboard.py"
+    --8<-- "includes/gtk/90-chessboard/chessboard.py"
     ```
 
 Almost all UI elements are defined in the `do_snapshot` method.
@@ -72,10 +72,10 @@ Groups of four [Graphene.Rect][Graphene.Rect]s are assembled manually then added
 1.  
 
     ```py title="Square colors" hl_lines="4-7"
-    --8<-- "includes/pygobject/90-chessboard/chessboard.__init__.py"
+    --8<-- "includes/gtk/90-chessboard/chessboard.__init__.py"
     ```
 
 ```py hl_lines="7-22"
---8<-- "includes/pygobject/90-chessboard/chessboard.do_snapshot.py"
+--8<-- "includes/gtk/90-chessboard/chessboard.do_snapshot.py"
 ```
 

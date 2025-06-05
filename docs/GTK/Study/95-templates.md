@@ -6,17 +6,17 @@ Tutorials start with defining UI in code, and if anything they use XML UI defini
 
 So the jump from naive tutorials to production-grade applications appears to depend partly on this feature of GTK.
 
---8<-- "includes/pygobject/templates/info.md"
+--8<-- "includes/gtk/templates/info.md"
 
 #### Blueprint
 
---8<-- "includes/pygobject/templates/blueprint.md"
+--8<-- "includes/gtk/templates/blueprint.md"
 
 #### GResource
 
---8<-- "includes/pygobject/templates/gresources.md"
+--8<-- "includes/gtk/templates/gresources.md"
 
---8<-- "includes/pygobject/templates/register.md"
+--8<-- "includes/gtk/templates/register.md"
 
 #### Boilerplate
 
@@ -28,15 +28,15 @@ Note that unlike when using [Builder][Gtk.Builder], the XML markup is not refere
 
 
 ```py title="main.py"
---8<-- "includes/pygobject/21-template-boilerplate/main.py"
+--8<-- "includes/gtk/21-template-boilerplate/main.py"
 ```
 
 ```blueprint title="template.blp"
---8<-- "includes/pygobject/21-template-boilerplate/template.blp"
+--8<-- "includes/gtk/21-template-boilerplate/template.blp"
 ```
 
 ```xml title="gresources.xml"
---8<-- "includes/pygobject/21-template-boilerplate/gresources.xml"
+--8<-- "includes/gtk/21-template-boilerplate/gresources.xml"
 ```
 
 #### Subclassing Adw.ApplicationWindow
@@ -50,19 +50,19 @@ Also note that the custom subclass has been imported from another file, reflecti
 
 
 ```py title="src/main.py"
---8<-- "includes/pygobject/22-template-boilerplate-adw/main.py"
+--8<-- "includes/gtk/22-template-boilerplate-adw/main.py"
 ```
 
 ```py title="src/template.py"
---8<-- "includes/pygobject/22-template-boilerplate-adw/template.py"
+--8<-- "includes/gtk/22-template-boilerplate-adw/template.py"
 ```
 
 ```blueprint title="src/template.blp"
---8<-- "includes/pygobject/22-template-boilerplate-adw/template.blp"
+--8<-- "includes/gtk/22-template-boilerplate-adw/template.blp"
 ```
 
 ```xml title="src/gresources.xml"
---8<-- "includes/pygobject/22-template-boilerplate-adw/gresources.xml"
+--8<-- "includes/gtk/22-template-boilerplate-adw/gresources.xml"
 ```
 
 #### Adding widgets
@@ -70,18 +70,18 @@ Also note that the custom subclass has been imported from another file, reflecti
 Additional widgets, properties, and handlers can be added without much difficulty.
 
 ```py title="src/main.py"
---8<-- "includes/pygobject/24-hello-world-adw/main.py"
+--8<-- "includes/gtk/24-hello-world-adw/main.py"
 ```
 
 ```py title="src/template.py"
---8<-- "includes/pygobject/24-hello-world-adw/template.py"
+--8<-- "includes/gtk/24-hello-world-adw/template.py"
 ```
 
 ```blueprint title="src/template.blp"
---8<-- "includes/pygobject/24-hello-world-adw/template.blp"
+--8<-- "includes/gtk/24-hello-world-adw/template.blp"
 ```
 
 ```xml title="src/gresources.xml"
---8<-- "includes/pygobject/24-hello-world-adw/gresources.xml"
+--8<-- "includes/gtk/24-hello-world-adw/gresources.xml"
 ```
 

@@ -1,5 +1,5 @@
 # Quadrapassel
 
---8<-- "includes/vala/97-quadrapassel/info.md"
+--8<-- "includes/vala/projects/quadrapassel/info.md"
 
---8<-- "includes/vala/97-quadrapassel/graphics.md"
+--8<-- "includes/vala/projects/quadrapassel/graphics.md"

@@ -1,0 +1,1 @@
+Vala uses [Java/C#-style construction](https://naaando.gitbooks.io/the-vala-tutorial/content/en/4-object-oriented-programming/construction.html) where the constructor method is named after the class and has [no return type](https://naaando.gitbooks.io/the-vala-tutorial/content/en/4-object-oriented-programming/oop-basics.html).

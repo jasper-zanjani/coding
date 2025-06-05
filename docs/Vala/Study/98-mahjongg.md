@@ -1,6 +1,6 @@
 # GNOME Mahjongg
 
---8<-- "includes/pygobject/links.md"
+--8<-- "includes/gtk/links.md"
 
 !!! info "Project structure"
 
@@ -12,8 +12,8 @@
 
     -   **game-save.vala** implements saving and loading game states (even though this doesn't appear to be available when using the application itself)
 
---8<-- "includes/vala/99-mahojng/info.md"
+--8<-- "includes/vala/projects/mahjong/info.md"
 
 ## Graphics
 
---8<-- "includes/vala/99-mahjong/gfx.md"
+--8<-- "includes/vala/projects/mahjong/gfx.md"

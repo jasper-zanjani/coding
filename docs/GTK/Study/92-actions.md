@@ -1,23 +1,29 @@
 # Actions
 
---8<-- "includes/pygobject/links.md"
+--8<-- "includes/gtk/links.md"
 
---8<-- "includes/pygobject/actions/info.md"
+--8<-- "includes/gtk/actions/info.md"
 
-## Projects
+!!! info "Actions in prominent projects"
 
-<div class="grid cards" markdown>
+    -   [**Contacts**][GNOME-Contacts] (1)
+        {: .annotate }
 
--   [**Contacts**][GNOME-Contacts]
+        1.  
 
-    --8<-- "includes/pygobject/projects/Contacts/actions.md"
+            --8<-- "includes/gtk/projects/Contacts/actions.md"
 
--   [**Gradia**][Gradia]
+    -   [**Gradia**][Gradia] (1)
+        {: .annotate }
 
-    --8<-- "includes/pygobject/projects/Gradia/actions.md"
+        1.  
 
--   [**Builder**][GNOME-Builder]
+            --8<-- "includes/gtk/projects/Gradia/actions.md"
 
-    --8<-- "includes/pygobject/projects/Builder/actions.md"
+    -   [**Builder**][GNOME-Builder] (1)
+        {: .annotate }
 
-</div>
+        1.  
+
+            --8<-- "includes/gtk/projects/Builder/actions.md"
+

@@ -1,0 +1,98 @@
+using Gtk 4.0;
+using Adw 1;
+
+Adw.ApplicationWindow main_window {
+  height-request: 300;
+  width-request: 400;
+
+  Adw.ToastOverlay {
+
+    Adw.NavigationSplitView split_view {
+      sidebar-width-fraction: 0.3;
+      min-sidebar-width: 260;
+      max-sidebar-width: 360;
+
+      sidebar: Adw.NavigationPage list_pane {
+        title: "Starships";
+
+        Adw.ToolbarView {
+          [top]
+          Adw.HeaderBar {
+            
+            [start]
+            Button add_button {
+              icon-name: "list-add-symbolic";
+            }
+
+          }
+
+          Adw.Bin starships_list_container {
+            Gtk.ListView list_view {
+              //factory: BuilderListItemFactory {
+              //  template ListItem {
+              //    child: Gtk.Box {
+              //      Gtk.Label {
+              //        label: bind template.item as <StringObject>.string;
+              //      }
+              //    };
+              //  }
+              //};
+            }
+          }
+        }
+      };
+
+      content: Adw.NavigationPage details_pane {
+        title: "Content";
+
+        Adw.ToolbarView {
+          [top]
+          Adw.HeaderBar {
+            show-title: false;
+
+            [end]
+            ToggleButton edit-button {
+              icon-name: "document-edit-symbolic";
+            }
+          }
+
+          Stack stack {
+            StackPage {
+              name: "none-selected-page";
+
+              child: Adw.StatusPage {
+                icon-name: "avatar-default-symbolic";
+                title: "Select a Starship";
+              };
+            }
+
+            StackPage {
+              name: "starship-selected-page";
+
+              child: Adw.StatusPage {
+                title: "Starship selected...";
+              };
+            }
+
+            StackPage {
+              name: "starship-editing-pape";
+
+              child: Adw.StatusPage {
+                title: "Editing starship...";
+              };
+            }
+          }
+        }
+      };
+
+    }
+  }
+
+  Adw.Breakpoint {
+    condition ("max-width: 560sp")
+
+    setters {
+      split_view.collapsed: true;
+    }
+  }
+}
