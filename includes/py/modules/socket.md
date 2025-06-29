@@ -3,13 +3,15 @@ Sockets can be classified by family and type:
 
 <div class="grid cards" markdown>
 
--   Family 
-    - AF\_INET: Internet
-    - AF\_UNIX: UNIX sockets
+-   **Family** 
 
--   Type
-    - SOCK\_STREAM: TCP
-    - SOCK\_DGRAM: UDP
+    - `AF_INET` Internet
+    - `AF_UNIX` UNIX sockets
+
+-   **Type**
+
+    - `SOCK_STREAM` TCP
+    - `SOCK_DGRAM` UDP
 
 </div>
 

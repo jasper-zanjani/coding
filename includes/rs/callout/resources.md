@@ -1,0 +1,21 @@
+**Documentation**
+
+-   [Standard library](https://doc.rust-lang.org/stable/std/index.html)
+
+**Books**
+
+-   [_The Rust Programming Language_](https://doc.rust-lang.org/stable/book/index.html) "the Book"
+-   [_Rust By Example_](https://doc.rust-lang.org/rust-by-example)
+-   [_Rust Atomics and Locks_](https://marabos.nl/atomics/preface.html)
+-   [_Asynchronous Programming in Rust_](https://rust-lang.github.io/async-book/intro.html)
+-   [Serde](https://serde.rs/)
+-   [The Rust Reference](https://doc.rust-lang.org/stable/reference/index.html)
+-   [The Rustonomicon](https://doc.rust-lang.org/stable/nomicon/intro.html)
+
+**Courses**
+
+-   [Let's build a (mini) shell in Rust](https://micahkepe.com/blog/minishell/)
+- [BTC price GUI](https://www.youtube.com/watch?v=z01c1hOr-kk&t=98s)
+- [Tim McNamara on Clap](https://www.youtube.com/watch?v=Y-LTWNciEks)
+- [std::fs](https://www.youtube.com/watch?v=0H3pg_pjyRE)
+

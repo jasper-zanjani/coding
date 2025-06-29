@@ -1,6 +1,6 @@
 use nix::unistd::{geteuid,getpid,getppid,gethostname};
 
-fn main()  {
+fn main()  { // (1)
 
     let hostname = gethostname().unwrap();
     let pid = getpid();

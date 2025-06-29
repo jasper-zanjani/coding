@@ -1,2 +1,0 @@
--   [harddots](https://github.com/l1x/harddots)
--   [tascli](https://github.com/Aperocky/tascli) a simple clap app for tracking tasks and records

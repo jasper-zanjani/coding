@@ -15,3 +15,7 @@
 === "pub"
 
     [dart pub](https://dart.dev/tools/pub/cmd): Work with packages
+
+    ```sh
+    --8<-- "includes/cmd/dart/dart-pub-get.sh"
+    ```

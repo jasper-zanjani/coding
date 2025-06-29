@@ -1,6 +1,16 @@
 # Overview
 
-=== "Projects"
+!!! info "Learning resources"
 
-    --8<-- "includes/rs/projects.md"
+    <div class="grid cards" markdown>
+    
+    -   
+
+        --8<-- "includes/rs/callout/resources.md"
+
+    -   **Projects**
+
+        --8<-- "includes/rs/callout/projects.md"
+
+    </div>
 

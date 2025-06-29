@@ -1,0 +1,12 @@
+-   [todui](https://github.com/danimelchor/todui) TUI to-do app
+-   [harddots](https://github.com/l1x/harddots)
+-   [tascli](https://github.com/Aperocky/tascli) a simple clap app for tracking tasks and record
+-   [launchthing](https://github.com/prajwalch/launchthing) unmaintained GTK4 app launcher
+-   [somo](https://github.com/theopfr/somo) alternative to netstat using clap
+-   [iamb](https://github.com/ulyssa/iamb) Matrix client using ratatui
+-   [wiki-tui](https://github.com/builditluc/wiki-tui) Wikipedia TUI using ratatui
+-   [kitget](https://github.com/adamperkowski/kitget) clap app that display kitten images
+-   [COSMIC desktop environment](https://github.com/pop-os/cosmic) for Pop!_OS, in alpha development
+-   [smd](https://github.com/guilhermeprokisch/smd) 
+-   [tetrs](https://github.com/Strophox/tetrs) 
+-   [Linux kernel crate](https://www.kernel.org/doc/rustdoc/latest/kernel/)

@@ -1,7 +1,23 @@
-# Consuming APIs
+!!! info "Resources"
 
-Every programming language has ...
-APIs can be consumed from the command-line using curl as well.
+    **API endpoints**
+
+    I've found a few interesting API endpoints for consumption.
+
+    -   **https://swapi.info/api**: apparently forked from [phalt/swapi](https://github.com/phalt/swapi) which has gone unmaintained for years
+    -   **https://pokeapi.co/api/v2**: recommended by the author of swapi
+    -   [**https://api.toys/api**](https://api.toys/api/index) has various endpoints: /api/dice_roll, /api/rock_paper_scissors, etc.
+    -   **https://api.thecatapi.com/v1/images/search** cat images
+
+    Curated lists of public apis:
+    
+    -   [Public APIs](https://publicapis.dev)
+
+    **Tutorials**
+
+    - Real Python
+        -   [Python & APIs: a winning combo for reading public data](https://realpython.com/python-api/)
+        -   [Raining Outside? Build a Weather CLI App With Python](https://realpython.com/build-a-python-weather-app-cli/)
 
 
 #### Basic API call
@@ -116,7 +132,6 @@ else:
 
 ```
 
-#### Resources
+#### Utilities
 
-- [Real Python: Python & APIs: a winning combo for reading public data](https://realpython.com/python-api/)
-- [Real Python: Raining Outside? Build a Weather CLI App With Python](https://realpython.com/build-a-python-weather-app-cli/)
+-   [hurl](https://github.com/Orange-OpenSource/hurl) is a tool that allows API calls to be tested from the command-line by using text files defining the expected contents of responses

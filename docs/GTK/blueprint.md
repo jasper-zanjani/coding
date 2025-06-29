@@ -2,15 +2,6 @@
 
 --8<-- "includes/gtk/links.md"
 
-??? info "Reference"
-
-    --8<-- "includes/gtk/callout.md"
-
-!!! info "Note"
-
-    While examining the source code of the demos found in Workbench, it seems that I will not be able to run them outside of the app without introducing some scaffolding.
-    I'll study how Builder projects are structured to see if I can find a way.
-
 Blueprint (1) documents can be compiled to XML using [blueprint-compiler](https://gitlab.gnome.org/GNOME/blueprint-compiler).
 {: .annotate }
 

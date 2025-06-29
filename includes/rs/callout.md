@@ -1,3 +1,16 @@
-**Resources**
+=== "Resources"
 
--   [Let's build a (mini) shell in Rust](https://micahkepe.com/blog/minishell/)
+    --8<-- "includes/rs/callout/resources.md"
+
+=== "Projects"
+
+    --8<-- "includes/rs/callout/projects.md"
+
+=== "Versions"
+
+    --8<-- "includes/rs/callout/versions.md"
+
+=== "Notes"
+
+    --8<-- "includes/rs/callout/notes.md"
+

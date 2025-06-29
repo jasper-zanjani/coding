@@ -25,6 +25,8 @@
 
     -   [Newelle](https://github.com/qwersyk/Newelle)
 
+    -   [Cuneo](https://github.com/heidefinnischen/cuneo/) 
+
 -   :simple-rust: gtk-rs
 
     - [Packet](https://github.com/nozwock/packet)
