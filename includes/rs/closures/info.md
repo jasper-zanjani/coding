@@ -12,3 +12,5 @@ A closure implements various traits depending on how it is used.
 -   `FnMut` applies to closure that don't move the captured value but might mutate it.
 
 -   `Fn` applies to closures that neither move nor mutate captured values, as well as closures that capture nothing from their environment.
+
+--8<-- "includes/rs/closures/gtk.md"

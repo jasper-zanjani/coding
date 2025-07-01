@@ -9,8 +9,9 @@
 -   [_Rust Atomics and Locks_](https://marabos.nl/atomics/preface.html)
 -   [_Asynchronous Programming in Rust_](https://rust-lang.github.io/async-book/intro.html)
 -   [Serde](https://serde.rs/)
--   [The Rust Reference](https://doc.rust-lang.org/stable/reference/index.html)
--   [The Rustonomicon](https://doc.rust-lang.org/stable/nomicon/intro.html)
+-   [_The Rust Reference_](https://doc.rust-lang.org/stable/reference/index.html)
+-   [_The Rustonomicon_](https://doc.rust-lang.org/stable/nomicon/intro.html)
+-   [_GUI Development with Rust and GTK 4_](https://gtk-rs.org/gtk4-rs/stable/latest/book/)
 
 **Courses**
 
