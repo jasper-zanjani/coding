@@ -9,8 +9,9 @@ theme:
     primary: pink
     accent: pink
   features:
-    - navigation.sections
+    # - navigation.sections
     # - navigation.expand # This option expands all navigation sections
+    - navigation.indexes
     - navigation.prune
     - toc.integrate
     - content.code.annotate

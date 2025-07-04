@@ -2,10 +2,15 @@
 [Args.nth]:         https://doc.rust-lang.org/std/env/struct.Args.html#method.nth
 [Args.collect]:     https://doc.rust-lang.org/std/env/struct.Args.html#method.collect
 [AtomicBool]:       https://doc.rust-lang.org/std/sync/atomic/struct.AtomicBool.html
-[Iterator]:          https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html
+[Cell]:             https://doc.rust-lang.org/stable/std/cell/struct.Cell.html
+[Fn]:               https://doc.rust-lang.org/stable/std/ops/trait.Fn.html
+[FnOnce]:           https://doc.rust-lang.org/stable/std/ops/trait.FnOnce.html
+[FnMut]:            https://doc.rust-lang.org/stable/std/ops/trait.FnMut.html
+[Iterator]:         https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html
 [Ordering]:         https://doc.rust-lang.org/std/sync/atomic/enum.Ordering.html
 [PathBuf]:          https://doc.rust-lang.org/stable/std/path/struct.PathBuf.html
 [Rc]:               https://doc.rust-lang.org/std/rc/struct.Rc.html
+[RefCell]:          https://doc.rust-lang.org/stable/std/cell/struct.RefCell.html
 [String]:           https://doc.rust-lang.org/stable/std/string/struct.String.html
 [Vec]:              https://doc.rust-lang.org/stable/std/vec/struct.Vec.html
 [as_str]:           https://doc.rust-lang.org/stable/std/string/struct.String.html#method.as_str

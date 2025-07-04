@@ -1,4 +1,5 @@
 GTK supports limited parsing of command-line options through **ApplicationCommandLine** (1), which represents a command-line invocation of an application.
+
 {: .annotate }
 
 1.  **Resources**

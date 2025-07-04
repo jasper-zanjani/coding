@@ -1,4 +1,9 @@
-# gtk-rs
+gtk-rs (1)
+{: .annotate }
+
+1.  
+
+    --8<-- "includes/rs/gtk-rs/callout.md"
 
 ```rs
 # Install GTK 4 and the build essentials

@@ -1,0 +1,33 @@
+using Gtk 4.0;
+using Adw 1;
+
+ApplicationWindow main_window {
+  title: "GTK4 Scale demo";
+  default-height: 200;
+  default-width: 400;
+
+  Box {
+    orientation: vertical;
+    valign: center;
+
+    Box {
+      margin-start: 12;
+      halign: center;
+
+      SpinButton spin {
+        digits: 0;
+        adjustment: Adjustment adjustment {
+          lower: 0;
+          upper: 100;
+          value: 50;
+          step-increment: 1;
+        };
+      }
+      Label label {
+        margin-start: 24;
+        width-request: 50;
+        label: bind spin.adjustment.value;
+      }
+    }
+  }
+}

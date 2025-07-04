@@ -1,7 +1,7 @@
 A simple application of the **rand** crate can be seen in the Guessing Game.
 
 ```rs hl_lines="7"
---8<-- "includes/rs/the-book/02-guessing-game/src/main.rs"
+--8<-- "includes/rs/the-book/02/src/main.rs"
 ```
 
 Note that some names in the rand crate have changed recently.

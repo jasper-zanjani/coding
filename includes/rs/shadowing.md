@@ -5,5 +5,5 @@ Once the local scope is exited, the global variable's variable is accessible aga
 Shadowing is used in the Guessing Game coding task to parse the input string as an integer.
 
 ```rs hl_lines="15" title="Guessing Game"
---8<-- "includes/rs/the-book/03-guessing-game/src/main.rs"
+--8<-- "includes/rs/the-book/03/src/main.rs"
 ```

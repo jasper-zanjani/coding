@@ -1,7 +1,7 @@
 This very simple example will print a short message whenever a connection is attempted to the specified port.
 
 ```rs
---8<-- "includes/rs/the-book/90-web-server/src/main.rs"
+--8<-- "includes/rs/the-book/90/src/main.rs"
 ```
 
 Adding a BufReader to read each request stream.

@@ -1,8 +1,10 @@
---8<-- "includes/vala/links/glib.md"
-
-[Workbench]: 
-    https://apps.gnome.org/Workbench/)
-[Workbench-git]:
-    https://github.com/workbenchdev/Workbench
-[GNOME-Extensions]:
-    https://extensions.gnome.org
+[Application-vala]:
+    https://valadoc.org/gtk4/Gtk.Application.html
+[ApplicationCommandLine-vala]:
+    https://valadoc.org/gio-2.0/GLib.ApplicationCommandLine.html
+[GLibGenericArray-vala]:
+    https://valadoc.org/glib-2.0/GLib.GenericArray
+[GLibOptionEntry-vala]:
+    https://valadoc.org/glib-2.0/GLib.OptionEntry.html
+[OptionEntry-vala]:
+    https://valadoc.org/glib-2.0/GLib.OptionEntry.html

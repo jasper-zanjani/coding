@@ -4,12 +4,11 @@
 
 There are various sources of GTK source code made available for study
 
--   [Workbench demos][Workbench-git]: The repo has been cloned to **~/.local/src/demos** but these demos mostly appear to use [`Adw.StatusPage`][Adw.StatusPage] as the document root.
+-   [Workbench demos][Workbench-git]: The repo has been cloned to **~/.local/src/demos** but these demos mostly appear to use `AdwStatusPage` (1) as the document root.
+    {: .annotate }
 
-## Containers and children
+    1.  
 
-There are two kinds of [container](https://docs.gtk.org/gtk3/class.Container.html) in GTK, both of which are subclasses of the abstract GtkContainer base class:
+        --8<-- "includes/gtk/callouts/adwstatuspage.md"
 
--   Subclasses of GtkBin have a single child
--   Others can have more than one child
 

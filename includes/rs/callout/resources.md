@@ -1,6 +1,7 @@
 **Documentation**
 
 -   [Standard library](https://doc.rust-lang.org/stable/std/index.html)
+-   [gtk-rs](https://gtk-rs.org/gtk4-rs/stable/latest/docs/gtk4/)
 
 **Books**
 

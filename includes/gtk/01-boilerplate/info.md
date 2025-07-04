@@ -1,35 +1,20 @@
-This boilerplate represents the minimum required, following canonical best practice, to create an [Application][Adw.Application] from a UI definition file following the [Builder][Gtk.Builder] pattern.
+This boilerplate represents the minimum required, following canonical best practice, to create an empty window from a UI definition file defining a simple [`ApplicationWindow`][ApplicationWindow] following the [Builder][Gtk.Builder] pattern.
 
-=== ":simple-python: Python"
+=== ":simple-rust: gtk-rs"
 
-    ```py
-    --8<-- "includes/gtk/01-boilerplate/main.py"
+    ```rs
+    --8<-- "includes/gtk/01-boilerplate/main.rs"
     ```
 
-    --8<-- "includes/gtk/01-boilerplate/annotations.md"
+=== ":simple-python: PyGObject"
+
+    ```py
+    --8<-- "includes/pygobject/01-boilerplate/main.py"
+    ```
 
 === ":simple-vala: Vala"
 
     ```vala
     --8<-- "includes/gtk/01-boilerplate/main.vala"
-    ```
-
-??? info "Template"
-
-
-    ```py title="src/main.py"
-    --8<-- "includes/gtk/22-template-boilerplate-adw/main.py"
-    ```
-
-    ```py title="src/template.py"
-    --8<-- "includes/gtk/22-template-boilerplate-adw/template.py"
-    ```
-
-    ```blueprint title="src/template.blp"
-    --8<-- "includes/gtk/22-template-boilerplate-adw/template.blp"
-    ```
-
-    ```xml title="src/gresources.xml"
-    --8<-- "includes/gtk/22-template-boilerplate-adw/gresources.xml"
     ```
 

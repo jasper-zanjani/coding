@@ -1,1 +1,0 @@
--   [GNOME Python on Matrix](https://matrix.to/#/#python:gnome.org)

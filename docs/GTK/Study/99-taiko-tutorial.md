@@ -226,7 +226,16 @@ The path specified is relative to the working directory at the time of invocatio
 ## 11. Scale
 
 
-Note that the `get_value()` method is not documented under [Scale][Gtk.Scale] but rather its superclass [Range][Gtk.Range].
+Note that the `get_value()` method is not documented under `Scale` (1) but rather its superclass `Range` (2).
+{: .annotate }
+
+1.  
+
+    --8<-- "includes/gtk/callouts/gtkscale.md"
+
+2.  
+
+    --8<-- "includes/gtk/callouts/gtkrange.md"
 
 ```py hl_lines="12-17 68-69"
 --8<-- "includes/gtk/taiko/11/main.py"
@@ -241,7 +250,12 @@ Note that the `get_value()` method is not documented under [Scale][Gtk.Scale] bu
 ## 12. HeaderBar
 
 
-[HeaderBar][Gtk.HeaderBar] is the widget that allows creation of custom title bars for windows.
+`HeaderBar` (1) is the widget that allows creation of custom title bars for windows.
+{: .annotate }
+
+1.  
+
+    --8<-- "includes/gtk/callouts/gtkheaderbar.md"
 
 === "Builder"
 
@@ -308,7 +322,12 @@ Note that the `get_value()` method is not documented under [Scale][Gtk.Scale] bu
 ## 16. AboutWindow
 
 
-Implementing [Adw.AboutWindow][Adw.AboutWindow]
+Implementing `AdwAboutWindow` (1)
+{: .annotate }
+
+1.  
+
+    --8<-- "includes/gtk/callouts/adwaboutwindow.md"
 
 ```py hl_lines="123-133"
 --8<-- "includes/gtk/taiko/16/main.py"

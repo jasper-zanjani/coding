@@ -1,5 +1,5 @@
 ```rs
---8<-- "includes/rs/the-book/10-rectangle-area/src/main.rs"
+--8<-- "includes/rs/the-book/10/src/main.rs"
 ```
 
 Adding outer attribute to implement Display trait.

@@ -13,3 +13,12 @@
 ## Atomic reference counting
 
 --8<-- "includes/rs/concurrency/atomics.md"
+
+## Cell
+
+[`Cell`][Cell] and [`RefCell`][RefCell] are used to implement _interior mutability_ (1).
+{: .annotate }
+
+1.  
+
+    --8<-- "includes/rs/concurrency/atomics-locks/interior-mutability"

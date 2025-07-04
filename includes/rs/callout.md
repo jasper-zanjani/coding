@@ -1,16 +1,22 @@
-=== "Resources"
+<div class="grid cards" markdown>
+
+-   
 
     --8<-- "includes/rs/callout/resources.md"
 
-=== "Projects"
+-   **Projects**
 
     --8<-- "includes/rs/callout/projects.md"
 
-=== "Versions"
+    **Versions**
 
     --8<-- "includes/rs/callout/versions.md"
 
-=== "Notes"
+    **Notes** (1)
+    {: .annotate }
 
-    --8<-- "includes/rs/callout/notes.md"
+    1.  
 
+        --8<-- "includes/rs/callout/notes.md"
+
+</div>

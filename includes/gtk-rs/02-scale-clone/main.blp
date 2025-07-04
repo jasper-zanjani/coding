@@ -1,0 +1,30 @@
+using Gtk 4.0;
+using Adw 1;
+
+ApplicationWindow main_window {
+  title: "GTK4 Scale demo";
+  default-height: 200;
+  default-width: 400;
+
+  Box {
+    orientation: vertical;
+    valign: center;
+
+    Box {
+      margin-start: 12;
+
+      Scale scale {
+        width-request: 280;
+        digits: 1;
+        draw-value: true;
+
+        adjustment: Adjustment {
+          lower: 0;
+          upper: 100;
+          value: 50;
+        };
+      }
+      Label label {}
+    }
+  }
+}

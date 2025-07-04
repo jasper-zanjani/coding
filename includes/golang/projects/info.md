@@ -15,3 +15,5 @@
 -   [typtea](https://github.com/ashish0kumar/typtea) terminal-based typing speed test with programming language support
 
 -   [jqp](https://github.com/noahgorstein/jqp) interactive TUI playground for exploring jq
+
+-   [pickdate](https://github.com/maraloon/pickdate) TUI date picker

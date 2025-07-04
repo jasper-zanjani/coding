@@ -1,4 +1,4 @@
-GNU gettext (1)is a widely used tool for internationalization of open software, especially in C but with support for other languages.
+GNU gettext (1) is a widely used tool for internationalization of open software, especially in C but with support for other languages.
 {: .annotate }
 
 1.  
